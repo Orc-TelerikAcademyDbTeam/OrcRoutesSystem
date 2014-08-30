@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Vehicle
+    public class Vehicle
     {
         public int Id { get; set; }
 

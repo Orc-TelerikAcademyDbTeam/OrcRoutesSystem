@@ -5,6 +5,11 @@
 
     public class Model
     {
+        public Model()
+        {
+            this.Vehicles = new HashSet<Vehicle>();
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }
