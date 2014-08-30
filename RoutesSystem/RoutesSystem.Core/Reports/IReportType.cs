@@ -8,5 +8,9 @@ namespace RoutesSystem.Core
 {
     public interface IReportType
     {
+        string Title { get; set; }
+        string Content { get; set; }
+
+        void WriteToFile();
     }
 }
