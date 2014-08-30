@@ -14,15 +14,15 @@
         public int Id { get; set; }
 
         [Required]
-        [ForeignKey("Town")]
         public int StartTownId { get; set; }
 
+        [ForeignKey("StartTownId")]
         public virtual Town StartTown { get; set; }
 
         [Required]
-        [ForeignKey("Town")]
         public int EndTownId { get; set; }
 
+        [ForeignKey("EndTownId")]
         public virtual Town EndTown { get; set; }
 
         [Required]
