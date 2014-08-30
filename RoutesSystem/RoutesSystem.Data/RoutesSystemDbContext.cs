@@ -37,5 +37,20 @@
         {
             base.SaveChanges();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Route>()
+                .HasRequired(t => t.StartTown)
+                .WithMany(t => t.StartRoutes)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Route>()
+                .HasRequired(t => t.EndTown)
+                .WithMany(t => t.EndRoutes)
+                .WillCascadeOnDelete(false);
+            
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

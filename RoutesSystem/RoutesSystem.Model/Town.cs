@@ -8,7 +8,8 @@
     {
         public Town()
         {
-            this.Routes = new HashSet<Route>();
+            this.StartRoutes = new HashSet<Route>();
+            this.EndRoutes = new HashSet<Route>();
         }
 
         public int Id { get; set; }
@@ -18,6 +19,8 @@
         [MaxLength(50)]
         public string Name { get; set; }
 
-        public virtual ICollection<Route> Routes { get; set; }
+        public virtual ICollection<Route> StartRoutes { get; set; }
+
+        public virtual ICollection<Route> EndRoutes { get; set; }
     }
 }

@@ -8,7 +8,7 @@
     {
         public Vehicle()
         {
-            this.Routes = new HashSet<Route>();
+            this.VehicleRoutes = new HashSet<VehicleRoute>();
         }
 
         public int Id { get; set; }
@@ -22,7 +22,7 @@
         public virtual VehicleType Type { get; set; }
 
         [Required]
-        public int ManifacturerId {get;set;}
+        public int ManufacturerId { get; set; }
 
         public virtual Manufacturer Manufacturer { get; set; }
 
@@ -38,6 +38,6 @@
 
         public virtual FuelType FuelType { get; set; }
 
-        public virtual ICollection<Route> Routes { get; set; }
+        public virtual ICollection<VehicleRoute> VehicleRoutes { get; set; }
     }
 }

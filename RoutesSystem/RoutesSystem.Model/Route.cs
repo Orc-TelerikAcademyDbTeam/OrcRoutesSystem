@@ -2,37 +2,29 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Route
     {
         public Route()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.VehicleRoutes = new HashSet<VehicleRoute>();
         }
 
         public int Id { get; set; }
 
         [Required]
-        public int TownId { get; set; }
+        public int StartTownId { get; set; }
 
-        public virtual Town Town { get; set; }
+        public virtual Town StartTown { get; set; }
 
-        //[Required]
-        //public int StartTownId { get; set; }
+        [Required]
+        public int EndTownId { get; set; }
 
-        //[ForeignKey("StartTownId")]
-        //public virtual Town StartTown { get; set; }
-
-        //[Required]
-        //public int EndTownId { get; set; }
-
-        //[ForeignKey("EndTownId")]
-        //public virtual Town EndTown { get; set; }
+        public virtual Town EndTown { get; set; }
 
         [Required]
         public float Distance { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<VehicleRoute> VehicleRoutes { get; set; }
     }
 }

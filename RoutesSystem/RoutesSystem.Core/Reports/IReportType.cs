@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RoutesSystem.Core
 {
-    interface IReportType
+    public interface IReportType
     {
     }
 }
