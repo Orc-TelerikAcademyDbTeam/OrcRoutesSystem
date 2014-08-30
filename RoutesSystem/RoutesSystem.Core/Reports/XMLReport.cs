@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Core.Reports
+﻿namespace RoutesSystem.Core.Reports
 {
-    class XMLReport : IReportType
+    using System;
+
+    public class XMLReport : IReportFileType
     {
+        public void CreateReport(IReportData data)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

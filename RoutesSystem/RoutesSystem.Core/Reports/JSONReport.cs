@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Core.Reports
+﻿namespace RoutesSystem.Core.Reports
 {
-    class JSONReport : IReportType
+    public class JSONReport: IReportFileType
     {
+        public void CreateReport(IReportData data)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
