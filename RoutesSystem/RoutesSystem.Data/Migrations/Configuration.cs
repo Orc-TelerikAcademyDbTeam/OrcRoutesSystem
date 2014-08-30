@@ -13,5 +13,8 @@
             AutomaticMigrationDataLossAllowed = true;
             ContextKey = "RoutesSystem.Data.RoutesSystemDbContext";
         }
+
+        protected override void Seed(RoutesSystem.Data.RoutesSystemDbContext context)
+        { }
     }
 }

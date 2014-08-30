@@ -17,11 +17,13 @@
         [ForeignKey("Town")]
         public int StartTownId { get; set; }
 
+        public virtual Town StartTown { get; set; }
+
         [Required]
         [ForeignKey("Town")]
         public int EndTownId { get; set; }
 
-        public virtual Town Town { get; set; }
+        public virtual Town EndTown { get; set; }
 
         [Required]
         public float Distance { get; set; }
