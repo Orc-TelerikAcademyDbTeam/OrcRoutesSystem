@@ -1,10 +1,16 @@
 ﻿namespace RoutesSystem.Model
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public class Vehicle
     {
+        public Vehicle()
+        {
+            this.Routes = new HashSet<Route>();
+        }
+
         public int Id { get; set; }
 
         //public int DriverId { get; set; }
@@ -32,6 +38,7 @@
         public int FuelTypeId { get; set; }
 
         public virtual FuelType FuelType { get; set; }
-        
+
+        public virtual ICollection<Route> Routes { get; set; }
     }
 }
