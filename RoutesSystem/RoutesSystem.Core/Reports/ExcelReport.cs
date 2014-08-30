@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RoutesSystem.Core
+namespace RoutesSystem.Core.Reports
 {
-    public class Class1
+    class ExcelReport : IReportType
     {
     }
 }

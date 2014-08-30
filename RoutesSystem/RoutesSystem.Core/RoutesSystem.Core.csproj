@@ -46,13 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataBaseIteraction\DBContext.cs" />
+    <Compile Include="DataBaseIteraction\IDatabaseContext.cs" />
+    <Compile Include="DataBaseIteraction\MySQL.cs" />
+    <Compile Include="DataBaseIteraction\SQLite.cs" />
+    <Compile Include="DataBaseIteraction\SQLServer.cs" />
+    <Compile Include="DataReader.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="IFormatType.cs" />
+    <Compile Include="Reports\ExcelReport.cs" />
+    <Compile Include="Reports\IReportType.cs" />
+    <Compile Include="Reports\ReportGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\JSONReport.cs" />
+    <Compile Include="Reports\PDFReport.cs" />
+    <Compile Include="Reports\XMLReport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
