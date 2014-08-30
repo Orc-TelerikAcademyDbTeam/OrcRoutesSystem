@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RoutesSystem.Data;
 using RoutesSystem.Model;
+using ArchiveReports;
 
 namespace RouteSystemUI
 {
@@ -32,6 +33,19 @@ namespace RouteSystemUI
             var manufacturers = data.Manufacturers.FirstOrDefault();
 
             MessageBox.Show(manufacturers.Id.ToString());
+
+            //ArchiveReports usage example
+            var archiveLocation = "../../../ZipArchives/Sample-Sales-Reports.zip";
+            var reportsExtensions = new HashSet<string>() { ".xls" };
+            var reportsArchive = new ReportsArchive(archiveLocation, reportsExtensions);
+
+            using (reportsArchive)
+            {
+                foreach (var report in reportsArchive)
+                {
+                    //Console.WriteLine("{0} => {1}  {2}", report.DirectoryName, report.FileName, report.FileExtension);
+                }
+            }
         }
     }
 }
