@@ -16,11 +16,17 @@
 
         public int ManifacturerId {get;set;}
 
+        public virtual Manufacturer Manufacturer { get; set; }
+
         public int ModelId { get; set; }
+
+        public virtual Model Model { get; set; }
 
         public DateTime YearOfManifacturer { get; set; }
 
         public int FuelTypeId { get; set; }
+
+        public virtual FuelType FuelType { get; set; }
         
     }
 }
