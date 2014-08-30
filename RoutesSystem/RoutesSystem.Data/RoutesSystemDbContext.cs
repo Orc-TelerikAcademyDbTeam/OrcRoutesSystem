@@ -1,0 +1,41 @@
+﻿namespace RoutesSystem.Data
+{
+    using RoutesSystem.Model;
+    using System.Data.Entity;
+    using RoutesSystem.Data.Migrations;
+
+    public class RoutesSystemDbContext : DbContext, IRoutesSystemDbContext
+    {
+        public RoutesSystemDbContext()
+            : base("RoutesSystemConnection")
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<RoutesSystemDbContext, Configuration>());
+        }
+
+        public IDbSet<FuelType> FuelTypes { get; set; }
+
+        public IDbSet<Model> Models { get; set; }
+
+        public IDbSet<Manufacturer> Manufacturers { get; set; }
+
+        public IDbSet<VehicleType> VehicleTypes { get; set; }
+
+        public IDbSet<Vehicle> Vehicles { get; set; }
+
+        public IDbSet<Driver> Drivers { get; set; }
+
+        public IDbSet<Town> Towns { get; set; }
+
+        public IDbSet<Route> Routes { get; set; }
+
+        public new IDbSet<T> Set<T>() where T : class
+        {
+            return base.Set<T>();
+        }
+
+        public new void SaveChanges()
+        {
+            base.SaveChanges();
+        }
+    }
+}
