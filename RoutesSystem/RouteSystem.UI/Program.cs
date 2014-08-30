@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RoutesSystem.Data;
+using RoutesSystem.Model;
 
 namespace RouteSystemUI
 {
@@ -16,27 +18,20 @@ namespace RouteSystemUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
 
-            //var data = new RouteSystemData();
+            var data = new RoutesSystemDbContext();
 
-            //var towns = data.Towns.All();
+            data.Manufacturers.Add(new Manufacturer
+            {
+                Name = "Pesho"
+            });
 
-            //foreach (var town in towns)
-            //{
-            //    Console.WriteLine(town.Name);
-            //}
+            data.SaveChanges();
 
-            //data.Courses.Add(new Town
-            //{
-            //    Name = "Sofia"
-            //});
+            var manufacturers = data.Manufacturers.FirstOrDefault();
 
-            //data.SaveChanges();
-
-            //var students = data.Students.All();
-
-            //Console.WriteLine(students.Count());
+            MessageBox.Show(manufacturers.Id.ToString());
         }
     }
 }

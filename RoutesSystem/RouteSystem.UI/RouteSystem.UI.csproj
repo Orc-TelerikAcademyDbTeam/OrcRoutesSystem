@@ -83,6 +83,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
+      <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
+      <Name>RoutesSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoutesSystem.Model\RoutesSystem.Model.csproj">
+      <Project>{d3545cf6-2a08-4f1c-b2a4-e0d8c2600613}</Project>
+      <Name>RoutesSystem.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

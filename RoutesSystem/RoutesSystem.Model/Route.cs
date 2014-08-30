@@ -14,16 +14,21 @@
         public int Id { get; set; }
 
         [Required]
-        public int StartTownId { get; set; }
+        public int TownId { get; set; }
 
-        [ForeignKey("StartTownId")]
-        public virtual Town StartTown { get; set; }
+        public virtual Town Town { get; set; }
 
-        [Required]
-        public int EndTownId { get; set; }
+        //[Required]
+        //public int StartTownId { get; set; }
 
-        [ForeignKey("EndTownId")]
-        public virtual Town EndTown { get; set; }
+        //[ForeignKey("StartTownId")]
+        //public virtual Town StartTown { get; set; }
+
+        //[Required]
+        //public int EndTownId { get; set; }
+
+        //[ForeignKey("EndTownId")]
+        //public virtual Town EndTown { get; set; }
 
         [Required]
         public float Distance { get; set; }

@@ -14,22 +14,22 @@
             ContextKey = "RoutesSystem.Data.RoutesSystemDbContext";
         }
 
-        protected override void Seed(RoutesSystemDbContext context)
-        {
-            this.SeedTown(context);
-        }
+        //protected override void Seed(RoutesSystemDbContext context)
+        //{
+        //    this.SeedTown(context);
+        //}
 
-        private void SeedTown(RoutesSystemDbContext context)
-        {
-            if (context.Towns.Any())
-            {
-                return;
-            }
+        //private void SeedTown(RoutesSystemDbContext context)
+        //{
+        //    if (context.Towns.Any())
+        //    {
+        //        return;
+        //    }
 
-            context.Towns.Add(new Town
-            {
-                Name = "Varna"
-            });
-        }
+        //    context.Towns.Add(new Town
+        //    {
+        //        Name = "Varna"
+        //    });
+        //}
     }
 }
