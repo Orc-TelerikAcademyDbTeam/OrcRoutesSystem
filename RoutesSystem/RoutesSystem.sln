@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteSystem.UI", "RouteSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutesSystem.Core", "RoutesSystem.Core\RoutesSystem.Core.csproj", "{0C6B75B9-9598-4585-A8D8-3AC1BC9C9531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveReports", "ArchiveReports\ArchiveReports.csproj", "{E1EBA381-8EFB-4BCA-9666-3F7480A9A55D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0C6B75B9-9598-4585-A8D8-3AC1BC9C9531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C6B75B9-9598-4585-A8D8-3AC1BC9C9531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C6B75B9-9598-4585-A8D8-3AC1BC9C9531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EBA381-8EFB-4BCA-9666-3F7480A9A55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EBA381-8EFB-4BCA-9666-3F7480A9A55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EBA381-8EFB-4BCA-9666-3F7480A9A55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EBA381-8EFB-4BCA-9666-3F7480A9A55D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
