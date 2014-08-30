@@ -1,33 +1,35 @@
-namespace RoutesSystem.Data.Migrations
+﻿namespace RoutesSystem.Data.Migrations
 {
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using RoutesSystem.Data;
+    using RoutesSystem.Model;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<RoutesSystemDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<RoutesSystemDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "RoutesSystem.Data.RoutesSystemDbContext";
         }
 
         protected override void Seed(RoutesSystemDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            this.SeedTown(context);
+        }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+        private void SeedTown(RoutesSystemDbContext context)
+        {
+            if (context.Towns.Any())
+            {
+                return;
+            }
+
+            context.Towns.Add(new Town
+            {
+                Name = "Varna"
+            });
         }
     }
 }

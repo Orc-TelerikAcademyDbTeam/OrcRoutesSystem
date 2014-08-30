@@ -17,6 +17,26 @@ namespace RouteSystemUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //var data = new RouteSystemData();
+
+            //var towns = data.Towns.All();
+
+            //foreach (var town in towns)
+            //{
+            //    Console.WriteLine(town.Name);
+            //}
+
+            //data.Courses.Add(new Town
+            //{
+            //    Name = "Sofia"
+            //});
+
+            //data.SaveChanges();
+
+            //var students = data.Students.All();
+
+            //Console.WriteLine(students.Count());
         }
     }
 }
