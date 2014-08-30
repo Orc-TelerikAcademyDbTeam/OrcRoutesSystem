@@ -4,9 +4,9 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class VehicleType
+    public class Manufacturer
     {
-        public VehicleType()
+        public Manufacturer()
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
