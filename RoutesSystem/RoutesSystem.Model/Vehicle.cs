@@ -11,11 +11,8 @@
             this.Routes = new HashSet<Route>();
         }
 
-        public int Id { get; set; }
-
-        //public int DriverId { get; set; }
-
-        //public virtual Driver Driver { get; set; }
+        [Required]
+        public virtual Driver Driver { get; set; }
 
         [Required]
         public int VehicleTypeId { get; set; }

@@ -1,14 +1,12 @@
 ﻿namespace RoutesSystem.Model
 {
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Driver
     {
-        public Driver()
-        {
-        }
-
-        public int Id { get; set; }
+        [Key, ForeignKey("Vehicle")]
+        public int VehicleId { get; set; }
 
         [Required]
         [MinLength(2)]
@@ -21,5 +19,7 @@
         [MinLength(2)]
         [MaxLength(50)]
         public string LastName { get; set; }
+
+        public virtual Vehicle Vehicle { get; set; }
     }
 }
