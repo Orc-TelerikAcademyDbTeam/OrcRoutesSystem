@@ -1,28 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestingProject
+﻿namespace TestingProject
 {
-    using System.Collections.ObjectModel;
+    using System;
+    using System.Linq;
 
     using RoutesSystem.Data.DBContexts;
-    using RoutesSystem.Model;
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var SQLiteData = new SQLiteContext();
-            SQLiteData.DriversInfo.Add(new DriverInfo { Id = 1, StartTown = "Sofiq", EndTown = "Varna" });
-            SQLiteData.SaveChanges();
-            var driverInfo = SQLiteData.DriversInfo.First();
-            Console.WriteLine("Driver with id "+
-                driverInfo.Id + " went through " + driverInfo.StartTown + " - "
-                + driverInfo.EndTown);
-
             //var SQLServerData = new RoutesSystemDbContext();
             //SQLServerData.VehicleTypes.Add(new VehicleType { Name = "Sedan" });
             //SQLServerData.SaveChanges();
@@ -31,28 +17,30 @@ namespace TestingProject
 
             //SQLServerData.Manufacturers.Add(manufacturer);
             //SQLServerData.SaveChanges();
-            //SQLServerData.Vehicles.Add(
-            //    new Vehicle
-            //    {
-            //        VehicleTypeId = 1,
-            //        YearOfManifacturer = DateTime.Now,
-            //        FuelType = new FuelType
-            //        {
-            //            Name = "Diesel"
 
-            //        },
-            //        Manufacturer = manufacturer,
-            //        Model = new Model
-            //        {
-            //            Name = "Avensis",
-            //            FuelConsumption = 5.5f,
-            //            NumberOfWheels = 4
-            //        }
+            //    SQLServerData.Vehicles.Add(
+            //        new Vehicle
+            //            {
+            //                Driver = new Driver
+            //                             {
+            //                                 FirstName = "Pencho", LastName = "Penchev"
+            //                             },
+            //                VehicleTypeId = 1,
+            //                YearOfManifacturer = DateTime.Now,
+            //                FuelType = new FuelType { Name = "Diesel" },
+            //                ManufacturerId = 1,
+            //                Model = new Model { Name = "Avensis", FuelConsumption = 5.5f, NumberOfWheels = 4 }
+            //            });
 
+            //    SQLServerData.SaveChanges();
 
-            //    });
-
-            //SQLServerData.SaveChanges();
+            //var SQLiteData = new SQLiteContext();
+            //SQLiteData.DriversInfo.Add(new DriverInfo { Id = 1, StartTown = "Sofiq", EndTown = "Varna" });
+            //SQLiteData.SaveChanges();
+            //var driverInfo = SQLiteData.DriversInfo.First();
+            //var driver = SQLServerData.Drivers.First(x => x.VehicleId == driverInfo.Id);
+            //Console.WriteLine(
+            //    "Driver " + driver.FirstName + " went through " + driverInfo.StartTown + " - " + driverInfo.EndTown);
 
             //var v = SQLServerData.Vehicles.Where(x=>x.Id>0).ToList();
             //foreach (var vehicle in v)
@@ -64,9 +52,7 @@ namespace TestingProject
             //SQLServerData.Drivers.Add(newDriver);
             //SQLServerData.SaveChanges();
 
-
             //var driver = SQLServerData.Drivers.First(x => x.VehicleId == driverInfo.Id);
-            
         }
     }
 }
