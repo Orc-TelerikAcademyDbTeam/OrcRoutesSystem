@@ -6,9 +6,10 @@
 
     public class Manufacturer
     {
+        private ICollection<Vehicle> vehicles;
         public Manufacturer()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.vehicles = new HashSet<Vehicle>();
         }
 
         public int Id { get; set; }
@@ -18,6 +19,16 @@
         [MaxLength(20)]
         public string Name { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<Vehicle> Vehicles
+        {
+            get
+            {
+                return this.vehicles;
+            }
+            set
+            {
+                this.vehicles = value;
+            }
+        }
     }
 }

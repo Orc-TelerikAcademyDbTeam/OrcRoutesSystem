@@ -4,6 +4,8 @@
     using RoutesSystem.Data;
     using System;
 
+    using RoutesSystem.Data.DBContexts;
+
     public class ReportGenerator
     {
         private readonly IReportFileType fileType;

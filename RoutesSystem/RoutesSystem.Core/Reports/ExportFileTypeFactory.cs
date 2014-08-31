@@ -20,7 +20,7 @@
                     reportFileType = new PDFReport();
                     break;
                 case ExportFileType.XML:
-                    reportFileType = new XMLReport();
+                    reportFileType = new XMLReport("a");
                     break;
                 default:
                     throw new ArgumentException("Wrong file type");
