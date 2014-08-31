@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace RoutesSystem.Core.DataBaseIteraction
 {
+    using RoutesSystem.Data.Contracts;
+
     class DBContext
     {
         DBContext(IDatabaseContext context)

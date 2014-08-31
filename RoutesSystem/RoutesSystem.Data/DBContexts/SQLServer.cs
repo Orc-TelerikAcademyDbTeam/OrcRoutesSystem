@@ -11,7 +11,7 @@ namespace RoutesSystem.Core.DataBaseIteraction
 
     using RoutesSystem.Data.Contracts;
 
-    class SQLite : IDatabaseContext
+    public class SQLServerContext : IDatabaseContext
     {
         public IDbSet<T> Set<T>() where T : class
         {
