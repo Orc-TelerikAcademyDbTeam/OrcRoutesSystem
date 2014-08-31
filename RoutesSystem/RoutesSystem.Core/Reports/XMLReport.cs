@@ -12,11 +12,6 @@
 
         public string Title { get; set; }
 
-        private string EditContent(IReportData data)
-        {
-            return data.ToString();//this should be the edit section for the text to be sent in the propoer format tp WriteToFile()
-        }
-
         public void CreateReport(IReportData data)
         {
             XmlWriterSettings settings = new XmlWriterSettings();
