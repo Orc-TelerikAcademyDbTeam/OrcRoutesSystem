@@ -9,6 +9,8 @@ using ArchiveReports;
 
 namespace RouteSystemUI
 {
+    using RoutesSystem.Data.DBContexts;
+
     static class Program
     {
         /// <summary>
@@ -17,9 +19,12 @@ namespace RouteSystemUI
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoutesSystemForm());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new RoutesSystemForm());
+
+
+           
 
             //var data = new RoutesSystemDbContext();
 

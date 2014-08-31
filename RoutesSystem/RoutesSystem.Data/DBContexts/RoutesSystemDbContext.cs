@@ -1,8 +1,10 @@
-﻿namespace RoutesSystem.Data
+﻿namespace RoutesSystem.Data.DBContexts
 {
-    using RoutesSystem.Model;
     using System.Data.Entity;
+
+    using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.Migrations;
+    using RoutesSystem.Model;
 
     public class RoutesSystemDbContext : DbContext, IRoutesSystemDbContext
     {

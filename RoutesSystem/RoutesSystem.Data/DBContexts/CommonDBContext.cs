@@ -11,8 +11,12 @@ namespace RoutesSystem.Core.DataBaseIteraction
 
     using RoutesSystem.Data.Contracts;
 
-    class SQLite : IDatabaseContext
+    class CommonDBContext:IDatabaseContext
     {
+        CommonDBContext(IDatabaseContext context)
+        { 
+        }
+
         public IDbSet<T> Set<T>() where T : class
         {
             throw new NotImplementedException();
