@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoutesSystemForm));
             this.tabRouteSystem = new System.Windows.Forms.TabControl();
             this.tabLoadData = new System.Windows.Forms.TabPage();
             this.loadExcelTextBox = new System.Windows.Forms.TextBox();
@@ -78,7 +79,8 @@
             // 
             // tabLoadData
             // 
-            this.tabLoadData.BackColor = System.Drawing.Color.Teal;
+            this.tabLoadData.BackColor = System.Drawing.Color.Transparent;
+            this.tabLoadData.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
             this.tabLoadData.Controls.Add(this.loadExcelTextBox);
             this.tabLoadData.Controls.Add(this.loadXMLTextbox);
             this.tabLoadData.Controls.Add(this.loadSQLiteTextBox);
@@ -149,12 +151,13 @@
             // 
             // loadXMLButton
             // 
+            this.loadXMLButton.BackColor = System.Drawing.Color.DarkSlateGray;
             this.loadXMLButton.Location = new System.Drawing.Point(310, 124);
             this.loadXMLButton.Name = "loadXMLButton";
             this.loadXMLButton.Size = new System.Drawing.Size(119, 28);
             this.loadXMLButton.TabIndex = 8;
             this.loadXMLButton.Text = "Choose";
-            this.loadXMLButton.UseVisualStyleBackColor = true;
+            this.loadXMLButton.UseVisualStyleBackColor = false;
             this.loadXMLButton.Click += new System.EventHandler(this.loadXMLButton_Click);
             // 
             // loadXMLLabel
@@ -184,12 +187,13 @@
             // 
             // loadExcelButton
             // 
+            this.loadExcelButton.BackColor = System.Drawing.Color.DarkSlateGray;
             this.loadExcelButton.Location = new System.Drawing.Point(310, 124);
             this.loadExcelButton.Name = "loadExcelButton";
             this.loadExcelButton.Size = new System.Drawing.Size(119, 28);
             this.loadExcelButton.TabIndex = 4;
             this.loadExcelButton.Text = "Choose";
-            this.loadExcelButton.UseVisualStyleBackColor = true;
+            this.loadExcelButton.UseVisualStyleBackColor = false;
             this.loadExcelButton.Click += new System.EventHandler(this.loadExcelButton_Click);
             // 
             // loadExcelLabel
@@ -203,12 +207,13 @@
             // 
             // importDataTypeButton
             // 
+            this.importDataTypeButton.BackColor = System.Drawing.Color.DarkSlateGray;
             this.importDataTypeButton.Location = new System.Drawing.Point(310, 63);
             this.importDataTypeButton.Name = "importDataTypeButton";
             this.importDataTypeButton.Size = new System.Drawing.Size(119, 28);
             this.importDataTypeButton.TabIndex = 2;
             this.importDataTypeButton.Text = "Load";
-            this.importDataTypeButton.UseVisualStyleBackColor = true;
+            this.importDataTypeButton.UseVisualStyleBackColor = false;
             this.importDataTypeButton.Click += new System.EventHandler(this.importDataTypeButton_Click);
             // 
             // importDataTypeLabel
@@ -236,7 +241,8 @@
             // 
             // tabReports
             // 
-            this.tabReports.BackColor = System.Drawing.Color.Teal;
+            this.tabReports.BackColor = System.Drawing.Color.Transparent;
+            this.tabReports.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
             this.tabReports.Controls.Add(this.generateReportButton);
             this.tabReports.Controls.Add(this.reportFileTypeLabel);
             this.tabReports.Controls.Add(this.reportFileTypeSelect);
@@ -253,12 +259,13 @@
             // 
             // generateReportButton
             // 
+            this.generateReportButton.BackColor = System.Drawing.Color.DarkSlateGray;
             this.generateReportButton.Location = new System.Drawing.Point(281, 167);
             this.generateReportButton.Name = "generateReportButton";
             this.generateReportButton.Size = new System.Drawing.Size(119, 28);
             this.generateReportButton.TabIndex = 6;
             this.generateReportButton.Text = "Export";
-            this.generateReportButton.UseVisualStyleBackColor = true;
+            this.generateReportButton.UseVisualStyleBackColor = false;
             // 
             // reportFileTypeLabel
             // 
@@ -340,6 +347,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(534, 286);
             this.Controls.Add(this.tabRouteSystem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoutesSystemForm";
             this.Text = "Routes System";
             this.tabRouteSystem.ResumeLayout(false);

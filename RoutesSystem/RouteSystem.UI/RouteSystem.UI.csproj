@@ -112,6 +112,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\background.png" />
+    <Content Include="images\icon.ico" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
