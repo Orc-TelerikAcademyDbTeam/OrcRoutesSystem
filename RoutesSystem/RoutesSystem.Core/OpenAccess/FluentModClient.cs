@@ -2,9 +2,9 @@
 {
     using Telerik.OpenAccess;
 
-    public class EntryPoint
+    public static class EntryPoint
     {
-        public static void Start(string[] args)
+        public static void Start()
         {
             UpdateDatabase();
         }

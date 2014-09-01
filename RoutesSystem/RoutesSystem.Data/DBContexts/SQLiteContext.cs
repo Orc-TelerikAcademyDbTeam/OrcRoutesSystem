@@ -7,7 +7,7 @@
     using RoutesSystem.Data.Migrations;
     using RoutesSystem.Model;
     using System.Data.SQLite;
-    using System.Data.SQLite.Linq;
+    //using System.Data.SQLite.Linq;
 
     public class SQLiteContext : DbContext, ISQLiteDbContext
     {

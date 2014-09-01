@@ -4,11 +4,14 @@
     using System.Linq;
 
     using RoutesSystem.Data.DBContexts;
+    using RoutesSystem.Core.OpenAccess;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
+            EntryPoint.Start();
+            
             //var SQLServerData = new RoutesSystemDbContext();
             //SQLServerData.VehicleTypes.Add(new VehicleType { Name = "Sedan" });
             //SQLServerData.SaveChanges();
