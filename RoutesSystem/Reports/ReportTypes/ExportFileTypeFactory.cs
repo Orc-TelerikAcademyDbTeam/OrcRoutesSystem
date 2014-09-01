@@ -2,6 +2,8 @@
 {
     using System;
 
+    using global::Reports.ReportWriters;
+
     public static class ExportFileTypeFactory
     {
         public static IReportFileType CreateFileType(ExportFileType fileType)
@@ -20,7 +22,7 @@
                     reportFileType = new PDFReport();
                     break;
                 case ExportFileType.XML:
-                    reportFileType = new XMLReport("a");
+                    reportFileType = new XmlReportWriter("a");
                     break;
                 default:
                     throw new ArgumentException("Wrong file type");

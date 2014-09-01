@@ -6,12 +6,12 @@
     using System.Xml;
 
 
-    public class XmlReporter<T>
+    public class XmlReportReader<T>
     {
         private string filePath;
         private XmlDocument document;
 
-        public XmlReporter(string filePath)
+        public XmlReportReader(string filePath)
         {
             this.FilePath = filePath;
         }

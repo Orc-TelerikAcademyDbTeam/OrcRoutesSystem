@@ -56,6 +56,7 @@
     <Compile Include="Contracts\IReportData.cs" />
     <Compile Include="Contracts\IReportFileType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportReaders\ExcellReportReader.cs" />
     <Compile Include="ReportModels\CarEntry.cs" />
     <Compile Include="ReportModels\CarTechnicalExpensesReport.cs" />
     <Compile Include="ReportModels\Expense.cs" />
@@ -68,8 +69,8 @@
     <Compile Include="ReportTypes\PDFReport.cs" />
     <Compile Include="ReportTypes\ReportGenerator.cs" />
     <Compile Include="ReportTypes\ReportType.cs" />
-    <Compile Include="ReportTypes\XMLReport.cs" />
-    <Compile Include="ReportTypes\XmlReports.cs" />
+    <Compile Include="ReportWriters\XmlReportWriter.cs" />
+    <Compile Include="ReportReaders\XmlReportReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -1,11 +1,12 @@
-﻿namespace RoutesSystem.Core.Reports
+﻿namespace Reports.ReportWriters
 {
-    using System;
     using System.Xml;
 
-    public class XMLReport : IReportFileType
+    using RoutesSystem.Core.Reports;
+
+    public class XmlReportWriter : IReportFileType
     {
-        public XMLReport(string title)
+        public XmlReportWriter(string title)
         {
             this.Title = title;
         }
@@ -20,7 +21,7 @@
             using (XmlWriter writer = XmlWriter.Create("d:\\Report.xml", settings))
             {
                 writer.WriteStartDocument();
-                writer.WriteComment(Title);
+                writer.WriteComment(this.Title);
                 writer.WriteStartElement("Route1");
                 writer.WriteAttributeString("Name", "RouteName");
 

@@ -14,13 +14,11 @@
     {
         private static void Main(string[] args)
         {
-
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
-
             //EntryPoint.Start();
-            
-            var xmlDoc = new XmlReporter<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
+
+            var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
             var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
             foreach (var entry in technicalReport)
             {
