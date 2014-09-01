@@ -12,7 +12,7 @@
         /// <returns></returns>
         internal IEnumerable<VisitedRouteInfo> GetVisitedRoutes()
         {
-            var dbContext = new RoutesSystemDbContext();
+            var dbContext = new SQLServerContext();
 
             var result = dbContext.Routes
                 .Select(route => new VisitedRouteInfo()
