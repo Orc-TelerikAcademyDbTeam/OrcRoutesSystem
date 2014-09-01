@@ -77,6 +77,9 @@
     <Compile Include="DataReader.cs" />
     <Compile Include="Excel.cs" />
     <Compile Include="IFormatType.cs" />
+    <Compile Include="Models\CarEntry.cs" />
+    <Compile Include="Models\CarTechnicalExpensesReport.cs" />
+    <Compile Include="Models\Expense.cs" />
     <Compile Include="OpenAccess\Customer.cs" />
     <Compile Include="OpenAccess\FluentModClient.cs" />
     <Compile Include="OpenAccess\FluentModel.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Reports\PDFReport.cs" />
     <Compile Include="Reports\ReportType.cs" />
     <Compile Include="Reports\XMLReport.cs" />
+    <Compile Include="Reports\XmlReports.cs" />
     <Compile Include="RoutesSystemEngine.cs" />
   </ItemGroup>
   <ItemGroup>

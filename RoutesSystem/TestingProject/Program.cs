@@ -5,13 +5,22 @@
 
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Core.OpenAccess;
+    using RoutesSystem.Core.Reports;
+    using RoutesSystem.Core.Models;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
             EntryPoint.Start();
-            
+
+            var xmlDoc = new XmlReporter<CarTechnicalExpensesReport>("Report.xml");
+            var technicalReport = xmlDoc.ReadDocument("RoutesSystem.Core.Models");
+            foreach (var entry in technicalReport)
+            {
+                Console.WriteLine(entry.RegistrationIdentifier);
+            }
+
             //var SQLServerData = new RoutesSystemDbContext();
             //SQLServerData.VehicleTypes.Add(new VehicleType { Name = "Sedan" });
             //SQLServerData.SaveChanges();
