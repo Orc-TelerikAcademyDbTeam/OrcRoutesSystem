@@ -32,24 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.93.0\lib\net45\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite.EF6">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.93.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite.Linq">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.93.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,29 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RoutesSystem.Core\RoutesSystem.Core.csproj">
-      <Project>{0c6b75b9-9598-4585-a8d8-3ac1bc9c9531}</Project>
-      <Name>RoutesSystem.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
-      <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
-      <Name>RoutesSystem.Data</Name>
+    <ProjectReference Include="..\Reports\Reports.csproj">
+      <Project>{e1eba381-8efb-4bca-9666-3f7480a9a55d}</Project>
+      <Name>Reports</Name>
     </ProjectReference>
     <ProjectReference Include="..\RoutesSystem.Model\RoutesSystem.Model.csproj">
       <Project>{d3545cf6-2a08-4f1c-b2a4-e0d8c2600613}</Project>
       <Name>RoutesSystem.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="x64\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x86\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <ProjectReference Include="..\SQLServer\SQLServer.csproj">
+      <Project>{0137803a-1fe9-4489-825d-2f8bf82a92ea}</Project>
+      <Name>SQLServer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

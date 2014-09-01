@@ -1,38 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using RoutesSystem.Data;
-using RoutesSystem.Model;
-using ArchiveReports;
+﻿namespace RouteSystem.UI
+{
+    using System;
+    using System.Linq;
+    using System.Windows.Forms;
 using RoutesSystem.PDFReports;
 
-namespace RouteSystemUI
-{
     using RoutesSystem.Data.DBContexts;
+    using RoutesSystem.Model;
 
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new RoutesSystemForm());
 
             var pdfGenerator = new PdfReportEngine();
+            var data = new SQLServerContext();
             pdfGenerator.CreateReport();
-
-            var data = new RoutesSystemDbContext();
-
-            data.Manufacturers.Add(new Manufacturer
-            {
-                Name = "Pesho"
-            });
+            data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
 
             data.SaveChanges();
 
