@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using RoutesSystem.Data;
 using RoutesSystem.Model;
 using ArchiveReports;
+using RoutesSystem.PDFReports;
 
 namespace RouteSystemUI
 {
@@ -23,8 +24,8 @@ namespace RouteSystemUI
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new RoutesSystemForm());
 
-
-           
+            var pdfGenerator = new PdfReportEngine();
+            pdfGenerator.CreateReport();
 
             var data = new RoutesSystemDbContext();
 

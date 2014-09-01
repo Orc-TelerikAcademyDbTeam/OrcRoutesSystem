@@ -110,6 +110,10 @@
       <Project>{d3545cf6-2a08-4f1c-b2a4-e0d8c2600613}</Project>
       <Name>RoutesSystem.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RoutesSystem.PDFReports\RoutesSystem.PDFReports.csproj">
+      <Project>{1cc1ba28-e1bd-4c98-afcc-ef4454d31870}</Project>
+      <Name>RoutesSystem.PDFReports</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\background.png" />

@@ -30,6 +30,8 @@
 
         public IDbSet<Route> Routes { get; set; }
 
+        public IDbSet<VehicleRoute> VehicleRoute { get; set; }
+
         public new IDbSet<T> Set<T>() where T : class
         {
             return base.Set<T>();

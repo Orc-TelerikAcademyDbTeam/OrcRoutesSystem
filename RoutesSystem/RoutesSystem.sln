@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveReports", "ArchiveRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingProject", "TestingProject\TestingProject.csproj", "{9FD85064-B639-44DD-90CF-A1871261A4F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutesSystem.PDFReports", "RoutesSystem.PDFReports\RoutesSystem.PDFReports.csproj", "{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9FD85064-B639-44DD-90CF-A1871261A4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FD85064-B639-44DD-90CF-A1871261A4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FD85064-B639-44DD-90CF-A1871261A4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
