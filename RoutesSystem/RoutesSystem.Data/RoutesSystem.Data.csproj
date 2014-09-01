@@ -61,12 +61,11 @@
     <Compile Include="DBContexts\CommonDBContext.cs" />
     <Compile Include="DBContexts\MySQLContext.cs" />
     <Compile Include="DBContexts\SQLiteContext.cs" />
-    <Compile Include="DBContexts\SQLServer.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DBContexts\SQLServerContext.cs" />
+    <Compile Include="Migrations\SQLServerConfiguration.cs" />
     <Compile Include="Migrations\SQLiteConfiguration.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\IGenericRepository.cs" />
-    <Compile Include="DBContexts\RoutesSystemDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
