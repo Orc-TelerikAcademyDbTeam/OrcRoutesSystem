@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reports", "Reports\Reports.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer", "SQLServer\SQLServer.csproj", "{0137803A-1FE9-4489-825D-2F8BF82A92EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutesSystem.PDFReports", "RoutesSystem.PDFReports\RoutesSystem.PDFReports.csproj", "{1CC1BA28-E1BD-4C98-AFCC-EF4454D31870}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLite", "SQLite\SQLite.csproj", "{36EFEA47-E5BD-49F5-94F6-63107B91F528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +47,10 @@ Global
 		{0137803A-1FE9-4489-825D-2F8BF82A92EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0137803A-1FE9-4489-825D-2F8BF82A92EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0137803A-1FE9-4489-825D-2F8BF82A92EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36EFEA47-E5BD-49F5-94F6-63107B91F528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EFEA47-E5BD-49F5-94F6-63107B91F528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EFEA47-E5BD-49F5-94F6-63107B91F528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EFEA47-E5BD-49F5-94F6-63107B91F528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
