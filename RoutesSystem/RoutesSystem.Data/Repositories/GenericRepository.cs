@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Data.Repositories
+﻿namespace RoutesSystem.Data.Repositories
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Linq.Expressions;
@@ -17,15 +17,15 @@ namespace RoutesSystem.Data.Repositories
         private IRoutesSystemDbContext context;
         private IDbSet<T> set;
 
-        public GenericRepository(IRoutesSystemDbContext context)
+        public GenericRepository(IRoutesSystemDbContext routeSystemContext)
         {
-            this.context = context;
-            this.set = context.Set<T>();
+            this.context = routeSystemContext;
+            this.set = routeSystemContext.Set<T>();
         }
 
         public IQueryable<T> All()
         {
-            return this.set.AsQueryable();
+            return this.context.Set<T>();
         }
 
         public IQueryable<T> SearchFor(Expression<Func<T, bool>> conditions)
@@ -45,16 +45,22 @@ namespace RoutesSystem.Data.Repositories
             entry.State = EntityState.Modified;
         }
 
-        public void Delete(T entity)
+        public T Delete(T entity)
         {
             var entry = AttachIfDetached(entity);
             entry.State = EntityState.Deleted;
+            return entity;
         }
 
         public void Detach(T entity)
         {
             var entry = this.context.Entry(entity);
             entry.State = EntityState.Detached;
+        }
+
+        public void SaveChanges()
+        {
+            this.context.SaveChanges();
         }
 
         private DbEntityEntry AttachIfDetached(T entity)

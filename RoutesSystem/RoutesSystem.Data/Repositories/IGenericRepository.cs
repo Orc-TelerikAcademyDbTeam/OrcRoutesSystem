@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Data.Repositories
+﻿namespace RoutesSystem.Data.Repositories
 {
+    using System;
+    using System.Linq;
     using System.Linq.Expressions;
 
     public interface IGenericRepository<T> where T : class
@@ -18,8 +14,10 @@ namespace RoutesSystem.Data.Repositories
 
         void Update(T entity);
 
-        void Delete(T entity);
+        T Delete(T entity);
 
         void Detach(T entity);
+
+        void SaveChanges();
     }
 }

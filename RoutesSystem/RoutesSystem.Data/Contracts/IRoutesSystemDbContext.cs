@@ -1,10 +1,11 @@
 ﻿namespace RoutesSystem.Data.Contracts
 {
     using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
 
     using RoutesSystem.Model;
 
-    public interface IRoutesSystemDbContext:IDatabaseContext
+    public interface IRoutesSystemDbContext : IDatabaseContext
     {
         IDbSet<FuelType> FuelTypes { get; set; }
 
@@ -22,6 +23,8 @@
 
         IDbSet<Route> Routes { get; set; }
 
+        DbSet<TEntity> Set<TEntity>() where TEntity : class;
 
+        DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
     }
 }

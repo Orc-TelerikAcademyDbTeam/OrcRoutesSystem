@@ -1,8 +1,8 @@
 ﻿namespace RoutesSystem.Data.DBContexts
 {
+    using System;
     using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration.Conventions;
-
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.Migrations;
     using RoutesSystem.Model;
@@ -27,6 +27,26 @@
         }
 
         public IDbSet<DriverInfo> DriversInfo { get; set; }
+
+        public IDbSet<FuelType> FuelTypes { get; set; }
+
+        public IDbSet<Model> Models { get; set; }
+
+        public IDbSet<Manufacturer> Manufacturers { get; set; }
+
+        public IDbSet<VehicleType> VehicleTypes { get; set; }
+
+        public IDbSet<Vehicle> Vehicles { get; set; }
+
+        public IDbSet<Driver> Drivers { get; set; }
+
+        public IDbSet<Town> Towns { get; set; }
+
+        public IDbSet<Route> Routes { get; set; }
+
+        public IDbSet<VehicleRoute> VehicleRoute { get; set; }
+
+        public IDbSet<FuelInfo> FuelInfo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

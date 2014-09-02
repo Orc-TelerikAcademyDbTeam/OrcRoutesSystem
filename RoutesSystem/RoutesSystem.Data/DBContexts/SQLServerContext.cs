@@ -1,7 +1,7 @@
 ﻿namespace RoutesSystem.Data.DBContexts
 {
+    using System;
     using System.Data.Entity;
-
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.Migrations;
     using RoutesSystem.Model;
@@ -32,14 +32,14 @@
 
         public IDbSet<VehicleRoute> VehicleRoute { get; set; }
 
-        public IDbSet<FuelInfo> FuelInfo { get; set; } 
+        public IDbSet<FuelInfo> FuelInfo { get; set; }
 
-        public new IDbSet<T> Set<T>() where T : class
+        public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
-            return base.Set<T>();
+            return base.Set<TEntity>();
         }
 
-        public new void SaveChanges()
+        public void SaveChanges()
         {
             base.SaveChanges();
         }
@@ -55,7 +55,7 @@
                 .HasRequired(t => t.EndTown)
                 .WithMany(t => t.EndRoutes)
                 .WillCascadeOnDelete(false);
-            
+
             base.OnModelCreating(modelBuilder);
         }
     }
