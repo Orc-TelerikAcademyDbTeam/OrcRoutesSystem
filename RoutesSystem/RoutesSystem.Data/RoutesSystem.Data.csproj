@@ -75,6 +75,7 @@
     <Compile Include="Migrations\SQLiteConfiguration.cs" />
     <Compile Include="MongoData.cs" />
     <Compile Include="Repositories\GenericNoSQLRepository.cs" />
+    <Compile Include="Repositories\GenericSQLiteRepository.cs" />
     <Compile Include="Repositories\GenericSQLRepository.cs" />
     <Compile Include="Repositories\IGenericNoSQLRepository.cs" />
     <Compile Include="Repositories\IGenericRepository.cs" />

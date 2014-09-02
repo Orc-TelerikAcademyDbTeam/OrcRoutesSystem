@@ -21,6 +21,8 @@
     {
         private static void Main(string[] args)
         {
+            var result = SQLiteWorker.GetDriverRouteData();
+
             //Repository pattern
             var data = new RouteSystemData();
 
@@ -68,7 +70,7 @@
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
             //c.SaveChanges();
 
-            //var result = SQLiteWorker.GetData();
+           
 
             //SQLServerWorker.ImportExcellData();
             //var XmlGen = new XmlReportWriter();
