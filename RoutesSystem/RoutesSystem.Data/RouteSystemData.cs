@@ -36,6 +36,30 @@
             }
         }
 
+        public IGenericRepository<Manufacturer> Manufacturers
+        {
+            get
+            {
+                return this.GetRepository<Manufacturer>();
+            }
+        }
+
+        public IGenericRepository<Town> Towns
+        {
+            get
+            {
+                return this.GetRepository<Town>();
+            }
+        }
+
+        public IGenericRepository<VehicleType> VehicleTypes
+        {
+            get
+            {
+                return this.GetRepository<VehicleType>();
+            }
+        }
+
         public IGenericRepository<FuelInfo> FuelInfo
         {
             get

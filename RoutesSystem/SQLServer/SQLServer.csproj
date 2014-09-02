@@ -50,6 +50,10 @@
     <Compile Include="SQLServerWorker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mongo\Mongo.csproj">
+      <Project>{e75b117c-1ca5-4dca-8e63-51d228ceb550}</Project>
+      <Name>Mongo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Reports\Reports.csproj">
       <Project>{e1eba381-8efb-4bca-9666-3f7480a9a55d}</Project>
       <Name>Reports</Name>

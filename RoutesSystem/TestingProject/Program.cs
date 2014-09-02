@@ -28,9 +28,10 @@
             //jsonGen.CreateReport();
 
 
-            //MongoWorker.Test();
+            
+            //SQLServerWorker.ImportMongoDBData();
+            //SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
 
-            //SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
             //foreach (var driver in data.Drivers.All())

@@ -29,27 +29,27 @@ namespace RoutesSystem.Data
             this.repositories = new Dictionary<Type, object>();
         }
 
-        public IGenericNoSQLRepository<MongoDriver> Drivers
+        public IGenericNoSQLRepository<MongoManufacturer> Manufacturers
         {
             get
             {
-                return this.GetRepository<MongoDriver>();
+                return this.GetRepository<MongoManufacturer>();
             }
         }
 
-        public IGenericNoSQLRepository<MongoFuelInfo> FuelInfo
+        public IGenericNoSQLRepository<MongoTown> Towns
         {
             get
             {
-                return this.GetRepository<MongoFuelInfo>();
+                return this.GetRepository<MongoTown>();
             }
         }
 
-        public IGenericNoSQLRepository<MongoVehicle> Vehicles
+        public IGenericNoSQLRepository<MongoVehicleType> VehicleTypes
         {
             get
             {
-                return this.GetRepository<MongoVehicle>();
+                return this.GetRepository<MongoVehicleType>();
             }
         } 
 

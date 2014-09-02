@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     using MongoDB.Bson;
     using MongoDB.Driver;
@@ -15,67 +16,67 @@
     {
         private static MongoData data=new MongoData();
 
-        public static void AddDriver(MongoDriver driver)
+        private static void Populate()
         {
+            if (!data.Manufacturers.All().Any())
+            {
+                data.Manufacturers.Insert(new MongoManufacturer()
+                                              {
+                                                  Name = "Toyota"
+                                              });
+                data.Manufacturers.Insert(new MongoManufacturer()
+                {
+                    Name = "BMW"
+                });
+
+                data.Manufacturers.Insert(new MongoManufacturer()
+                {
+                    Name = "Audi"
+                });
+            }
+
+            if (!data.Towns.All().Any())
+            {
+                data.Towns.Insert(new MongoTown()
+                                      {
+                                          Name = "Vraca"
+                                      });
+                data.Towns.Insert(new MongoTown()
+                {
+                    Name = "Maluk Porovec"
+                });
+
+                data.Towns.Insert(new MongoTown()
+                {
+                    Name = "Burgas"
+                });
+            }
+
+            if (!data.VehicleTypes.All().Any())
+            {
+                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Sedan" });
+                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Coupe" });
+                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Limousine" });
+            }
             
         }
 
-        public static void Test()
+        public static IQueryable<MongoTown> GetAllTowns()
         {
-            data.Drivers.Insert(new MongoDriver() { FirstName = "Penio", LastName = "Peniov", MiddleName = "Penkov" });
-
-            data.Vehicles.Insert(
-                new MongoVehicle()
-                    {
-                        Driver =
-                            new MongoDriver()
-                                {
-                                    FirstName = "Gancho",
-                                    LastName = "Ganchev",
-                                    MiddleName = "Penchev"
-                                },
-                        FuelType = new MongoFuelType() { Name = "Diesel" },
-                        Manufacturer = new MongoManufacturer() { Name = "Toyota" },
-                        Model =
-                            new MongoModel()
-                                {
-                                    FuelConsumption = 2.7f,
-                                    Name = "Avensis",
-                                    NumberOfWheels = 4
-                                },
-                        VehicleRoutes =
-                            new List<MongoRoute>()
-                                {
-                                    new MongoRoute()
-                                        {
-                                            Distance = 3.7f,
-                                            EndTown =
-                                                new MongoTown()
-                                                    {
-                                                        Name =
-                                                            "Vraca"
-                                                    },
-                                            StartTown =
-                                                new MongoTown()
-                                                    {
-                                                        Name =
-                                                            "Sofia"
-                                                    },
-                                        },
-                                },
-                        YearOfManifacturer = new DateTime(1993, 2, 2),
-                        VehicleType = new MongoVehicleType() { Name = "Sedan" }
-                    });
-
-            data.FuelInfo.Insert(
-                new MongoFuelInfo()
-                    {
-                        VehicleId = data.Vehicles.FindOne().Id,
-                        FuelId = data.Vehicles.FindOne().FuelType.Id,
-                        Price = 14.5m,
-                        Spent = 10.3m,
-                        Total = 30m
-                    });
+            Populate();
+            return data.Towns.All();
         }
+
+        public static IQueryable<MongoManufacturer> GetAllManufacturers()
+        {
+            Populate();
+            return data.Manufacturers.All();
+        }
+
+        public static IQueryable<MongoVehicleType> GetAllVehicleTypes()
+        {
+            Populate();
+            return data.VehicleTypes.All();
+        } 
     }
 }
