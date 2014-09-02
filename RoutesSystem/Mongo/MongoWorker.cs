@@ -12,9 +12,9 @@ namespace Mongo
 
     public class MongWorker
     {
-        private MongoClient client = new MongoClient("path");
+        private MongoClient client = new MongoClient("mongodb://localhost");
 
-        void Test()
+        public void Test()
         {
             var server = client.GetServer();
         }
