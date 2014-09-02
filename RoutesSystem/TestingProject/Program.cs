@@ -15,6 +15,8 @@
     using SQLServer;
     using MySQL;
     using Mongo;
+    using MySQL;
+    using Mongo;
     using RoutesSystem.Data;
 
     internal class Program
@@ -24,6 +26,13 @@
             //Repository pattern
             var data = new RouteSystemData();
 
+
+            var mongo = new MongoWorker();
+            mongo.Test();
+
+            //SQLServerWorker.ImportExcellData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
             foreach (var driver in data.Drivers.All())
             {
                 Console.WriteLine(driver.FirstName);
@@ -37,6 +46,9 @@
             //}
 
 
+            //SQLServerWorker.ImportExcellData();
+            //var XmlGen = new XmlReportWriter();
+            //XmlGen.CreateReport();
 
             //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
@@ -61,6 +73,11 @@
             //var XmlGen = new XmlReportWriter();
             //XmlGen.CreateReport();
 
+            //EntryPoint.Start();
+
+            //var c = new SQLiteContext();
+            //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
+            //c.SaveChanges();
             //EntryPoint.Start();
 
             //var c = new SQLiteContext();
