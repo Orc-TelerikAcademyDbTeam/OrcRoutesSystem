@@ -21,15 +21,17 @@ namespace MySQL
     {
        List<MappingConfiguration> configurations = new List<MappingConfiguration>();
     
-       var customerMapping = new MappingConfiguration<Report>();
-       customerMapping.MapType(customer => new
+       var customerMapping = new MappingConfiguration<VehicleInformation>();
+       customerMapping.MapType(k => new
        {
-           ID = customer.ID,
-           DriverName = customer.DriverName,
-           Route = customer.Route,
-           DateCreated = customer.DateCreated
-       }).ToTable("Report");
-       customerMapping.HasProperty(c => c.ID).IsIdentity();
+           VehicleID = k.VehicleID,
+           VehicleType = k.VehicleType,
+           Manufactorer = k.Manufactorer,
+           VehicleModel = k.VehicleModel,
+           FuelType = k.FuelType,
+           Driver = k.Driver
+       }).ToTable("VehicleInformation");
+       customerMapping.HasProperty(c => c.VehicleID).IsIdentity();
     
        configurations.Add(customerMapping);
     

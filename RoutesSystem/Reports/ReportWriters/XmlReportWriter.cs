@@ -28,10 +28,14 @@
                 
                 foreach (var item in inputData)
                 {
-                    writer.WriteStartElement("Route");
-                        writer.WriteAttributeString("Start",item.StartTownName);
-                        writer.WriteAttributeString("End",item.EndTownName);
-                    writer.WriteEndElement();
+                    foreach (var detail in item.VehicleRouteInfo)
+                    {
+                        writer.WriteStartElement("Route");
+                        writer.WriteAttributeString("Start", item.StartTownName);
+                        writer.WriteAttributeString("End", item.EndTownName);
+                        writer.WriteAttributeString("Date", detail.RouteDate.Date.Day.ToString());
+                        writer.WriteEndElement();
+                    }
                 }
 
                 writer.WriteEndElement();

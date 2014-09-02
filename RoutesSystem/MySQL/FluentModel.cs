@@ -58,11 +58,11 @@ namespace MySQL
 		static partial void CustomizeBackendConfiguration(ref BackendConfiguration config);
 	
 	    
-        public IQueryable<Report> Reports
+        public IQueryable<VehicleInformation> Reports
         {
            get
            {
-               return this.GetAll<Report>();
+               return this.GetAll<VehicleInformation>();
            }
         }
 	}

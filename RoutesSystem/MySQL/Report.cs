@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace MySQL
 {
-     public class Report
+     public class VehicleInformation
     {
-       public int ID { get; set; }
-       public string DriverName { get; set; }
-       public DateTime DateCreated { get; set; }
-       public string Route { get; set; }
+       public int VehicleID { get; set; }
+       public string VehicleType { get; set; }
+       public string Manufactorer { get; set; }
+       public string VehicleModel { get; set; }
+       public string FuelType { get; set; }
+       public string Driver { get; set; }
     }
 }

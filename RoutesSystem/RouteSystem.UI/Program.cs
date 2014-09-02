@@ -7,6 +7,7 @@
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
     using Reports.ReportWriters;
+    using RoutesSystem.Model.SQLServerModels;
 
     internal static class Program
     {
@@ -22,12 +23,17 @@
 
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
+            
             //MessageBox.Show("DONE!");
 
             //var data = new SQLServerContext();
+            //pdfGenerator.CreateReport();
             //data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
 
             //data.SaveChanges();
+
+            //var jsonGen = new JSONReportWriter();
+            //jsonGen.CreateReport();
 
             //var manufacturers = data.Manufacturers.FirstOrDefault();
 

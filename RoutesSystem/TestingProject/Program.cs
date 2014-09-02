@@ -15,8 +15,6 @@
     using SQLServer;
     using MySQL;
     using Mongo;
-    using MySQL;
-    using Mongo;
     using RoutesSystem.Data;
 
     internal class Program
@@ -26,8 +24,11 @@
             //Repository pattern
             var data = new RouteSystemData();
 
+            //var jsonGen = new JSONReportWriter();
+            //jsonGen.CreateReport();
 
-            MongoWorker.Test();
+
+            //MongoWorker.Test();
 
             //SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
@@ -73,6 +74,7 @@
             //XmlGen.CreateReport();
 
             //EntryPoint.Start();
+            //EntryPoint.InsertRow(10, "Car", "Opel", "Fiesta", "Gas", "Pesho");
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
