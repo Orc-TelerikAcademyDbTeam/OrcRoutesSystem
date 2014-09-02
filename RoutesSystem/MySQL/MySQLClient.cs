@@ -2,9 +2,9 @@
     
     namespace MySQL
     {
-       class Program
+       public class EntryPoint
        {
-           static void Main(string[] args)
+           public static void Start()
            {
                UpdateDatabase();
            }

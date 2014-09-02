@@ -11,6 +11,7 @@
     using SQLite;
 
     using SQLServer;
+    using MySQL;
 
     internal class Program
     {
@@ -28,21 +29,17 @@
 
             //var result = SQLiteWorker.GetData();
 
+            SQLServerWorker.ImportExcellData();
+            var XmlGen = new XmlReportWriter();
+            XmlGen.CreateReport();
 
+            EntryPoint.Start();
 
+            //var c = new SQLiteContext();
+            //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
+            //c.SaveChanges();
 
-
-
-
-
-
-
-
-
-
-
-
-            //EntryPoint.Start();
+            //var result = SQLiteWorker.GetData();
 
             //var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
             //var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
