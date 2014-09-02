@@ -12,16 +12,20 @@
 
     using SQLServer;
     using MySQL;
-
+    using Mongo;
     internal class Program
     {
         private static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
+
+            var mongo = new MongoWorker();
+            mongo.Test();
+
             //SQLServerWorker.ImportExcellData();
-            var pdfGen = new PdfReportWriter();
-            pdfGen.CreateReport();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
@@ -30,10 +34,10 @@
             //var result = SQLiteWorker.GetData();
 
             //SQLServerWorker.ImportExcellData();
-            var XmlGen = new XmlReportWriter();
-            XmlGen.CreateReport();
+            //var XmlGen = new XmlReportWriter();
+            //XmlGen.CreateReport();
 
-            EntryPoint.Start();
+            //EntryPoint.Start();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
