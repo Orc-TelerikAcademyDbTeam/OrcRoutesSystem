@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB
 {
-    public class Class1
+    public class MongoWorker
     {
     }
 }
