@@ -8,6 +8,7 @@
     using RoutesSystem.Model;
     using Reports.ReportWriters;
     using RoutesSystem.Model.SQLServerModels;
+    using RouteSystemUI;
 
     internal static class Program
     {
@@ -17,9 +18,9 @@
         [STAThread]
         private static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new RoutesSystemForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new RoutesSystemForm());
 
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();

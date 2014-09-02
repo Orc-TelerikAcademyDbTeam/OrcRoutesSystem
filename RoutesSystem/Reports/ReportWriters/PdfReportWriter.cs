@@ -4,12 +4,12 @@
 
     public class PdfReportWriter
     {
-        public void CreateReport()
+        public void CreateReport(string filePath = null, string fileName = null)
         {
             var report = new PdfReport();
             var reportData = report.GetVisitedRoutes();
 
-            var pdfGenerator = new PdfGenerator();
+            var pdfGenerator = new PdfGenerator(filePath, fileName);
             pdfGenerator.Generate(reportData);
         }
     }

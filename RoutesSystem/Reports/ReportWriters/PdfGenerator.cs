@@ -24,7 +24,7 @@
         private string fileName;
         private string path;
 
-        internal PdfGenerator(string fileName = null, string path = null)
+        internal PdfGenerator(string path = null, string fileName = null)
         {
             if (fileName == null)
             {

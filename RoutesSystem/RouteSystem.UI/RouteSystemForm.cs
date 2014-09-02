@@ -1,5 +1,6 @@
 ﻿namespace RouteSystemUI
 {
+    using RouteSystem.UI;
     using System;
     using System.Windows.Forms;
 
@@ -119,6 +120,16 @@
                     MessageBox.Show("Choose SQLite connection string first!");
                 }
             }
+        }
+
+        private void generateReportButton_Click(object sender, EventArgs e)
+        {
+            this.SaveReportDialog.ShowDialog();
+            var filePathInfo = this.SaveReportDialog.FileName;
+            this.textBoxSelectedFolder.Text = filePathInfo;
+            
+            UIEngine.CreatePDFReport(filePathInfo);
+            MessageBox.Show("Report created!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

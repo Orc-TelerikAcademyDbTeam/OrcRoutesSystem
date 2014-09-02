@@ -47,6 +47,7 @@
             this.importDataTypeLabel = new System.Windows.Forms.Label();
             this.importDataTypeSelect = new System.Windows.Forms.ComboBox();
             this.tabReports = new System.Windows.Forms.TabPage();
+            this.textBoxSelectedFolder = new System.Windows.Forms.TextBox();
             this.generateReportButton = new System.Windows.Forms.Button();
             this.reportFileTypeLabel = new System.Windows.Forms.Label();
             this.reportFileTypeSelect = new System.Windows.Forms.ComboBox();
@@ -56,6 +57,8 @@
             this.driversReportRadioButton = new System.Windows.Forms.RadioButton();
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadXMLOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
+            this.reportProgress = new System.Windows.Forms.ProgressBar();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -243,6 +246,8 @@
             // 
             this.tabReports.BackColor = System.Drawing.Color.Transparent;
             this.tabReports.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
+            this.tabReports.Controls.Add(this.reportProgress);
+            this.tabReports.Controls.Add(this.textBoxSelectedFolder);
             this.tabReports.Controls.Add(this.generateReportButton);
             this.tabReports.Controls.Add(this.reportFileTypeLabel);
             this.tabReports.Controls.Add(this.reportFileTypeSelect);
@@ -257,15 +262,23 @@
             this.tabReports.TabIndex = 1;
             this.tabReports.Text = "Generate Reports";
             // 
+            // textBoxSelectedFolder
+            // 
+            this.textBoxSelectedFolder.Location = new System.Drawing.Point(21, 184);
+            this.textBoxSelectedFolder.Name = "textBoxSelectedFolder";
+            this.textBoxSelectedFolder.Size = new System.Drawing.Size(240, 26);
+            this.textBoxSelectedFolder.TabIndex = 7;
+            // 
             // generateReportButton
             // 
             this.generateReportButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.generateReportButton.Location = new System.Drawing.Point(281, 167);
+            this.generateReportButton.Location = new System.Drawing.Point(267, 184);
             this.generateReportButton.Name = "generateReportButton";
             this.generateReportButton.Size = new System.Drawing.Size(119, 28);
             this.generateReportButton.TabIndex = 6;
             this.generateReportButton.Text = "Export";
             this.generateReportButton.UseVisualStyleBackColor = false;
+            this.generateReportButton.Click += new System.EventHandler(this.generateReportButton_Click);
             // 
             // reportFileTypeLabel
             // 
@@ -283,7 +296,7 @@
             "PDF Report",
             "XML Report",
             "JSON Report"});
-            this.reportFileTypeSelect.Location = new System.Drawing.Point(21, 167);
+            this.reportFileTypeSelect.Location = new System.Drawing.Point(260, 132);
             this.reportFileTypeSelect.Name = "reportFileTypeSelect";
             this.reportFileTypeSelect.Size = new System.Drawing.Size(240, 28);
             this.reportFileTypeSelect.TabIndex = 4;
@@ -326,10 +339,10 @@
             this.driversReportRadioButton.AutoSize = true;
             this.driversReportRadioButton.Location = new System.Drawing.Point(21, 35);
             this.driversReportRadioButton.Name = "driversReportRadioButton";
-            this.driversReportRadioButton.Size = new System.Drawing.Size(143, 24);
+            this.driversReportRadioButton.Size = new System.Drawing.Size(225, 24);
             this.driversReportRadioButton.TabIndex = 0;
             this.driversReportRadioButton.TabStop = true;
-            this.driversReportRadioButton.Text = "Drivers Report";
+            this.driversReportRadioButton.Text = "Aggregate Route Report";
             this.driversReportRadioButton.UseVisualStyleBackColor = true;
             // 
             // loadExcelOpenFileDialog
@@ -339,6 +352,13 @@
             // loadXMLOpenFileDialog
             // 
             this.loadXMLOpenFileDialog.FileName = "Load XML File";
+            // 
+            // reportProgress
+            // 
+            this.reportProgress.Location = new System.Drawing.Point(19, 216);
+            this.reportProgress.Name = "reportProgress";
+            this.reportProgress.Size = new System.Drawing.Size(242, 23);
+            this.reportProgress.TabIndex = 8;
             // 
             // RoutesSystemForm
             // 
@@ -388,6 +408,9 @@
         private System.Windows.Forms.RadioButton expenseReportRadioButton;
         private System.Windows.Forms.TextBox loadExcelTextBox;
         private System.Windows.Forms.TextBox loadXMLTextbox;
+        private System.Windows.Forms.SaveFileDialog SaveReportDialog;
+        private System.Windows.Forms.TextBox textBoxSelectedFolder;
+        private System.Windows.Forms.ProgressBar reportProgress;
     }
 }
 
