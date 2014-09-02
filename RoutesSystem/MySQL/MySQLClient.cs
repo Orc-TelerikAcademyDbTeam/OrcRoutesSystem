@@ -7,6 +7,7 @@
            public static void Start()
            {
                UpdateDatabase();
+               
            }
     
            private static void UpdateDatabase()

@@ -73,7 +73,7 @@
             //var XmlGen = new XmlReportWriter();
             //XmlGen.CreateReport();
 
-            //EntryPoint.Start();
+            EntryPoint.Start();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
