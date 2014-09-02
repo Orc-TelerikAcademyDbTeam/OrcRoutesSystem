@@ -26,7 +26,7 @@
 
             if (path == null)
             {
-                this.path = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
+                this.path = "..\\..\\..\\Json-Reports\\";
             }
             else
             {
@@ -38,9 +38,14 @@
         {
             try
             {
-                string jsonResult = JsonConvert.SerializeObject(vehicleCollection, Formatting.Indented);
+                string jsonResult;
 
-                System.IO.File.WriteAllText(this.path + this.fileName + ".josn", jsonResult);
+                foreach (var vehicle in vehicleCollection)
+                {
+                    jsonResult = JsonConvert.SerializeObject(vehicle, Formatting.Indented);
+
+                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + ".json", jsonResult);
+                }
             }
             catch (Exception ex)
             {

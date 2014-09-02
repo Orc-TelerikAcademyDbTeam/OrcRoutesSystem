@@ -24,8 +24,8 @@
             //Repository pattern
             var data = new RouteSystemData();
 
-            //var josnGen = new JSONReportWriter();
-            //josnGen.CreateReport();
+            var jsonGen = new JSONReportWriter();
+            jsonGen.CreateReport();
 
 
             //MongoWorker.Test();

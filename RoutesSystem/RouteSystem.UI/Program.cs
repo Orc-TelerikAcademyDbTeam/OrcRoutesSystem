@@ -28,8 +28,8 @@
 
             //data.SaveChanges();
 
-            //var josnGen = new JSONReportWriter();
-            //josnGen.CreateReport();
+            //var jsonGen = new JSONReportWriter();
+            //jsonGen.CreateReport();
 
             //var manufacturers = data.Manufacturers.FirstOrDefault();
 
