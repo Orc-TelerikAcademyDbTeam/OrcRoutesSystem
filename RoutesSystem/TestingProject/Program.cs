@@ -29,7 +29,7 @@
 
             //var result = SQLiteWorker.GetData();
 
-            SQLServerWorker.ImportExcellData();
+            //SQLServerWorker.ImportExcellData();
             var XmlGen = new XmlReportWriter();
             XmlGen.CreateReport();
 
