@@ -18,20 +18,21 @@
                 writer.WriteStartDocument();
                 writer.WriteComment("Report drivers visited routes");
                 writer.WriteStartElement("Routes");
-                writer.WriteAttributeString("Starttown", "Endtown");
-
+                    //writer.WriteStartElement("Route");
+                    //    writer.WriteAttributeString("Start","zzz");
+                    //    writer.WriteAttributeString("End","xxx");
+                    //writer.WriteEndElement();
+                
                 var report = new XmlReport();
                 var inputData = report.GetVisitedRoutes();
+                
                 foreach (var item in inputData)
                 {
-                    System.Console.WriteLine(item.StartTownName, item.EndTownName);
+                    writer.WriteStartElement("Route");
+                        writer.WriteAttributeString("Start",item.StartTownName);
+                        writer.WriteAttributeString("End",item.EndTownName);
+                    writer.WriteEndElement();
                 }
-
-                //writer.WriteStartElement("x", "root", "123");
-                //writer.WriteStartElement("item");
-                //writer.WriteAttributeString("xmlns", "x", null, "abc");
-                //writer.WriteEndElement();
-                //writer.WriteEndElement();
 
                 writer.WriteEndElement();
                 writer.WriteEndDocument();

@@ -27,16 +27,16 @@
             var data = new RouteSystemData();
 
 
-            var mongo = new MongoWorker();
-            mongo.Test();
+            //var mongo = new MongoWorker();
+            //mongo.Test();
 
             //SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
-            foreach (var driver in data.Drivers.All())
-            {
-                Console.WriteLine(driver.FirstName);
-            }
+            //foreach (var driver in data.Drivers.All())
+            //{
+            //    Console.WriteLine(driver.FirstName);
+            //}
 
             //var db = new SQLServerContext();
             //var driversDB = new GenericRepository<Driver>(db);
@@ -53,8 +53,8 @@
             //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
 
-            var mongo = new MongoWorker();
-            mongo.Test();
+            //var mongo = new MongoWorker();
+            //mongo.Test();
 
             //SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
@@ -69,9 +69,9 @@
 
             //var result = SQLiteWorker.GetData();
 
-            //SQLServerWorker.ImportExcellData();
-            //var XmlGen = new XmlReportWriter();
-            //XmlGen.CreateReport();
+            SQLServerWorker.ImportExcellData();
+            var XmlGen = new XmlReportWriter();
+            XmlGen.CreateReport();
 
             //EntryPoint.Start();
 
