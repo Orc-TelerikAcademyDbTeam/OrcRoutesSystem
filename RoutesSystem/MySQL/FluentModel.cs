@@ -58,7 +58,7 @@ namespace MySQL
 		static partial void CustomizeBackendConfiguration(ref BackendConfiguration config);
 	
 	    
-        public IQueryable<Report> Customers
+        public IQueryable<Report> Reports
         {
            get
            {

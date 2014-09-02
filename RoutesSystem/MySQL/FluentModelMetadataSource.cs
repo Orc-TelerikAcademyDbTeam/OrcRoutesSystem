@@ -25,10 +25,10 @@ namespace MySQL
        customerMapping.MapType(customer => new
        {
            ID = customer.ID,
-           Name = customer.DriverName,
-           EmailAddress = customer.Route,
+           DriverName = customer.DriverName,
+           Route = customer.Route,
            DateCreated = customer.DateCreated
-       }).ToTable("Customer");
+       }).ToTable("Report");
        customerMapping.HasProperty(c => c.ID).IsIdentity();
     
        configurations.Add(customerMapping);
