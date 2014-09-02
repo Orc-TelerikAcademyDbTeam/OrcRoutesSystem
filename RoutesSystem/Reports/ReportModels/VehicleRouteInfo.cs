@@ -2,10 +2,12 @@
 {
     using System;
 
-    public class VehicleRouteInfo
+    internal class VehicleRouteInfo
     {
-        public DateTime RouteDate { get; set; }
+        internal DateTime RouteDate { get; set; }
 
-        public string DriverName { get; set; }
+        internal string DriverName { get; set; }
+
+        internal string VehicleFullName { get; set; }
     }
 }

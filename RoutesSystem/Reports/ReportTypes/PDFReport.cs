@@ -7,7 +7,7 @@
 
     using RoutesSystem.Data.DBContexts;
 
-    public class PdfReport
+    internal class PdfReport
     {
         /// <summary>
         /// Get collection of the all visited routes with info about the drivers
@@ -19,24 +19,20 @@
 
             var result =
                 dbContext.Routes.Select(
-                    route =>
-                    new VisitedRouteInfo()
+                    route => new VisitedRouteInfo()
                         {
                             StartTownName = route.StartTown.Name,
                             EndTownName = route.EndTown.Name,
-                            VehicleRouteInfo =
-                                route.VehicleRoutes.AsQueryable()
-                                     .Select(
-                                         vehicleRoute =>
-                                         new VehicleRouteInfo()
-                                             {
-                                                 RouteDate = vehicleRoute.Date,
-                                                 DriverName =
-                                                     vehicleRoute.Vehicle.Driver
-                                                                 .FirstName + " "
-                                                     + vehicleRoute.Vehicle.Driver
-                                                                   .LastName,
-                                             })
+                            Distance = route.Distance,
+                            VehicleRouteInfo = route.VehicleRoutes.AsQueryable()
+                                .Select(vehicleRoute => new VehicleRouteInfo()
+                                    {
+                                        VehicleFullName = vehicleRoute.Vehicle.Manufacturer.Name + " " +
+                                            vehicleRoute.Vehicle.Model.Name,
+                                        RouteDate = vehicleRoute.Date,
+                                        DriverName = vehicleRoute.Vehicle.Driver.FirstName + " " +
+                                            vehicleRoute.Vehicle.Driver.LastName
+                                    })
                         }).ToArray();
 
             return result;

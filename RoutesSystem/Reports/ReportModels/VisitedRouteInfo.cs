@@ -4,9 +4,11 @@
 
     internal class VisitedRouteInfo
     {
-        public string StartTownName { get; set; }
+        internal string StartTownName { get; set; }
 
-        public string EndTownName { get; set; }
+        internal string EndTownName { get; set; }
+
+        internal double Distance { get; set; }
 
         internal IEnumerable<VehicleRouteInfo> VehicleRouteInfo { get; set; }
     }

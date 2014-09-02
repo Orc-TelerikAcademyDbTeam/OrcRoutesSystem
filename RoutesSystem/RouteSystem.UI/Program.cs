@@ -6,6 +6,7 @@
 
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
+    using Reports.ReportWriters;
 
     internal static class Program
     {
@@ -19,9 +20,11 @@
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new RoutesSystemForm());
 
-            //var pdfGenerator = new PdfReportEngine();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+            //MessageBox.Show("DONE!");
+
             //var data = new SQLServerContext();
-            //pdfGenerator.CreateReport();
             //data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
 
             //data.SaveChanges();
