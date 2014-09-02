@@ -44,7 +44,7 @@
                 {
                     jsonResult = JsonConvert.SerializeObject(vehicle, Formatting.Indented);
 
-                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + ".josn", jsonResult);
+                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + ".json", jsonResult);
                 }
             }
             catch (Exception ex)
