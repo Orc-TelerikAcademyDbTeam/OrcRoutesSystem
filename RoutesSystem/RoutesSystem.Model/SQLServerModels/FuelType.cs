@@ -1,12 +1,11 @@
-﻿namespace RoutesSystem.Model
+﻿namespace RoutesSystem.Model.SQLServerModels
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class Model
+    public class FuelType
     {
-        public Model()
+        public FuelType()
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
@@ -18,11 +17,7 @@
         [MaxLength(20)]
         public string Name { get; set; }
 
-        [Required]
-        public float FuelConsumption { get; set; }
-
-        public int NumberOfWheels { get; set; }
-
         public virtual ICollection<Vehicle> Vehicles { get; set; }
+
     }
 }

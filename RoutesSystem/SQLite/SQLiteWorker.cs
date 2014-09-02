@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SQLite
+﻿namespace SQLite
 {
-    using RoutesSystem.Data.DBContexts;
-    using RoutesSystem.Model;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using RoutesSystem.Data;
+    using RoutesSystem.Model.SQLiteModels;
 
     public static class SQLiteWorker
     {
-        private static SQLiteContext context = new SQLiteContext();
+        private static SQLiteData data = new SQLiteData();
 
-        public static List<DriverInfo> GetData()
+        public static List<DriverInfo> GetDriverRouteData()
         {
             List<DriverInfo> result;
-            using (context)
-            {
-                result = context.DriversInfo.ToList();
-            }
+
+            result = data.DriversInfo.All().ToList();
 
             return result;
         }

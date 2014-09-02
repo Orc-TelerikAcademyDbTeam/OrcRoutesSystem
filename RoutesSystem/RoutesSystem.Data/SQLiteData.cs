@@ -1,46 +1,40 @@
-﻿namespace RoutesSystem.Data
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RoutesSystem.Data
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.IO;
 
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Data.Repositories;
-    using RoutesSystem.Model;
+    using RoutesSystem.Model.SQLiteModels;
     using RoutesSystem.Model.SQLServerModels;
 
-    public class RouteSystemData
+    public class SQLiteData
     {
-        private IRoutesSystemDbContext context;
+        private ISQLiteDbContext context;
         private IDictionary<Type, object> repositories;
 
-        public RouteSystemData()
-            : this(new SQLServerContext())
+        public SQLiteData()
+            : this(new SQLiteContext())
         {
         }
 
-        public RouteSystemData(IRoutesSystemDbContext context)
+        public SQLiteData(ISQLiteDbContext context)
         {
             this.context = context;
             this.repositories = new Dictionary<Type, object>();
         }
 
-        public IGenericRepository<Driver> Drivers
+        public IGenericRepository<DriverInfo> DriversInfo
         {
             get
             {
-                return this.GetRepository<Driver>();
-            }
-        }
-
-        public IGenericRepository<FuelInfo> FuelInfo
-        {
-            get
-            {
-                return this.GetRepository<FuelInfo>();
+                return this.GetRepository<DriverInfo>();
             }
         } 
 

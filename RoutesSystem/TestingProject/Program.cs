@@ -30,7 +30,7 @@
             //var mongo = new MongoWorker();
             //mongo.Test();
 
-            //SQLServerWorker.ImportExcellData();
+            SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
             //foreach (var driver in data.Drivers.All())

@@ -1,4 +1,4 @@
-﻿namespace RoutesSystem.Model
+﻿namespace RoutesSystem.Model.SQLServerModels
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

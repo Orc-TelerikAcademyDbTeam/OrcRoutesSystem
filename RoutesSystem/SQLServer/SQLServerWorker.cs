@@ -7,17 +7,18 @@
     using Reports.ArchiveReports;
     using Reports.ReportReaders;
 
+    using RoutesSystem.Data;
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
+    using RoutesSystem.Model.SQLServerModels;
+
     public static class SQLServerWorker
     {
-        private static SQLServerContext context=new SQLServerContext();
+        private static RouteSystemData data=new RouteSystemData();
 
         public static void ImportExcellData()
         {
             var reports = ExcellReportReader.ReadFromFile("..//..//..//ZipArchives/Fuels-Reports.zip");
-            using (context)
-            {
                 foreach (var fuelInfo in reports)
                 {
                     var fuelInfoModel = new FuelInfo
@@ -28,11 +29,10 @@
                                                 Total = fuelInfo.Total,
                                                 FuelId = fuelInfo.FuelId
                                             };
-                    context.FuelInfo.Add(fuelInfoModel);
+                    data.FuelInfo.Add(fuelInfoModel);
                 }
-                context.SaveChanges();
+                data.FuelInfo.SaveChanges();
                 
-            }
 
         }
     }
