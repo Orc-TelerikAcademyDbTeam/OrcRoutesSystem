@@ -19,8 +19,8 @@
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
             //SQLServerWorker.ImportExcellData();
-            //var pdfGen = new PdfReportWriter();
-            //pdfGen.CreateReport();
+            var pdfGen = new PdfReportWriter();
+            pdfGen.CreateReport();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
