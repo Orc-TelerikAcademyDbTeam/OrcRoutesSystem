@@ -1,14 +1,18 @@
 ﻿namespace Reports.ReportWriters
 {
-    using Newtonsoft.Json;
-    using Reports.ReportModels;
     using System;
     using System.Collections.Generic;
     using System.IO;
 
+    using Newtonsoft.Json;
+
+    using Reports.ReportModels;
+
     internal class JSONGenerator
     {
         private const string DEFAULT_FILE_NAME = "VehicleInformationReport";
+        private const string JSON_EXTENSION = ".json";
+        private const string JSON_FILE_PATH = "..\\..\\..\\Json-Reports\\";
 
         private string fileName;
         private string path;
@@ -26,7 +30,7 @@
 
             if (path == null)
             {
-                this.path = "..\\..\\..\\Json-Reports\\";
+                this.path = JSON_FILE_PATH;
             }
             else
             {
@@ -42,9 +46,14 @@
 
                 foreach (var vehicle in vehicleCollection)
                 {
+                    // create JSON object
                     jsonResult = JsonConvert.SerializeObject(vehicle, Formatting.Indented);
 
-                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + ".json", jsonResult);
+                    // create *.json file for JSON object
+                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + JSON_EXTENSION, jsonResult);
+
+                    // insert data form JSON object into MySQL
+                    MySQL.EntryPoint.InsertRow(vehicle.VehicleID, vehicle.VehicleType, vehicle.Manufactorer, vehicle.VehicleModel, vehicle.FuelType, vehicle.Driver);
                 }
             }
             catch (Exception ex)

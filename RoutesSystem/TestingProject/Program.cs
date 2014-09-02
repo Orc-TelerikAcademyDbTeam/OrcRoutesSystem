@@ -24,8 +24,8 @@
             //Repository pattern
             var data = new RouteSystemData();
 
-            var jsonGen = new JSONReportWriter();
-            jsonGen.CreateReport();
+            //var jsonGen = new JSONReportWriter();
+            //jsonGen.CreateReport();
 
 
             //MongoWorker.Test();
@@ -73,8 +73,8 @@
             //var XmlGen = new XmlReportWriter();
             //XmlGen.CreateReport();
 
-            EntryPoint.Start();
-            EntryPoint.InsertRow(1, "Car", "Opel", "Fiesta", "Gas", "Pesho");
+            //EntryPoint.Start();
+            //EntryPoint.InsertRow(10, "Car", "Opel", "Fiesta", "Gas", "Pesho");
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });

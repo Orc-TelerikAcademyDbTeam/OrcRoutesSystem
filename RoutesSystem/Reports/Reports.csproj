@@ -92,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MySQL\MySQL.csproj">
+      <Project>{6f9c2621-695c-4bde-881b-157dcaa75c07}</Project>
+      <Name>MySQL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
       <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
       <Name>RoutesSystem.Data</Name>
