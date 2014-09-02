@@ -36,6 +36,13 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.9.2.235, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,16 +65,22 @@
     <Compile Include="Contracts\IDatabaseContext.cs" />
     <Compile Include="Contracts\IRoutesSystemDbContext.cs" />
     <Compile Include="Contracts\ISQLiteDbContext.cs" />
+    <Compile Include="Contracts\IMongoDBContext.cs" />
     <Compile Include="DBContexts\CommonDBContext.cs" />
+    <Compile Include="DBContexts\MongoDBContext.cs" />
     <Compile Include="DBContexts\MySQLContext.cs" />
     <Compile Include="DBContexts\SQLiteContext.cs" />
     <Compile Include="DBContexts\SQLServerContext.cs" />
     <Compile Include="Migrations\SQLServerConfiguration.cs" />
     <Compile Include="Migrations\SQLiteConfiguration.cs" />
-    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="MongoData.cs" />
+    <Compile Include="Repositories\GenericNoSQLRepository.cs" />
+    <Compile Include="Repositories\GenericSQLRepository.cs" />
+    <Compile Include="Repositories\IGenericNoSQLRepository.cs" />
     <Compile Include="Repositories\IGenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteSystemData.cs" />
+    <Compile Include="SQLiteData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

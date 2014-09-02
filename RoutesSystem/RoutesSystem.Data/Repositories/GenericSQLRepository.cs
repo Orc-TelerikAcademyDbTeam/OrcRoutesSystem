@@ -12,12 +12,12 @@
 
     using RoutesSystem.Data.Contracts;
 
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericSQLRepository<T> : IGenericRepository<T> where T : class
     {
         private IRoutesSystemDbContext context;
         private IDbSet<T> set;
 
-        public GenericRepository(IRoutesSystemDbContext routeSystemContext)
+        public GenericSQLRepository(IRoutesSystemDbContext routeSystemContext)
         {
             this.context = routeSystemContext;
             this.set = routeSystemContext.Set<T>();

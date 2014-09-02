@@ -43,7 +43,7 @@ namespace RoutesSystem.Data
             var typeOfModel = typeof(T);
             if (!this.repositories.ContainsKey(typeOfModel))
             {
-                var typeOfRepository = typeof(GenericRepository<T>);
+                var typeOfRepository = typeof(GenericSQLRepository<T>);
                 var newRepository = Activator.CreateInstance(typeOfRepository, this.context);
                 this.repositories.Add(typeOfModel, newRepository);
             }

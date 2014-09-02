@@ -1,43 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mongo
+﻿namespace Mongo
 {
-    using System.Runtime.InteropServices;
+    using System;
+    using System.Collections.Generic;
 
     using MongoDB.Bson;
-    using MongoDB.Bson.Serialization.Attributes;
     using MongoDB.Driver;
 
-    public class MongoWorker
-    {
-        private MongoClient client = new MongoClient("mongodb://localhost");
+    using RoutesSystem.Data;
+    using RoutesSystem.Model;
+    using RoutesSystem.Model.MongoDBModels;
+    using RoutesSystem.Model.SQLServerModels;
 
-        public void Test()
+    public static class MongoWorker
+    {
+        private static MongoData data=new MongoData();
+
+        public static void AddDriver(MongoDriver driver)
         {
-            var server = client.GetServer();
-            MongoDatabase db = server.GetDatabase("Tester");
-            var test = db.GetCollection("justatest");
-            test.Insert(
-                new Log()
-                    {
-                        Id = ObjectId.GenerateNewId().ToString(),
-                        LogDate = DateTime.Now,
-                        Text = "Something important happened"
-                    });
+            
         }
 
-        class Log
+        public static void Test()
         {
-            [BsonRepresentation(BsonType.ObjectId)]
-            public string Id { get; set; }
+            data.Drivers.Insert(new MongoDriver() { FirstName = "Penio", LastName = "Peniov", MiddleName = "Penkov" });
 
-            public string Text { get; set; }
+            data.Vehicles.Insert(
+                new MongoVehicle()
+                    {
+                        Driver =
+                            new MongoDriver()
+                                {
+                                    FirstName = "Gancho",
+                                    LastName = "Ganchev",
+                                    MiddleName = "Penchev"
+                                },
+                        FuelType = new MongoFuelType() { Name = "Diesel" },
+                        Manufacturer = new MongoManufacturer() { Name = "Toyota" },
+                        Model =
+                            new MongoModel()
+                                {
+                                    FuelConsumption = 2.7f,
+                                    Name = "Avensis",
+                                    NumberOfWheels = 4
+                                },
+                        VehicleRoutes =
+                            new List<MongoRoute>()
+                                {
+                                    new MongoRoute()
+                                        {
+                                            Distance = 3.7f,
+                                            EndTown =
+                                                new MongoTown()
+                                                    {
+                                                        Name =
+                                                            "Vraca"
+                                                    },
+                                            StartTown =
+                                                new MongoTown()
+                                                    {
+                                                        Name =
+                                                            "Sofia"
+                                                    },
+                                        },
+                                },
+                        YearOfManifacturer = new DateTime(1993, 2, 2),
+                        VehicleType = new MongoVehicleType() { Name = "Sedan" }
+                    });
 
-            public DateTime LogDate { get; set; }
+            data.FuelInfo.Insert(
+                new MongoFuelInfo()
+                    {
+                        VehicleId = data.Vehicles.FindOne().Id,
+                        FuelId = data.Vehicles.FindOne().FuelType.Id,
+                        Price = 14.5m,
+                        Spent = 10.3m,
+                        Total = 30m
+                    });
         }
     }
 }

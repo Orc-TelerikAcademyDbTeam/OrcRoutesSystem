@@ -4,6 +4,7 @@
     using System.Data.Entity.Infrastructure;
 
     using RoutesSystem.Model;
+    using RoutesSystem.Model.SQLServerModels;
 
     public interface IRoutesSystemDbContext : IDatabaseContext
     {

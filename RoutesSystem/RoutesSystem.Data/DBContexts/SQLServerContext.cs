@@ -5,6 +5,7 @@
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.Migrations;
     using RoutesSystem.Model;
+    using RoutesSystem.Model.SQLServerModels;
 
     public class SQLServerContext : DbContext, IRoutesSystemDbContext
     {

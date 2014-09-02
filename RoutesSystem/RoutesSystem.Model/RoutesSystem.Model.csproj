@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -57,18 +63,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverInfo.cs" />
-    <Compile Include="FuelInfo.cs" />
-    <Compile Include="FuelType.cs" />
-    <Compile Include="Manufacturer.cs" />
-    <Compile Include="Model.cs" />
-    <Compile Include="Driver.cs" />
+    <Compile Include="MongoDBModels\MongoDriver.cs" />
+    <Compile Include="MongoDBModels\MongoFuelInfo.cs" />
+    <Compile Include="MongoDBModels\MongoFuelType.cs" />
+    <Compile Include="MongoDBModels\MongoManufacturer.cs" />
+    <Compile Include="MongoDBModels\MongoModel.cs" />
+    <Compile Include="MongoDBModels\MongoRoute.cs" />
+    <Compile Include="MongoDBModels\MongoTown.cs" />
+    <Compile Include="MongoDBModels\MongoVehicle.cs" />
+    <Compile Include="MongoDBModels\MongoVehicleType.cs" />
+    <Compile Include="SQLiteModels\DriverInfo.cs" />
+    <Compile Include="SQLServerModels\FuelInfo.cs" />
+    <Compile Include="SQLServerModels\FuelType.cs" />
+    <Compile Include="SQLServerModels\Manufacturer.cs" />
+    <Compile Include="SQLServerModels\Model.cs" />
+    <Compile Include="SQLServerModels\Driver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Route.cs" />
-    <Compile Include="Town.cs" />
-    <Compile Include="VehicleRoute.cs" />
-    <Compile Include="VehicleType.cs" />
-    <Compile Include="Vehicle.cs" />
+    <Compile Include="SQLServerModels\Route.cs" />
+    <Compile Include="SQLServerModels\Town.cs" />
+    <Compile Include="SQLServerModels\VehicleRoute.cs" />
+    <Compile Include="SQLServerModels\VehicleType.cs" />
+    <Compile Include="SQLServerModels\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
