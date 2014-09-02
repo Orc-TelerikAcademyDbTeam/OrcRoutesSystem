@@ -13,6 +13,8 @@
     using SQLite;
 
     using SQLServer;
+    using MySQL;
+    using Mongo;
     using RoutesSystem.Data;
 
     internal class Program
@@ -38,6 +40,13 @@
 
             //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
+
+            var mongo = new MongoWorker();
+            mongo.Test();
+
+            //SQLServerWorker.ImportExcellData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
             ////SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
@@ -48,21 +57,17 @@
 
             //var result = SQLiteWorker.GetData();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //SQLServerWorker.ImportExcellData();
+            //var XmlGen = new XmlReportWriter();
+            //XmlGen.CreateReport();
 
             //EntryPoint.Start();
+
+            //var c = new SQLiteContext();
+            //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
+            //c.SaveChanges();
+
+            //var result = SQLiteWorker.GetData();
 
             //var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
             //var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
