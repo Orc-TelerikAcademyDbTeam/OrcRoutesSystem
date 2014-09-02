@@ -1,0 +1,8 @@
+{
+  "VehicleID": 2,
+  "VehicleType": "car",
+  "Manufactorer": "bmw",
+  "VehicleModel": "c100",
+  "FuelType": "benzin",
+  "Driver": "Stanio Stanev"
+}
