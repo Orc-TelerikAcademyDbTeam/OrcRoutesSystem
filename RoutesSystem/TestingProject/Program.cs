@@ -74,6 +74,7 @@
             //XmlGen.CreateReport();
 
             EntryPoint.Start();
+            EntryPoint.InsertRow(1, "Car", "Opel", "Fiesta", "Gas", "Pesho");
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
