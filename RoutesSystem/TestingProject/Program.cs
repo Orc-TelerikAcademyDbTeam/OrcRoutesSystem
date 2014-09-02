@@ -1,5 +1,6 @@
 ﻿namespace TestingProject
 {
+    using System;
     using System.Globalization;
     using System.Threading;
 
@@ -7,19 +8,58 @@
 
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
+    using RoutesSystem.Data.Repositories;
 
     using SQLite;
 
     using SQLServer;
     using MySQL;
+    using Mongo;
+    using MySQL;
+    using Mongo;
+    using RoutesSystem.Data;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            //Repository pattern
+            var data = new RouteSystemData();
+
+
+            var mongo = new MongoWorker();
+            mongo.Test();
 
             //SQLServerWorker.ImportExcellData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+            foreach (var driver in data.Drivers.All())
+            {
+                Console.WriteLine(driver.FirstName);
+            }
+
+            //var db = new SQLServerContext();
+            //var driversDB = new GenericRepository<Driver>(db);
+            //foreach (var driver in driversDB.All())
+            //{
+            //    System.Console.WriteLine(driver.FirstName);
+            //}
+
+
+            //SQLServerWorker.ImportExcellData();
+            //var XmlGen = new XmlReportWriter();
+            //XmlGen.CreateReport();
+
+            //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+
+            var mongo = new MongoWorker();
+            mongo.Test();
+
+            //SQLServerWorker.ImportExcellData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+            ////SQLServerWorker.ImportExcellData();
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
 
@@ -33,9 +73,11 @@
             //var XmlGen = new XmlReportWriter();
             //XmlGen.CreateReport();
 
-            var report = new XmlReportWriter();
-            report.CreateReport();
+            //EntryPoint.Start();
 
+            //var c = new SQLiteContext();
+            //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
+            //c.SaveChanges();
             //EntryPoint.Start();
 
             //var c = new SQLiteContext();
@@ -50,9 +92,9 @@
             //{
             //    Console.WriteLine(entry.RegistrationIdentifier);
             //}
-            var manufacturer = new Manufacturer { Name = "Toyota" };
+            //var manufacturer = new Manufacturer { Name = "Toyota" };
 
-            SQLServerWorker.ImportExcellData();
+            //SQLServerData.Manufacturers.Add(manufacturer);
             //SQLServerData.SaveChanges();
 
             //    SQLServerData.Vehicles.Add(

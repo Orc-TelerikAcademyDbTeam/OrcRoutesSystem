@@ -89,6 +89,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mongo\Mongo.csproj">
+      <Project>{e75b117c-1ca5-4dca-8e63-51d228ceb550}</Project>
+      <Name>Mongo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MySQL\MySQL.csproj">
       <Project>{6f9c2621-695c-4bde-881b-157dcaa75c07}</Project>
       <Name>MySQL</Name>
