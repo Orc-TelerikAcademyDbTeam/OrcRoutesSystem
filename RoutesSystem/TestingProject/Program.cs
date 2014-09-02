@@ -20,8 +20,8 @@
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
             //SQLServerWorker.ImportExcellData();
-            var pdfGen = new PdfReportWriter();
-            pdfGen.CreateReport();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
@@ -30,10 +30,13 @@
             //var result = SQLiteWorker.GetData();
 
             //SQLServerWorker.ImportExcellData();
-            var XmlGen = new XmlReportWriter();
-            XmlGen.CreateReport();
+            //var XmlGen = new XmlReportWriter();
+            //XmlGen.CreateReport();
 
-            EntryPoint.Start();
+            var report = new XmlReportWriter();
+            report.CreateReport();
+
+            //EntryPoint.Start();
 
             //var c = new SQLiteContext();
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
@@ -47,9 +50,9 @@
             //{
             //    Console.WriteLine(entry.RegistrationIdentifier);
             //}
-            //var manufacturer = new Manufacturer { Name = "Toyota" };
+            var manufacturer = new Manufacturer { Name = "Toyota" };
 
-            //SQLServerData.Manufacturers.Add(manufacturer);
+            SQLServerWorker.ImportExcellData();
             //SQLServerData.SaveChanges();
 
             //    SQLServerData.Vehicles.Add(

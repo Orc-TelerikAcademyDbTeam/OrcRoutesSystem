@@ -16,15 +16,22 @@
             using (XmlWriter writer = XmlWriter.Create("d:\\Report.xml", settings))
             {
                 writer.WriteStartDocument();
-                writer.WriteComment("Report drivers' visited routes");
+                writer.WriteComment("Report drivers visited routes");
                 writer.WriteStartElement("Routes");
-                writer.WriteAttributeString("Start town", "End town", "Vehicle route info");
+                writer.WriteAttributeString("Starttown", "Endtown");
 
                 var report = new XmlReport();
-                foreach (var item in report.GetVisitedRoutes())
+                var inputData = report.GetVisitedRoutes();
+                foreach (var item in inputData)
                 {
-                     writer.WriteElementString(item.StartTownName, item.EndTownName, item.VehicleRouteInfo.ToString());
+                    System.Console.WriteLine(item.StartTownName, item.EndTownName);
                 }
+
+                //writer.WriteStartElement("x", "root", "123");
+                //writer.WriteStartElement("item");
+                //writer.WriteAttributeString("xmlns", "x", null, "abc");
+                //writer.WriteEndElement();
+                //writer.WriteEndElement();
 
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
