@@ -72,6 +72,7 @@
     <Compile Include="ReportTypes\JSONReport.cs" />
     <Compile Include="ReportTypes\ReportGenerator.cs" />
     <Compile Include="ReportTypes\ReportType.cs" />
+    <Compile Include="ReportTypes\XmlReport.cs" />
     <Compile Include="ReportWriters\PdfGenerator.cs" />
     <Compile Include="ReportWriters\PdfReportWriter.cs" />
     <Compile Include="ReportTypes\PdfReport.cs" />

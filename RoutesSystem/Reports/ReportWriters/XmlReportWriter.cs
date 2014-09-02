@@ -4,16 +4,11 @@
 
     using RoutesSystem.Core.Reports;
 
-    public class XmlReportWriter : IReportFileType
+    using Reports.ReportTypes;
+
+    public class XmlReportWriter
     {
-        public XmlReportWriter(string title)
-        {
-            this.Title = title;
-        }
-
-        public string Title { get; set; }
-
-        public void CreateReport(IReportData data)
+        public void CreateReport()
         {
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -21,11 +16,15 @@
             using (XmlWriter writer = XmlWriter.Create("d:\\Report.xml", settings))
             {
                 writer.WriteStartDocument();
-                writer.WriteComment(this.Title);
-                writer.WriteStartElement("Route1");
-                writer.WriteAttributeString("Name", "RouteName");
+                writer.WriteComment("Report drivers' visited routes");
+                writer.WriteStartElement("Routes");
+                writer.WriteAttributeString("Start town", "End town", "Vehicle route info");
 
-                writer.WriteElementString("test", "test");//this should be a loop with all the data
+                var report = new XmlReport();
+                foreach (var item in report.GetVisitedRoutes())
+                {
+                     writer.WriteElementString(item.StartTownName, item.EndTownName, item.VehicleRouteInfo.ToString());
+                }
 
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
