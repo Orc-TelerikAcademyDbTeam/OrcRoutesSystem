@@ -41,6 +41,9 @@
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.2\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,6 +63,7 @@
     <Compile Include="Contracts\IReportFileType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportModels\FuelInfo.cs" />
+    <Compile Include="ReportModels\VehicleInformation.cs" />
     <Compile Include="ReportReaders\ExcellReportReader.cs" />
     <Compile Include="ReportModels\CarEntry.cs" />
     <Compile Include="ReportModels\CarTechnicalExpensesReport.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="ReportTypes\ReportGenerator.cs" />
     <Compile Include="ReportTypes\ReportType.cs" />
     <Compile Include="ReportTypes\XmlReport.cs" />
+    <Compile Include="ReportWriters\JSONGenerator.cs" />
+    <Compile Include="ReportWriters\JSONReportWriter.cs" />
     <Compile Include="ReportWriters\PdfGenerator.cs" />
     <Compile Include="ReportWriters\PdfReportWriter.cs" />
     <Compile Include="ReportTypes\PdfReport.cs" />
