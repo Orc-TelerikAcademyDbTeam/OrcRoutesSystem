@@ -4,6 +4,7 @@
     using System.Collections.Generic;
 
     using Reports.ArchiveReports;
+    using Reports.ReportReaders;
 
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
@@ -13,17 +14,25 @@
 
         public static void ImportExcellData()
         {
-            var archiveReport = new ReportsArchive(
-                "..//..//..//ZipArchives/Sample-Sales-Reports.zip",
-                new HashSet<string>() { ".xls" });
-
-            using (archiveReport)
+            var reports = ExcellReportReader.ReadFromFile("..//..//..//ZipArchives/Fuels-Reports.zip");
+            using (context)
             {
-                foreach (var report in archiveReport)
+                foreach (var fuelInfo in reports)
                 {
-                    Console.WriteLine("{0} => {1}  {2}", report.DirectoryName, report.FileName, report.FileExtension);
+                    var fuelInfoModel = new FuelInfo
+                                            {
+                                                Price = fuelInfo.Price,
+                                                VehicleId = fuelInfo.VehicleId,
+                                                Spent = fuelInfo.Spent,
+                                                Total = fuelInfo.Total,
+                                                FuelId = fuelInfo.FuelId
+                                            };
+                    context.FuelInfo.Add(fuelInfoModel);
                 }
+                context.SaveChanges();
+                
             }
+
         }
     }
 }

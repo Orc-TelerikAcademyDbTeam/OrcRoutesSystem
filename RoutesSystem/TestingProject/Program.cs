@@ -1,12 +1,14 @@
 ﻿namespace TestingProject
 {
-    using System;
     using System.Globalization;
     using System.Threading;
 
-    using Reports.ReportModels;
+    using Reports.ReportWriters;
 
-    using RoutesSystem.Core.Reports;
+    using RoutesSystem.Data.DBContexts;
+    using RoutesSystem.Model;
+
+    using SQLite;
 
     using SQLServer;
 
@@ -16,17 +18,38 @@
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
+            //SQLServerWorker.ImportExcellData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+
+            //var c = new SQLiteContext();
+            //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
+            //c.SaveChanges();
+
+            //var result = SQLiteWorker.GetData();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //EntryPoint.Start();
 
-            var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
-            var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
-            foreach (var entry in technicalReport)
-            {
-                Console.WriteLine(entry.RegistrationIdentifier);
-            }
-
-            SQLServerWorker.ImportExcellData();
-
+            //var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>("Sample-Vendors-Expenses.xml");
+            //var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
+            //foreach (var entry in technicalReport)
+            //{
+            //    Console.WriteLine(entry.RegistrationIdentifier);
+            //}
             //var manufacturer = new Manufacturer { Name = "Toyota" };
 
             //SQLServerData.Manufacturers.Add(manufacturer);

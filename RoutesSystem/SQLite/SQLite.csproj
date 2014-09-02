@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FD85064-B639-44DD-90CF-A1871261A4F6}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{36EFEA47-E5BD-49F5-94F6-63107B91F528}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestingProject</RootNamespace>
-    <AssemblyName>TestingProject</AssemblyName>
+    <RootNamespace>SQLite</RootNamespace>
+    <AssemblyName>SQLite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
@@ -59,34 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="SQLiteWorker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Reports\Reports.csproj">
-      <Project>{e1eba381-8efb-4bca-9666-3f7480a9a55d}</Project>
-      <Name>Reports</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
-      <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
-      <Name>RoutesSystem.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RoutesSystem.Model\RoutesSystem.Model.csproj">
-      <Project>{d3545cf6-2a08-4f1c-b2a4-e0d8c2600613}</Project>
-      <Name>RoutesSystem.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SQLite\SQLite.csproj">
-      <Project>{36efea47-e5bd-49f5-94f6-63107b91f528}</Project>
-      <Name>SQLite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SQLServer\SQLServer.csproj">
-      <Project>{0137803a-1fe9-4489-825d-2f8bf82a92ea}</Project>
-      <Name>SQLServer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="x64\SQLite.Interop.dll">
@@ -95,6 +66,20 @@
     <Content Include="x86\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
+      <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
+      <Name>RoutesSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoutesSystem.Model\RoutesSystem.Model.csproj">
+      <Project>{d3545cf6-2a08-4f1c-b2a4-e0d8c2600613}</Project>
+      <Name>RoutesSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

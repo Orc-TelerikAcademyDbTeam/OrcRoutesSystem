@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverInfo.cs" />
+    <Compile Include="FuelInfo.cs" />
     <Compile Include="FuelType.cs" />
     <Compile Include="Manufacturer.cs" />
     <Compile Include="Model.cs" />
