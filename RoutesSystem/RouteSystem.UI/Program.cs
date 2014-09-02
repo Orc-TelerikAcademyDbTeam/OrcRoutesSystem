@@ -3,7 +3,6 @@
     using System;
     using System.Linq;
     using System.Windows.Forms;
-using RoutesSystem.PDFReports;
 
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
@@ -20,16 +19,16 @@ using RoutesSystem.PDFReports;
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new RoutesSystemForm());
 
-            var pdfGenerator = new PdfReportEngine();
-            var data = new SQLServerContext();
-            pdfGenerator.CreateReport();
-            data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
+            //var pdfGenerator = new PdfReportEngine();
+            //var data = new SQLServerContext();
+            //pdfGenerator.CreateReport();
+            //data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
 
-            data.SaveChanges();
+            //data.SaveChanges();
 
-            var manufacturers = data.Manufacturers.FirstOrDefault();
+            //var manufacturers = data.Manufacturers.FirstOrDefault();
 
-            MessageBox.Show(manufacturers.Id.ToString());
+            //MessageBox.Show(manufacturers.Id.ToString());
 
             ////ArchiveReports usage example
             //var archiveLocation = "../../../ZipArchives/Sample-Sales-Reports.zip";
