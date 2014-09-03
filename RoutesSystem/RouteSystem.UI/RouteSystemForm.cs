@@ -82,11 +82,15 @@
         {
             if (this.importDataTypeSelect.SelectedItem.ToString() == "MongoDB and Excel")
             {
-                if (this.loadExcelTextBox.Text == "")
+                if (this.loadExcelTextBox.Text == "" && this.loadMongoDBTextBox.Text == "")
+                {
+                    MessageBox.Show("Choose MongoDB connection string and Excel file first!");
+                }
+                else if (this.loadExcelTextBox.Text == "")
                 {
                     MessageBox.Show("Choose Excel file first!");
                 }
-                if (this.loadMongoDBTextBox.Text == "")
+                else if (this.loadMongoDBTextBox.Text == "")
                 {
                     MessageBox.Show("Choose MongoDB connection string first!");
                 }
@@ -106,11 +110,11 @@
             {
                 if (this.loadMySQLTextBox.Text == "" && this.loadSQLiteTextBox.Text == "")
                 {
-                    MessageBox.Show("Choose MongoDB and SQLite connection strings first!");
+                    MessageBox.Show("Choose MySQL and SQLite connection strings first!");
                 }
                 else if (this.loadMySQLTextBox.Text == "")
                 {
-                    MessageBox.Show("Choose MongoDB connection string first!");
+                    MessageBox.Show("Choose MySQL connection string first!");
                 }
                 else if (this.loadSQLiteTextBox.Text == "")
                 {
@@ -123,7 +127,6 @@
         {
             this.SaveReportDialog.ShowDialog();
             var filePathInfo = this.SaveReportDialog.FileName;
-            this.textBoxSelectedFolder.Text = filePathInfo;
             var checkedButton = tabReports.Controls
                 .OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
