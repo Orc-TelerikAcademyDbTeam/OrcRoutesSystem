@@ -18,6 +18,11 @@
             this.Populate();
         }
 
+        public MongoWorker(string connectionString)
+        {
+            this.data = new MongoData(connectionString, "RoutesSystem");
+        }
+
         private void Populate()
         {
             if (!this.data.Manufacturers.All().Any())

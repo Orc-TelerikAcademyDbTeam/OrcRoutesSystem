@@ -47,6 +47,9 @@
             this.importDataTypeLabel = new System.Windows.Forms.Label();
             this.importDataTypeSelect = new System.Windows.Forms.ComboBox();
             this.tabReports = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxSelectedFolder = new System.Windows.Forms.TextBox();
             this.generateReportButton = new System.Windows.Forms.Button();
             this.expenseReportRadioButton = new System.Windows.Forms.RadioButton();
@@ -56,9 +59,6 @@
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadXMLOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -175,7 +175,7 @@
             // loadMongoDBTextBox
             // 
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 125);
-            this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
+            this.loadMongoDBTextBox.Name = "loadMongoDBAndExcelTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
             // 
@@ -191,7 +191,7 @@
             // loadExcelButton
             // 
             this.loadExcelButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.loadExcelButton.Location = new System.Drawing.Point(310, 124);
+            this.loadExcelButton.Location = new System.Drawing.Point(310, 210);
             this.loadExcelButton.Name = "loadExcelButton";
             this.loadExcelButton.Size = new System.Drawing.Size(119, 28);
             this.loadExcelButton.TabIndex = 4;
@@ -232,8 +232,7 @@
             // 
             this.importDataTypeSelect.FormattingEnabled = true;
             this.importDataTypeSelect.Items.AddRange(new object[] {
-            "Excel",
-            "MongoDB",
+            "MongoDB and Excel",
             "XML",
             "MySQL and SQLite"});
             this.importDataTypeSelect.Location = new System.Drawing.Point(13, 63);
@@ -261,6 +260,33 @@
             this.tabReports.Size = new System.Drawing.Size(526, 253);
             this.tabReports.TabIndex = 1;
             this.tabReports.Text = "Generate Reports";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(275, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "(XML Report)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(72, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "(JSON Report)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(72, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "(PDF Report)";
             // 
             // textBoxSelectedFolder
             // 
@@ -297,8 +323,9 @@
             this.xmlReportRadio.Name = "xmlReportRadio";
             this.xmlReportRadio.Size = new System.Drawing.Size(124, 24);
             this.xmlReportRadio.TabIndex = 2;
-            this.xmlReportRadio.Text = "Cars Report";
+            this.xmlReportRadio.Text = "Fuel Consumption Report";
             this.xmlReportRadio.UseVisualStyleBackColor = true;
+            this.xmlReportRadio.CheckedChanged += new System.EventHandler(this.xmlReportRadio_CheckedChanged);
             // 
             // CheckBoxVehicleInformationReport
             // 
@@ -321,6 +348,7 @@
             this.CheckBoxAggregateRouteReport.TabStop = true;
             this.CheckBoxAggregateRouteReport.Text = "Aggregate Route Report";
             this.CheckBoxAggregateRouteReport.UseVisualStyleBackColor = true;
+            this.CheckBoxAggregateRouteReport.CheckedChanged += new System.EventHandler(this.CheckBoxAggregateRouteReport_CheckedChanged);
             // 
             // loadExcelOpenFileDialog
             // 
@@ -329,33 +357,6 @@
             // loadXMLOpenFileDialog
             // 
             this.loadXMLOpenFileDialog.FileName = "Load XML File";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "(PDF Report)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "(JSON Report)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(275, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "(XML Report)";
             // 
             // RoutesSystemForm
             // 

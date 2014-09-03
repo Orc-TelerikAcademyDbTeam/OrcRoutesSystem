@@ -48,18 +48,13 @@
 
         private void importDataTypeSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.importDataTypeSelect.SelectedItem.ToString() == "Excel")
+            if (this.importDataTypeSelect.SelectedItem.ToString() == "MongoDB and Excel")
             {
                 hideUnusedLoadData();
 
                 this.loadExcelLabel.Visible = true;
                 this.loadExcelButton.Visible = true;
                 this.loadExcelTextBox.Visible = true;
-            }
-            else if (this.importDataTypeSelect.SelectedItem.ToString() == "MongoDB")
-            {
-                hideUnusedLoadData();
-
                 this.loadMongoDBLabel.Visible = true;
                 this.loadMongoDBTextBox.Visible = true;
             }
@@ -85,18 +80,19 @@
 
         private void importDataTypeButton_Click(object sender, EventArgs e)
         {
-            if (this.importDataTypeSelect.SelectedItem.ToString() == "Excel")
+            if (this.importDataTypeSelect.SelectedItem.ToString() == "MongoDB and Excel")
             {
                 if (this.loadExcelTextBox.Text == "")
                 {
                     MessageBox.Show("Choose Excel file first!");
                 }
-            }
-            else if (this.importDataTypeSelect.SelectedItem.ToString() == "MongoDB")
-            {
                 if (this.loadMongoDBTextBox.Text == "")
                 {
                     MessageBox.Show("Choose MongoDB connection string first!");
+                }
+                else
+                {
+                    UIEngine.ImportExcelAndMongoData(this.loadMongoDBTextBox.Text, this.loadExcelTextBox.Text);
                 }
             }
             else if (this.importDataTypeSelect.SelectedItem.ToString() == "XML")
@@ -133,6 +129,16 @@
 
             UIEngine.CreateReport(checkedButton, filePathInfo);
             MessageBox.Show("Report created!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void CheckBoxAggregateRouteReport_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xmlReportRadio_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
