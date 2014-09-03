@@ -138,7 +138,7 @@
             // 
             // loadMySQLTextBox
             // 
-            this.loadMySQLTextBox.Location = new System.Drawing.Point(310, 125);
+            this.loadMySQLTextBox.Location = new System.Drawing.Point(310, 106);
             this.loadMySQLTextBox.Name = "loadMySQLTextBox";
             this.loadMySQLTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMySQLTextBox.TabIndex = 10;
@@ -146,7 +146,7 @@
             // loadMySQLLabel
             // 
             this.loadMySQLLabel.AutoSize = true;
-            this.loadMySQLLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadMySQLLabel.Location = new System.Drawing.Point(14, 109);
             this.loadMySQLLabel.Name = "loadMySQLLabel";
             this.loadMySQLLabel.Size = new System.Drawing.Size(269, 20);
             this.loadMySQLLabel.TabIndex = 9;
@@ -155,7 +155,7 @@
             // loadXMLButton
             // 
             this.loadXMLButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.loadXMLButton.Location = new System.Drawing.Point(310, 124);
+            this.loadXMLButton.Location = new System.Drawing.Point(310, 123);
             this.loadXMLButton.Name = "loadXMLButton";
             this.loadXMLButton.Size = new System.Drawing.Size(119, 28);
             this.loadXMLButton.TabIndex = 8;
@@ -166,7 +166,7 @@
             // loadXMLLabel
             // 
             this.loadXMLLabel.AutoSize = true;
-            this.loadXMLLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadXMLLabel.Location = new System.Drawing.Point(14, 127);
             this.loadXMLLabel.Name = "loadXMLLabel";
             this.loadXMLLabel.Size = new System.Drawing.Size(150, 20);
             this.loadXMLLabel.TabIndex = 7;
@@ -174,7 +174,7 @@
             // 
             // loadMongoDBTextBox
             // 
-            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 125);
+            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 106);
             this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
@@ -182,7 +182,7 @@
             // loadMongoDBLabel
             // 
             this.loadMongoDBLabel.AutoSize = true;
-            this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
             this.loadMongoDBLabel.Size = new System.Drawing.Size(291, 20);
             this.loadMongoDBLabel.TabIndex = 5;
@@ -202,7 +202,7 @@
             // loadExcelLabel
             // 
             this.loadExcelLabel.AutoSize = true;
-            this.loadExcelLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadExcelLabel.Location = new System.Drawing.Point(14, 146);
             this.loadExcelLabel.Name = "loadExcelLabel";
             this.loadExcelLabel.Size = new System.Drawing.Size(157, 20);
             this.loadExcelLabel.TabIndex = 3;

@@ -55,6 +55,7 @@
                 this.loadExcelLabel.Visible = true;
                 this.loadExcelButton.Visible = true;
                 this.loadExcelTextBox.Visible = true;
+
                 this.loadMongoDBLabel.Visible = true;
                 this.loadMongoDBTextBox.Visible = true;
             }
