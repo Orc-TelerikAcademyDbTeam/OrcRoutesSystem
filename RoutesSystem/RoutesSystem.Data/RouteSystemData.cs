@@ -90,6 +90,22 @@
             {
                 return this.GetRepository<Model>();
             }
+        }
+
+        public IGenericRepository<Route> Routes
+        {
+            get
+            {
+                return this.GetRepository<Route>();
+            }
+        }
+
+        public IGenericRepository<VehicleRoute> VehicleRoutes
+        {
+            get
+            {
+                return this.GetRepository<VehicleRoute>();
+            }
         } 
 
         private IGenericRepository<T> GetRepository<T>() where T : class

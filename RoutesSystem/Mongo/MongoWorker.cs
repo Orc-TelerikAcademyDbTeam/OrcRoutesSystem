@@ -141,7 +141,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
-                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "1").First(),
+                            Driver = new MongoDriver()
+                            {
+                                FirstName = "Peter",
+                                MiddleName = "Petrov",
+                                LastName = "Petrov"
+                            },
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                             Manufacturer =
                                 this.data.Manufacturers.SearchFor(x => x.Name == "Toyota").First(),
@@ -154,7 +159,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
-                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "2").First(),
+                            Driver = new MongoDriver()
+                            {
+                                FirstName = "Yaro",
+                                MiddleName = "Berov",
+                                LastName = "Penov"
+                            },
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                             Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Audi").First(),
                             Model = this.data.VehicleModels.SearchFor(x => x.Name == "R8").First(),
@@ -166,7 +176,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
-                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "3").First(),
+                            Driver = new MongoDriver()
+                            {
+                                FirstName = "Martin",
+                                MiddleName = "Vaklinov",
+                                LastName = "Vaklinov"
+                            },
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                             Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "BMW").First(),
                             Model = this.data.VehicleModels.SearchFor(x => x.Name == "M7").First(),
@@ -178,7 +193,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "4").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Cristiano",
+                            MiddleName = "",
+                            LastName = "Ronaldo"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Mercedes").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "C100").First(),
@@ -190,7 +210,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "5").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Gergi",
+                            MiddleName = "Georgiev",
+                            LastName = "Georgiev"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Mercedes").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "SLK").First(),
@@ -202,7 +227,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "6").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Ognqn",
+                            MiddleName = "",
+                            LastName = "Jelezov"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Lada").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "1600").First(),
@@ -214,7 +244,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "7").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Mitko",
+                            MiddleName = "Mitev",
+                            LastName = "Mitev"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "BMW").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "X5").First(),
@@ -226,7 +261,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "8").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Lalka",
+                            MiddleName = "Asenova",
+                            LastName = "Paralingova"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Opel").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "Vectra").First(),
@@ -238,7 +278,12 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
-                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "9").First(),
+                        Driver = new MongoDriver()
+                        {
+                            FirstName = "Zlatka",
+                            MiddleName = "Cherna",
+                            LastName = "Chernata"
+                        },
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Wolkswagen").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "Golf").First(),
@@ -250,7 +295,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "10").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Zagore",
+                           MiddleName = "Toshev",
+                           LastName = "Peshev"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Wolkswagen").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Golf").First(),
@@ -262,7 +312,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "11").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Marti",
+                           MiddleName = "K",
+                           LastName = "Lambova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Fiat").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Novo").First(),
@@ -275,7 +330,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "12").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Dimitrichka",
+                           MiddleName = "Hah",
+                           LastName = "Budurova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Seat").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Umbro").First(),
@@ -288,7 +348,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "13").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Hinka",
+                           MiddleName = "Hulk",
+                           LastName = "Hinkova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "GreatWall").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "555").First(),
@@ -300,7 +365,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "14").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Urus",
+                           MiddleName = "Urugvai",
+                           LastName = "Hapeshtiq"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chevy").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Curvet").First(),
@@ -312,7 +382,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "15").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Luiz",
+                           MiddleName = "Shark",
+                           LastName = "Suarez"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Harley-Davidson").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "2200").First(),
@@ -324,7 +399,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "16").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Toshko",
+                           MiddleName = "Tosheta",
+                           LastName = "Toshev"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Suzuki").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Hayabusa").First(),
@@ -336,7 +416,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "17").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Ventilator",
+                           MiddleName = "Klimatikov",
+                           LastName = "Aspartamov"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Suzuki").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "VS1400").First(),
@@ -348,7 +433,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "18").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Petiletka",
+                           MiddleName = "Venelinova",
+                           LastName = "Paleva"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Honda").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Civic").First(),
@@ -360,7 +450,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "19").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Razvigor",
+                           MiddleName = "Kornishonov",
+                           LastName = "Shtaigov"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Honda").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "SuperCub").First(),
@@ -373,7 +468,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "20").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Helikopter",
+                           MiddleName = "Petrov",
+                           LastName = "Petrov"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chavdar").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "141").First(),
@@ -385,7 +485,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "21").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Joro",
+                           MiddleName = "Kolumbieca",
+                           LastName = "Smaglata"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chavdar").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "11M3").First(),
@@ -397,7 +502,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "22").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Harry",
+                           MiddleName = "J",
+                           LastName = "Potter"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Stralis").First(),
@@ -409,7 +519,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "23").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Adolf",
+                           MiddleName = "Funky",
+                           LastName = "Shperplatov"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Traker").First(),
@@ -421,7 +536,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "24").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Enq",
+                           MiddleName = "Nanq",
+                           LastName = "Noniva"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Daily").First(),
@@ -433,7 +553,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "25").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Cvetelina",
+                           MiddleName = "P",
+                           LastName = "Cecova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "DailyVan").First(),
@@ -445,7 +570,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "26").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Lora",
+                           MiddleName = "O",
+                           LastName = "Karadjova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "R470").First(),
@@ -457,7 +587,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "27").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Magdalena",
+                           MiddleName = "Maleeva",
+                           LastName = "Maleeva"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "R500").First(),
@@ -469,7 +604,12 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
-                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "28").First(),
+                       Driver = new MongoDriver()
+                       {
+                           FirstName = "Stefka",
+                           MiddleName = "Preskachastata",
+                           LastName = "Kostadinova"
+                       },
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "K124EB").First(),
@@ -477,207 +617,6 @@
                            this.data.VehicleTypes.SearchFor(x => x.Name == "Bus").First(),
                        YearOfManifacturer = new DateTime(2008, 9, 17)
                    });
-            }
-
-            if (!this.data.Drivers.All().Any())
-            {
-                this.data.Drivers.Insert(new MongoDriver() 
-                { 
-                    FirstName = "Peter",
-                    MiddleName = "Petrov",
-                    LastName = "Petrov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Yaro",
-                    MiddleName = "Berov",
-                    LastName = "Penov"
-                });
-
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Martin",
-                    MiddleName = "Vaklinov",
-                    LastName = "Vaklinov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Cristiano",
-                    MiddleName = "",
-                    LastName = "Ronaldo"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Gergi",
-                    MiddleName = "Georgiev",
-                    LastName = "Georgiev"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Ognqn",
-                    MiddleName = "",
-                    LastName = "Jelezov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Mitko",
-                    MiddleName = "Mitev",
-                    LastName = "Mitev"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Lalka",
-                    MiddleName = "Asenova",
-                    LastName = "Paralingova"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Zlatka",
-                    MiddleName = "Cherna",
-                    LastName = "Chernata"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Zagore",
-                    MiddleName = "Toshev",
-                    LastName = "Peshev"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Marti",
-                    MiddleName = "K",
-                    LastName = "Lambova"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Dimitrichka",
-                    MiddleName = "Hah",
-                    LastName = "Budurova"
-                });
-
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Hinka",
-                    MiddleName = "Hulk",
-                    LastName = "Hinkova"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Urus",
-                    MiddleName = "Urugvai",
-                    LastName = "Hapeshtiq"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Luiz",
-                    MiddleName = "Shark",
-                    LastName = "Suarez"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Toshko",
-                    MiddleName = "Tosheta",
-                    LastName = "Toshev"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Ventilator",
-                    MiddleName = "Klimatikov",
-                    LastName = "Aspartamov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Petiletka",
-                    MiddleName = "Venelinova",
-                    LastName = "Paleva"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Razvigor",
-                    MiddleName = "Kornishonov",
-                    LastName = "Shtaigov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Helikopter",
-                    MiddleName = "Petrov",
-                    LastName = "Petrov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Joro",
-                    MiddleName = "Kolumbieca",
-                    LastName = "Smaglata"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Harry",
-                    MiddleName = "J",
-                    LastName = "Potter"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Adolf",
-                    MiddleName = "Funky",
-                    LastName = "Shperplatov"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Enq",
-                    MiddleName = "Nanq",
-                    LastName = "Noniva"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Cvetelina",
-                    MiddleName = "P",
-                    LastName = "Cecova"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Lora",
-                    MiddleName = "O",
-                    LastName = "Karadjova"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Magdalena",
-                    MiddleName = "Maleeva",
-                    LastName = "Maleeva"
-                });
-
-                this.data.Drivers.Insert(new MongoDriver()
-                {
-                    FirstName = "Stefka",
-                    MiddleName = "Preskachastata",
-                    LastName = "Kostadinova"
-                });
             }
 
             if (!this.data.Routes.All().Any())
@@ -1226,6 +1165,16 @@
         public IQueryable<MongoModel> GetAllModels()
         {
             return this.data.VehicleModels.All();
+        }
+
+        public IQueryable<MongoRoute> GetAllRoutes()
+        {
+            return this.data.Routes.All();
+        }
+
+        public IQueryable<MongoVehicleRoute> GetAllVehicleRoutes()
+        {
+            return this.data.VehicleRoutes.All();
         }
     }
 }

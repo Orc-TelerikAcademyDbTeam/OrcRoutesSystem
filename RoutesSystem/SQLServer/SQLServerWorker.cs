@@ -17,6 +17,7 @@
         {
             var mongoData = new MongoWorker();
 
+            //Fill Manufactures
             var allManufacturers = mongoData.GetAllManufacturers();
 
             foreach (var manufacturer in allManufacturers)
@@ -25,6 +26,7 @@
                 data.Manufacturers.SaveChanges();
             }
 
+            //Fill Towns
             var allTowns = mongoData.GetAllTowns();
             foreach (var town in allTowns)
             {
@@ -32,6 +34,7 @@
                 data.Towns.SaveChanges();
             }
 
+            //Fill Vehicle Types
             var allVehicleTypes = mongoData.GetAllVehicleTypes();
             foreach (var type in allVehicleTypes)
             {
@@ -39,6 +42,7 @@
                 data.VehicleTypes.SaveChanges();
             }
 
+            //Fill Fuel Types
             var allFuelTypes = mongoData.GetAllFuelTypes();
             foreach (var fuel in allFuelTypes)
             {
@@ -46,6 +50,7 @@
                 data.Fueltypes.SaveChanges();
             }
 
+            //Fill Models
             var allModels = mongoData.GetAllModels();
             foreach (var model in allModels)
             {
@@ -58,6 +63,7 @@
                 data.Models.SaveChanges();
             }
 
+            //Fill Vehicles
             var allVehicles = mongoData.GetAllVehicles();
             foreach (var vehicle in allVehicles)
             {
@@ -69,9 +75,17 @@
 
                 int fuelTypeId = data.Fueltypes.SearchFor(x => x.Name == vehicle.FuelType.Name).Select(x => x.Id).First();
 
+                var driver = vehicle.Driver;
+
                 data.Vehicles.Add(
                     new Vehicle()
                         {
+                            Driver = new Driver()
+                            {
+                                FirstName = driver.FirstName,
+                                MiddleName = driver.MiddleName,
+                                LastName = driver.LastName
+                            },
                             VehicleTypeId = vehicleTypeId,
                             ManufacturerId = manufacturerId,
                             ModelId = modelId,
@@ -79,6 +93,50 @@
                             FuelTypeId = fuelTypeId
                         });
                 data.Vehicles.SaveChanges();
+            }
+
+            //Fill Routes
+            var allRoutes = mongoData.GetAllRoutes();
+            foreach (var route in allRoutes)
+            {
+                var startTown = data.Towns.SearchFor(x => x.Name == route.StartTown.Name).FirstOrDefault();
+                var endTown = data.Towns.SearchFor(x => x.Name == route.EndTown.Name).FirstOrDefault();
+
+                data.Routes.Add(
+                    new Route()
+                    {
+                        StartTown = startTown,
+                        EndTown = endTown,
+                        Distance = route.Distance,
+                    });
+
+                data.Routes.SaveChanges();
+            }
+
+            //Fill VehicleRoutes
+            var allVehicleRoutes = mongoData.GetAllVehicleRoutes();
+            foreach (var vehicleRoute in allVehicleRoutes)
+            {
+                var vehicleRouteId = int.Parse(vehicleRoute.RouteId.Id);
+                var routeId = data.Routes
+                    .SearchFor(x => x.StartTown.Name == vehicleRoute.RouteId.StartTown.Name 
+                        && x.EndTown.Name == vehicleRoute.RouteId.EndTown.Name)
+                        .FirstOrDefault().Id;
+
+                var vehicleId = data.Vehicles
+                    .SearchFor(x => x.Driver.FirstName == vehicleRoute.VehicleId.Driver.FirstName 
+                        && x.Driver.LastName == vehicleRoute.VehicleId.Driver.LastName)
+                        .FirstOrDefault().Id;
+
+                data.VehicleRoutes.Add(
+                    new VehicleRoute() 
+                    {
+                        RouteId = routeId,
+                        VehicleId = vehicleId,
+                        Date = vehicleRoute.Date
+                    });
+
+                data.VehicleRoutes.SaveChanges();
             }
         }
 
