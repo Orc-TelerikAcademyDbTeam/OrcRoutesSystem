@@ -8,37 +8,13 @@
 
     public class XmlReportWriter
     {
-        public void CreateReport()
+        public void CreateReport(string filePath = null, string fileName = null)
         {
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
+            var report = new XmlReport();
+            var inputData = report.GetVisitedRoutes();
 
-            using (XmlWriter writer = XmlWriter.Create("d:\\Report.xml", settings))
-            {
-                writer.WriteStartDocument();
-                writer.WriteComment("Report drivers visited routes");
-                writer.WriteStartElement("Routes");
-
-                var report = new XmlReport();
-                var inputData = report.GetVisitedRoutes();
-                
-                foreach (var item in inputData)
-                {
-                    foreach (var detail in item.VehicleRouteInfo)
-                    {
-                        writer.WriteStartElement("Route");
-                        writer.WriteAttributeString("Start", item.StartTownName);
-                        writer.WriteAttributeString("End", item.EndTownName);
-                        writer.WriteAttributeString("Driver", detail.DriverName);
-                        writer.WriteAttributeString("Date", detail.RouteDate.Date.ToString());
-                        writer.WriteEndElement();
-                    }
-                }
-
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-                writer.Flush();
-            }
+            var pdfGenerator = new XmlGenerator(filePath, fileName);
+            pdfGenerator.Generate(inputData);
         }
     }
 }

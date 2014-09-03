@@ -21,6 +21,13 @@
             jsonGen.CreateReport(helper.FilePath, helper.FileName);
         }
 
+        private static void CreateXMLReport(string filePathInfo)
+        {
+            var xmlGen = new XmlReportWriter();
+            var helper = new FilePathHelper(filePathInfo);
+            xmlGen.CreateReport(helper.FilePath, helper.FileName);
+        }
+
         internal static void CreateReport(RadioButton button, string filePathInfo)
         {
             switch (button.Name)
@@ -30,6 +37,9 @@
                     break;
                 case "CheckBoxVehicleInformationReport":
                     CreateJSONReport(filePathInfo);
+                    break;
+                case "xmlReportRadio":
+                    CreateXMLReport(filePathInfo);
                     break;
                 default:
                     throw new ArgumentException("Wrong button passed!");

@@ -50,7 +50,7 @@
             this.textBoxSelectedFolder = new System.Windows.Forms.TextBox();
             this.generateReportButton = new System.Windows.Forms.Button();
             this.expenseReportRadioButton = new System.Windows.Forms.RadioButton();
-            this.carsReportRadioButton = new System.Windows.Forms.RadioButton();
+            this.xmlReportRadio = new System.Windows.Forms.RadioButton();
             this.CheckBoxVehicleInformationReport = new System.Windows.Forms.RadioButton();
             this.CheckBoxAggregateRouteReport = new System.Windows.Forms.RadioButton();
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -58,6 +58,7 @@
             this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -245,12 +246,13 @@
             // 
             this.tabReports.BackColor = System.Drawing.Color.Transparent;
             this.tabReports.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
+            this.tabReports.Controls.Add(this.label3);
             this.tabReports.Controls.Add(this.label2);
             this.tabReports.Controls.Add(this.label1);
             this.tabReports.Controls.Add(this.textBoxSelectedFolder);
             this.tabReports.Controls.Add(this.generateReportButton);
             this.tabReports.Controls.Add(this.expenseReportRadioButton);
-            this.tabReports.Controls.Add(this.carsReportRadioButton);
+            this.tabReports.Controls.Add(this.xmlReportRadio);
             this.tabReports.Controls.Add(this.CheckBoxVehicleInformationReport);
             this.tabReports.Controls.Add(this.CheckBoxAggregateRouteReport);
             this.tabReports.Location = new System.Drawing.Point(4, 29);
@@ -288,15 +290,15 @@
             this.expenseReportRadioButton.Text = "Expense Report";
             this.expenseReportRadioButton.UseVisualStyleBackColor = true;
             // 
-            // carsReportRadioButton
+            // xmlReportRadio
             // 
-            this.carsReportRadioButton.AutoSize = true;
-            this.carsReportRadioButton.Location = new System.Drawing.Point(268, 35);
-            this.carsReportRadioButton.Name = "carsReportRadioButton";
-            this.carsReportRadioButton.Size = new System.Drawing.Size(124, 24);
-            this.carsReportRadioButton.TabIndex = 2;
-            this.carsReportRadioButton.Text = "Cars Report";
-            this.carsReportRadioButton.UseVisualStyleBackColor = true;
+            this.xmlReportRadio.AutoSize = true;
+            this.xmlReportRadio.Location = new System.Drawing.Point(268, 35);
+            this.xmlReportRadio.Name = "xmlReportRadio";
+            this.xmlReportRadio.Size = new System.Drawing.Size(124, 24);
+            this.xmlReportRadio.TabIndex = 2;
+            this.xmlReportRadio.Text = "Cars Report";
+            this.xmlReportRadio.UseVisualStyleBackColor = true;
             // 
             // CheckBoxVehicleInformationReport
             // 
@@ -346,6 +348,15 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "(JSON Report)";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(275, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "(XML Report)";
+            // 
             // RoutesSystemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,7 +394,7 @@
         private System.Windows.Forms.Label loadMongoDBLabel;
         private System.Windows.Forms.Button loadExcelButton;
         private System.Windows.Forms.Label loadExcelLabel;
-        private System.Windows.Forms.RadioButton carsReportRadioButton;
+        private System.Windows.Forms.RadioButton xmlReportRadio;
         private System.Windows.Forms.RadioButton CheckBoxVehicleInformationReport;
         private System.Windows.Forms.RadioButton CheckBoxAggregateRouteReport;
         private System.Windows.Forms.OpenFileDialog loadExcelOpenFileDialog;
@@ -396,6 +407,7 @@
         private System.Windows.Forms.TextBox textBoxSelectedFolder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

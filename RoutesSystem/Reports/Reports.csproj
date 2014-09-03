@@ -84,6 +84,7 @@
     <Compile Include="ReportTypes\PdfReport.cs" />
     <Compile Include="ReportModels\VehicleRouteInfo.cs" />
     <Compile Include="ReportModels\VisitedRouteInfo.cs" />
+    <Compile Include="ReportWriters\XmlGenerator.cs" />
     <Compile Include="ReportWriters\XmlReportWriter.cs" />
     <Compile Include="ReportReaders\XmlReportReader.cs" />
   </ItemGroup>
