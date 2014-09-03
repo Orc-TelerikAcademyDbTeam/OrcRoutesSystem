@@ -1,5 +1,6 @@
 ﻿namespace SQLServer
 {
+    using System.Collections.Generic;
     using System.Linq;
 
     using Mongo;
@@ -8,6 +9,8 @@
 
     using RoutesSystem.Data;
     using RoutesSystem.Model.SQLServerModels;
+
+    using CarEntry = Reports.ReportModels.CarEntry;
 
     public static class SQLServerWorker
     {
@@ -157,6 +160,11 @@
                 data.FuelInfo.Add(fuelInfoModel);
             }
             data.FuelInfo.SaveChanges();
+        }
+
+        public static void ImportXMLCarExpenses(IEnumerable<CarEntry> entries)
+        {
+            
         }
     }
 }

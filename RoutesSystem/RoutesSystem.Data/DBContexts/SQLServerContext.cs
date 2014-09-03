@@ -35,6 +35,10 @@
 
         public IDbSet<FuelInfo> FuelInfo { get; set; }
 
+        public IDbSet<CarEntry> VehicleExpenseInfo { get; set; }
+ 
+        public IDbSet<CarExpenses>  VehicleExpenses { get; set; }
+
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
             return base.Set<TEntity>();

@@ -100,6 +100,22 @@
             }
         }
 
+        public IGenericRepository<CarEntry> VehicleExpenseInfo
+        {
+            get
+            {
+                return this.GetRepository<CarEntry>();
+            }
+        }
+
+        public IGenericRepository<CarExpenses> VehicleExpenses
+        {
+            get
+            {
+                return this.GetRepository<CarExpenses>();
+            }
+        }
+
         public IGenericRepository<VehicleRoute> VehicleRoutes
         {
             get

@@ -1,5 +1,8 @@
 ﻿namespace RouteSystem.UI
 {
+    using System.Globalization;
+    using System.Threading;
+
     using Mongo;
 
     using Reports.ReportModels;
@@ -15,6 +18,8 @@
     {
         public static void ImportXMLToMongoAndSQLServer(string mongoConnectionString, string pathToXML)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>(pathToXML);
             var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
             var mongoWorker = new MongoWorker(mongoConnectionString);
