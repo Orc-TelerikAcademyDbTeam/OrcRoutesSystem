@@ -9,6 +9,8 @@
     using Reports.ReportWriters;
     using RoutesSystem.Model.SQLServerModels;
     using RouteSystemUI;
+    using MySQL;
+    
 
     internal static class Program
     {
@@ -21,7 +23,7 @@
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RoutesSystemForm());
-
+            
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
             
