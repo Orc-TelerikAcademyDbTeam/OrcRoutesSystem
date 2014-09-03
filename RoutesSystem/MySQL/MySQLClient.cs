@@ -1,5 +1,7 @@
-﻿using Telerik.OpenAccess;
-    
+﻿using System.Collections.Generic;
+using System.Linq;
+using Telerik.OpenAccess;
+
 namespace MySQL
 {
     public class EntryPoint
@@ -7,9 +9,9 @@ namespace MySQL
         public static void Start()
         {
             UpdateDatabase();
-               
+
         }
-    
+
         private static void UpdateDatabase()
         {
             using (var context = new MySQL.FluentModel())
@@ -18,7 +20,7 @@ namespace MySQL
                 EnsureDB(schemaHandler);
             }
         }
-    
+
         private static void EnsureDB(ISchemaHandler schemaHandler)
         {
             string script = null;
@@ -31,15 +33,14 @@ namespace MySQL
                 schemaHandler.CreateDatabase();
                 script = schemaHandler.CreateDDLScript();
             }
-    
+
             if (!string.IsNullOrEmpty(script))
             {
                 schemaHandler.ExecuteDDLScript(script);
             }
         }
 
-
-        public static void InsertRow(int id, string type, string manufactorer, string model, string fuel, string driver)
+        public static void InsertRow(int id, string type, string manufactorer, string model, string fuel, string driverFirstName, string driverLastName)
         {
             using (FluentModel dbContext = new FluentModel())
             {
@@ -49,12 +50,20 @@ namespace MySQL
                 newRecord.Manufactorer = manufactorer;
                 newRecord.VehicleModel = model;
                 newRecord.FuelType = fuel;
-                newRecord.Driver = driver;
+                newRecord.DriverFirstName = driverFirstName;
+                newRecord.DriverLastName = driverLastName;
 
                 dbContext.Add(newRecord);
                 dbContext.SaveChanges();
             }
         }
-           
+
+        public static IList<VehicleInformation> GetAllVehicleInformation()
+        {
+            using (FluentModel dbContext = new FluentModel())
+            {
+                return dbContext.GetAll<VehicleInformation>().ToList();
+            }
+        }
     }
 }
