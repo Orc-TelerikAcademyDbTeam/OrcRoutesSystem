@@ -13,9 +13,17 @@
     {
         private static RouteSystemData data = new RouteSystemData();
 
-        public static void ImportMongoDBData()
+        public static void ImportMongoDBData(string connectionString=null)
         {
-            var mongoData = new MongoWorker();
+            MongoWorker mongoData;
+            if (connectionString!=null)
+            {
+                mongoData = new MongoWorker(connectionString);
+            }
+            else
+        {
+                mongoData=new MongoWorker();
+            }
 
             //Fill Manufactures
             var allManufacturers = mongoData.GetAllManufacturers();
@@ -83,12 +91,12 @@
                 };
 
                 var vehicleModel = new Vehicle()
-                {
-                    VehicleTypeId = vehicleTypeId,
-                    ManufacturerId = manufacturerId,
-                    ModelId = modelId,
-                    YearOfManifacturer = vehicle.YearOfManifacturer,
-                    FuelTypeId = fuelTypeId
+                        {
+                            VehicleTypeId = vehicleTypeId,
+                            ManufacturerId = manufacturerId,
+                            ModelId = modelId,
+                            YearOfManifacturer = vehicle.YearOfManifacturer,
+                            FuelTypeId = fuelTypeId
                 };
 
                 data.Vehicles.Add(vehicleModel);

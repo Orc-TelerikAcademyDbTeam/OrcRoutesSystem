@@ -4,8 +4,17 @@
     using System;
     using System.Windows.Forms;
 
+    using SQLServer;
+
     internal static class UIEngine
     {
+
+        public static void ImportExcelAndMongoData(string connectionString, string zipArchivePath)
+        {
+            SQLServerWorker.ImportMongoDBData(connectionString);
+            SQLServerWorker.ImportExcellData(zipArchivePath);
+        }
+
         private static void CreatePDFReport(string filePathInfo)
         {
             var pdfGen = new PdfReportWriter();
