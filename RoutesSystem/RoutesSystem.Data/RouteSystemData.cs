@@ -66,6 +66,30 @@
             {
                 return this.GetRepository<FuelInfo>();
             }
+        }
+
+        public IGenericRepository<FuelType> Fueltypes
+        {
+            get
+            {
+                return this.GetRepository<FuelType>();
+            }
+        }
+
+        public IGenericRepository<Vehicle> Vehicles
+        {
+            get
+            {
+                return this.GetRepository<Vehicle>();
+            }
+        }
+
+        public IGenericRepository<Model> Models
+        {
+            get
+            {
+                return this.GetRepository<Model>();
+            }
         } 
 
         private IGenericRepository<T> GetRepository<T>() where T : class

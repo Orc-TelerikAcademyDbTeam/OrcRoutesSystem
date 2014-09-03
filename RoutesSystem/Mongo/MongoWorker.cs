@@ -1,82 +1,131 @@
 ﻿namespace Mongo
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-
-    using MongoDB.Bson;
-    using MongoDB.Driver;
 
     using RoutesSystem.Data;
     using RoutesSystem.Model;
     using RoutesSystem.Model.MongoDBModels;
     using RoutesSystem.Model.SQLServerModels;
 
-    public static class MongoWorker
+    public class MongoWorker
     {
-        private static MongoData data=new MongoData();
+        private MongoData data;
 
-        private static void Populate()
+        public MongoWorker()
         {
-            if (!data.Manufacturers.All().Any())
-            {
-                data.Manufacturers.Insert(new MongoManufacturer()
-                                              {
-                                                  Name = "Toyota"
-                                              });
-                data.Manufacturers.Insert(new MongoManufacturer()
-                {
-                    Name = "BMW"
-                });
-
-                data.Manufacturers.Insert(new MongoManufacturer()
-                {
-                    Name = "Audi"
-                });
-            }
-
-            if (!data.Towns.All().Any())
-            {
-                data.Towns.Insert(new MongoTown()
-                                      {
-                                          Name = "Vraca"
-                                      });
-                data.Towns.Insert(new MongoTown()
-                {
-                    Name = "Maluk Porovec"
-                });
-
-                data.Towns.Insert(new MongoTown()
-                {
-                    Name = "Burgas"
-                });
-            }
-
-            if (!data.VehicleTypes.All().Any())
-            {
-                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Sedan" });
-                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Coupe" });
-                data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Limousine" });
-            }
-            
+            this.data = new MongoData();
+            this.Populate();
         }
 
-        public static IQueryable<MongoTown> GetAllTowns()
+        private void Populate()
         {
-            Populate();
-            return data.Towns.All();
+            if (!this.data.Manufacturers.All().Any())
+            {
+                this.data.Manufacturers.Insert(new MongoManufacturer() { Name = "Toyota" });
+                this.data.Manufacturers.Insert(new MongoManufacturer() { Name = "BMW" });
+
+                this.data.Manufacturers.Insert(new MongoManufacturer() { Name = "Audi" });
+            }
+
+            if (!this.data.Towns.All().Any())
+            {
+                this.data.Towns.Insert(new MongoTown() { Name = "Vraca" });
+                this.data.Towns.Insert(new MongoTown() { Name = "Maluk Porovec" });
+
+                this.data.Towns.Insert(new MongoTown() { Name = "Burgas" });
+            }
+
+            if (!this.data.VehicleTypes.All().Any())
+            {
+                this.data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Sedan" });
+                this.data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Coupe" });
+                this.data.VehicleTypes.Insert(new MongoVehicleType() { Name = "Limousine" });
+            }
+
+            if (!this.data.FuelTypes.All().Any())
+            {
+                this.data.FuelTypes.Insert(new MongoFuelType() { Name = "Diesel" });
+                this.data.FuelTypes.Insert(new MongoFuelType() { Name = "Benzine" });
+                this.data.FuelTypes.Insert(new MongoFuelType() { Name = "Methane" });
+            }
+
+            if (!this.data.VehicleModels.All().Any())
+            {
+                this.data.VehicleModels.Insert(
+                    new MongoModel() { FuelConsumption = 8.5f, Name = "R8", NumberOfWheels = 4 });
+                this.data.VehicleModels.Insert(
+                    new MongoModel() { FuelConsumption = 5.5f, Name = "M7", NumberOfWheels = 4 });
+                this.data.VehicleModels.Insert(
+                    new MongoModel() { FuelConsumption = 4.0f, Name = "Avensis", NumberOfWheels = 4 });
+            }
+
+            if (!this.data.Vehicles.All().Any())
+            {
+                this.data.Vehicles.Insert(
+                    new MongoVehicle()
+                        {
+                            FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine").First(),
+                            Manufacturer =
+                                this.data.Manufacturers.SearchFor(x => x.Name == "Toyota").First(),
+                            Model = this.data.VehicleModels.SearchFor(x => x.Name == "Avensis").First(),
+                            VehicleType =
+                                this.data.VehicleTypes.SearchFor(x => x.Name == "Limousine").First(),
+                            YearOfManifacturer = new DateTime(2012, 1, 1)
+                        });
+
+                this.data.Vehicles.Insert(
+                    new MongoVehicle()
+                        {
+                            FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
+                            Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Audi").First(),
+                            Model = this.data.VehicleModels.SearchFor(x => x.Name == "R8").First(),
+                            VehicleType =
+                                this.data.VehicleTypes.SearchFor(x => x.Name == "Limousine").First(),
+                            YearOfManifacturer = new DateTime(2012, 1, 1)
+                        });
+
+                this.data.Vehicles.Insert(
+                    new MongoVehicle()
+                        {
+                            FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
+                            Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "BMW").First(),
+                            Model = this.data.VehicleModels.SearchFor(x => x.Name == "M7").First(),
+                            VehicleType =
+                                this.data.VehicleTypes.SearchFor(x => x.Name == "Limousine").First(),
+                            YearOfManifacturer = new DateTime(2012, 1, 1)
+                        });
+            }
         }
 
-        public static IQueryable<MongoManufacturer> GetAllManufacturers()
+        public IQueryable<MongoTown> GetAllTowns()
         {
-            Populate();
-            return data.Manufacturers.All();
+            return this.data.Towns.All();
         }
 
-        public static IQueryable<MongoVehicleType> GetAllVehicleTypes()
+        public IQueryable<MongoManufacturer> GetAllManufacturers()
         {
-            Populate();
-            return data.VehicleTypes.All();
-        } 
+            return this.data.Manufacturers.All();
+        }
+
+        public IQueryable<MongoVehicleType> GetAllVehicleTypes()
+        {
+            return this.data.VehicleTypes.All();
+        }
+
+        public IQueryable<MongoFuelType> GetAllFuelTypes()
+        {
+            return this.data.FuelTypes.All();
+        }
+
+        public IQueryable<MongoVehicle> GetAllVehicles()
+        {
+            return this.data.Vehicles.All();
+        }
+
+        public IQueryable<MongoModel> GetAllModels()
+        {
+            return this.data.VehicleModels.All();
+        }
     }
 }

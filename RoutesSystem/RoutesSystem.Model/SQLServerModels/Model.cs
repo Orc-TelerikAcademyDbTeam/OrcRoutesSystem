@@ -13,7 +13,7 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(2)]
         [MaxLength(20)]
         public string Name { get; set; }
 

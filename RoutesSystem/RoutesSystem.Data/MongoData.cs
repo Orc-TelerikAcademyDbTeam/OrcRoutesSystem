@@ -23,7 +23,13 @@ namespace RoutesSystem.Data
         {
         }
 
-        public MongoData(IMongoDBContext context)
+        public MongoData(string url, string dbName)
+        {
+            this.context = new MongoDBContext(url, dbName);
+            this.repositories = new Dictionary<Type, object>();
+        }
+
+        private MongoData(IMongoDBContext context)
         {
             this.context = context;
             this.repositories = new Dictionary<Type, object>();
@@ -51,7 +57,31 @@ namespace RoutesSystem.Data
             {
                 return this.GetRepository<MongoVehicleType>();
             }
-        } 
+        }
+
+        public IGenericNoSQLRepository<MongoFuelType> FuelTypes
+        {
+            get
+            {
+                return this.GetRepository<MongoFuelType>();
+            }
+        }
+
+        public IGenericNoSQLRepository<MongoModel> VehicleModels
+        {
+            get
+            {
+                return this.GetRepository<MongoModel>();
+            }
+        }
+
+        public IGenericNoSQLRepository<MongoVehicle> Vehicles
+        {
+            get
+            {
+                return this.GetRepository<MongoVehicle>();
+            }
+        }
 
         private IGenericNoSQLRepository<T> GetRepository<T>() where T : class
         {
