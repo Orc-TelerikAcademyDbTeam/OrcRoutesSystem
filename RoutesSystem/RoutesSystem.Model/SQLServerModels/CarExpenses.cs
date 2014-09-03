@@ -11,10 +11,10 @@ namespace RoutesSystem.Model.SQLServerModels
 
     public class CarExpenses
     {
+        [Key]
         public int Id { get; set; }
 
-        [Required]
-        public int CarEntryId { get; set; }
+        public int CarEntry { get; set; }
 
         public DateTime Date { get; set; }
 

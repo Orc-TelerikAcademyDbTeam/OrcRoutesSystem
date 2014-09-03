@@ -24,6 +24,7 @@
             var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
             var mongoWorker = new MongoWorker(mongoConnectionString);
             mongoWorker.ImportXMLCarsEntry(technicalReport);
+            SQLServerWorker.ImportXMLCarExpenses(technicalReport);
         }
 
         public static void ImportExcelAndMongoData(string connectionString, string zipArchivePath)

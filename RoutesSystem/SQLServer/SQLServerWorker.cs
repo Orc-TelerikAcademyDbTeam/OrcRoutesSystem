@@ -162,9 +162,26 @@
             data.FuelInfo.SaveChanges();
         }
 
-        public static void ImportXMLCarExpenses(IEnumerable<CarEntry> entries)
+        public static void ImportXMLCarExpenses(IEnumerable<CarEntry> cars)
         {
-            
+            foreach (var carEntry in cars)
+            {
+                var expenses = new List<CarExpenses>();
+                foreach (var expense in carEntry.Expenses)
+                {
+                    var newExpense = new CarExpenses() { Cost = expense.Cost, Date = expense.Month };
+                    data.VehicleExpenses.Add(newExpense);
+                    data.VehicleExpenses.SaveChanges();
+                    expenses.Add(newExpense);
+                }
+                var newCarEntry = new RoutesSystem.Model.SQLServerModels.CarEntry()
+                {
+                    VehicleId = carEntry.RegistrationIdentifier,
+                    VehicleExpenses = expenses
+                };
+                data.VehicleExpenseInfo.Add(newCarEntry);
+                data.VehicleExpenseInfo.SaveChanges();
+            }
         }
     }
 }

@@ -11,6 +11,8 @@
     using RoutesSystem.Model.MongoDBModels;
     using RoutesSystem.Model.SQLServerModels;
 
+    using CarEntry = Reports.ReportModels.CarEntry;
+
     public class MongoWorker
     {
         private MongoData data;

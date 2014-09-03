@@ -173,28 +173,22 @@
             this.loadXMLLabel.Text = "Choose XML File:";
             // 
             // loadMongoDBTextBox
-<<<<<<< HEAD
             // 
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 250);
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 106);
-=======
             // 
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(311, 106);
->>>>>>> origin/master
             this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
             // 
             // loadMongoDBLabel
             // 
-<<<<<<< HEAD
             this.loadMongoDBLabel.AutoSize = true;
             this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 250);
             this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
-=======
             this.loadMongoDBLabel.AutoSize = true;
             this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
->>>>>>> origin/master
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
             this.loadMongoDBLabel.Size = new System.Drawing.Size(291, 20);
             this.loadMongoDBLabel.TabIndex = 5;
