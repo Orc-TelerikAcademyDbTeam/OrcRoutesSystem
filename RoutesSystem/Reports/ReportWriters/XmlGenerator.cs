@@ -48,8 +48,8 @@
                 foreach (var item in inputData)
                 {
                         writer.WriteStartElement("Routes");
-                        writer.WriteAttributeString("Vehicle Id", item.VehicleId.ToString());
-                        writer.WriteAttributeString("Fuel Id", item.FuelId.ToString());
+                        writer.WriteAttributeString("VehicleId", item.VehicleId.ToString());
+                        writer.WriteAttributeString("FuelId", item.FuelId.ToString());
                         writer.WriteAttributeString("Price", item.Price.ToString());
                         writer.WriteAttributeString("Spent", item.Spent.ToString());
                         writer.WriteAttributeString("Total", item.Total.ToString());

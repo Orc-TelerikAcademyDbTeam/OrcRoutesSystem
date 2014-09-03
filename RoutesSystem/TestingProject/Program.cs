@@ -59,8 +59,8 @@
 
 
             //SQLServerWorker.ImportExcellData();
-            //var XmlGen = new XmlReportWriter();
-            //XmlGen.CreateReport();
+            var XmlGen = new XmlReportWriter();
+            XmlGen.CreateReport();
 
             //Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
