@@ -9,6 +9,7 @@
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Model;
     using RoutesSystem.Data.Repositories;
+    using RoutesSystem.Model.SQLiteModels;
 
     using SQLite;
 
@@ -28,7 +29,17 @@
             //var jsonGen = new JSONReportWriter();
             //jsonGen.CreateReport();
 
+            //SQLiteData data=new SQLiteData();
+            //data.DriversInfo.Add(new DriverInfo()
+            //                         {
+            //                             DriverFirstName = "Penio",
+            //                             DriverLastName = "Penev",
+            //                             EndTown = "Maluk Porovec",
+            //                             StartTown = "Golqm Porovec"
+            //                         });
+            //data.DriversInfo.SaveChanges();
 
+            var data = SQLiteWorker.GetDriverRouteData();
 
             SQLServerWorker.ImportMongoDBData();
             SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
