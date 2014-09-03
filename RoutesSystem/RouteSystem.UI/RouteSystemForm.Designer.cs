@@ -76,7 +76,7 @@
             this.tabRouteSystem.Name = "tabRouteSystem";
             this.tabRouteSystem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabRouteSystem.SelectedIndex = 0;
-            this.tabRouteSystem.Size = new System.Drawing.Size(534, 286);
+            this.tabRouteSystem.Size = new System.Drawing.Size(534, 413);
             this.tabRouteSystem.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabRouteSystem.TabIndex = 0;
             // 
@@ -102,7 +102,7 @@
             this.tabLoadData.Location = new System.Drawing.Point(4, 29);
             this.tabLoadData.Name = "tabLoadData";
             this.tabLoadData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLoadData.Size = new System.Drawing.Size(526, 253);
+            this.tabLoadData.Size = new System.Drawing.Size(526, 380);
             this.tabLoadData.TabIndex = 0;
             this.tabLoadData.Text = "Load Data";
             // 
@@ -174,15 +174,15 @@
             // 
             // loadMongoDBTextBox
             // 
-            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 125);
-            this.loadMongoDBTextBox.Name = "loadMongoDBAndExcelTextBox";
+            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 250);
+            this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
             // 
             // loadMongoDBLabel
             // 
             this.loadMongoDBLabel.AutoSize = true;
-            this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 250);
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
             this.loadMongoDBLabel.Size = new System.Drawing.Size(291, 20);
             this.loadMongoDBLabel.TabIndex = 5;
@@ -321,7 +321,7 @@
             this.xmlReportRadio.AutoSize = true;
             this.xmlReportRadio.Location = new System.Drawing.Point(268, 35);
             this.xmlReportRadio.Name = "xmlReportRadio";
-            this.xmlReportRadio.Size = new System.Drawing.Size(124, 24);
+            this.xmlReportRadio.Size = new System.Drawing.Size(232, 24);
             this.xmlReportRadio.TabIndex = 2;
             this.xmlReportRadio.Text = "Fuel Consumption Report";
             this.xmlReportRadio.UseVisualStyleBackColor = true;
@@ -363,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(534, 286);
+            this.ClientSize = new System.Drawing.Size(534, 413);
             this.Controls.Add(this.tabRouteSystem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoutesSystemForm";

@@ -63,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MongoDBModels\MongoExpense.cs" />
+    <Compile Include="MongoDBModels\MongoCarEntry.cs" />
     <Compile Include="MongoDBModels\MongoDriver.cs" />
     <Compile Include="MongoDBModels\MongoFuelInfo.cs" />
     <Compile Include="MongoDBModels\MongoFuelType.cs" />

@@ -1,13 +1,25 @@
 ﻿namespace RouteSystem.UI
 {
+    using Mongo;
+
+    using Reports.ReportModels;
     using Reports.ReportWriters;
     using System;
     using System.Windows.Forms;
+
+    using RoutesSystem.Core.Reports;
 
     using SQLServer;
 
     internal static class UIEngine
     {
+        public static void ImportXMLToMongoAndSQLServer(string mongoConnectionString, string pathToXML)
+        {
+            var xmlDoc = new XmlReportReader<CarTechnicalExpensesReport>(pathToXML);
+            var technicalReport = xmlDoc.ReadDocument("Reports.ReportModels");
+            var mongoWorker = new MongoWorker(mongoConnectionString);
+            mongoWorker.ImportXMLCarsEntry(technicalReport);
+        }
 
         public static void ImportExcelAndMongoData(string connectionString, string zipArchivePath)
         {

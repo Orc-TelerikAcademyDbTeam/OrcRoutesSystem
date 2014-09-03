@@ -4,7 +4,7 @@
 
     public class CarEntry
     {
-        private string registrationIndentifier;
+        private int registrationIndentifier;
         private ICollection<Expense> expenses;
 
         public CarEntry()
@@ -12,7 +12,7 @@
             this.Expenses = new List<Expense>();
         }
 
-        public string RegistrationIdentifier
+        public int RegistrationIdentifier
         {
             get { return this.registrationIndentifier; }
             set { this.registrationIndentifier = value; }

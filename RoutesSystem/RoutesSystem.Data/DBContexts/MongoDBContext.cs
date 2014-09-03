@@ -52,5 +52,9 @@
         public MongoCollection<MongoVehicle> Vehicles { get; set; }
 
         public MongoCollection<MongoVehicleType> VehicleTypes { get; set; }
+
+        public MongoCollection<MongoCarEntry> VehicleExpensesInfo { get; set; }
+
+        public MongoCollection<MongoExpense> VehicleExpenses { get; set; }
     }
 }

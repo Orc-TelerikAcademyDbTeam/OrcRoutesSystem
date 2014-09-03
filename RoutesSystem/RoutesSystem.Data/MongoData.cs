@@ -99,6 +99,22 @@ namespace RoutesSystem.Data
             }
         }
 
+        public IGenericNoSQLRepository<MongoCarEntry> VehicleExpensesInfo
+        {
+            get
+            {
+                return this.GetRepository<MongoCarEntry>();
+            }
+        }
+
+        public IGenericNoSQLRepository<MongoExpense> VehicleExpenses
+        {
+            get
+            {
+                return this.GetRepository<MongoExpense>();
+            }
+        }
+
         public IGenericNoSQLRepository<MongoVehicleRoute> VehicleRoutes
         {
             get

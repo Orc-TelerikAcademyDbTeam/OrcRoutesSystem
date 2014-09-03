@@ -52,6 +52,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Reports\Reports.csproj">
+      <Project>{e1eba381-8efb-4bca-9666-3f7480a9a55d}</Project>
+      <Name>Reports</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RoutesSystem.Data\RoutesSystem.Data.csproj">
       <Project>{5d4d6416-d5d0-4918-9ef3-e82ae4906b63}</Project>
       <Name>RoutesSystem.Data</Name>

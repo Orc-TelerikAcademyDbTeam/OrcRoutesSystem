@@ -24,6 +24,7 @@
         {
             this.loadXMLOpenFileDialog.ShowDialog();
             this.loadXMLTextbox.Text = this.loadXMLOpenFileDialog.FileName;
+            
         }
 
         private void hideUnusedLoadData()
@@ -65,6 +66,8 @@
                 this.loadXMLLabel.Visible = true;
                 this.loadXMLButton.Visible = true;
                 this.loadXMLTextbox.Visible = true;
+                this.loadMongoDBLabel.Visible = true;
+                this.loadMongoDBTextBox.Visible = true;
             }
             else if (this.importDataTypeSelect.SelectedItem.ToString() == "MySQL and SQLite")
             {
@@ -86,7 +89,7 @@
                 {
                     MessageBox.Show("Choose Excel file first!");
                 }
-                if (this.loadMongoDBTextBox.Text == "")
+                else if (this.loadMongoDBTextBox.Text == "")
                 {
                     MessageBox.Show("Choose MongoDB connection string first!");
                 }
@@ -100,6 +103,14 @@
                 if (this.loadXMLTextbox.Text == "")
                 {
                     MessageBox.Show("Choose XML file first!");
+                }
+                else if (this.loadMongoDBTextBox.Text=="")
+                {
+                    MessageBox.Show("Choose MongoDB connection string first!");
+                }
+                else
+                {
+                    UIEngine.ImportXMLToMongoAndSQLServer(this.loadMongoDBTextBox.Text, this.loadXMLTextbox.Text);
                 }
             }
             else if (this.importDataTypeSelect.SelectedItem.ToString() == "MySQL and SQLite")

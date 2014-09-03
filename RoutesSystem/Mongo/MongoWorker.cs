@@ -1,7 +1,10 @@
 ﻿namespace Mongo
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
+
+    using Reports.ReportModels;
 
     using RoutesSystem.Data;
     using RoutesSystem.Model;
@@ -21,6 +24,7 @@
         public MongoWorker(string connectionString)
         {
             this.data = new MongoData(connectionString, "RoutesSystem");
+            this.Populate();
         }
 
         private void Populate()
@@ -1185,6 +1189,24 @@
                     VehicleId = 27,
                     Date = new DateTime(2014, 9, 29)
                 });
+            }
+        }
+
+        public void ImportXMLCarsEntry(IEnumerable<CarEntry> cars)
+        {
+            foreach (var carEntry in cars)
+            {
+                var expenses = new List<MongoExpense>();
+                foreach (var expense in carEntry.Expenses)
+                {
+                    expenses.Add(new MongoExpense() { Cost = expense.Cost, Date = expense.Month, });
+                }
+                var mongoCarEntry = new MongoCarEntry()
+                                        {
+                                            VehicleId = carEntry.RegistrationIdentifier,
+                                            Expenses = expenses
+                                        };
+                this.data.VehicleExpensesInfo.Insert(mongoCarEntry);
             }
         }
 
