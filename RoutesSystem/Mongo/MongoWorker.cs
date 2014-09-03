@@ -56,7 +56,7 @@
                 this.data.Towns.Insert(new MongoTown() { Name = "St.Zagora" });
                 this.data.Towns.Insert(new MongoTown() { Name = "Sliven" });
                 this.data.Towns.Insert(new MongoTown() { Name = "Blagoevgrad" });
-                this.data.Towns.Insert(new MongoTown() { Name = "Perniks" });
+                this.data.Towns.Insert(new MongoTown() { Name = "Pernik" });
             }
 
             if (!this.data.VehicleTypes.All().Any())
@@ -449,6 +449,350 @@
                            this.data.VehicleTypes.SearchFor(x => x.Name == "Bus").First(),
                        YearOfManifacturer = new DateTime(2008, 9, 17)
                    });
+            }
+
+            if (!this.data.Drivers.All().Any())
+            {
+                this.data.Drivers.Insert(new MongoDriver() 
+                { 
+                    DriverID = "1",
+                    FirstName = "Peter",
+                    MiddleName = "Petrov",
+                    LastName = "Petrov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "2",
+                    FirstName = "Yaro",
+                    MiddleName = "Berov",
+                    LastName = "Penov"
+                });
+
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "3",
+                    FirstName = "Martin",
+                    MiddleName = "Vaklinov",
+                    LastName = "Vaklinov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "4",
+                    FirstName = "Cristiano",
+                    MiddleName = "",
+                    LastName = "Ronaldo"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "5",
+                    FirstName = "Gergi",
+                    MiddleName = "Georgiev",
+                    LastName = "Georgiev"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "6",
+                    FirstName = "Ognqn",
+                    MiddleName = "",
+                    LastName = "Jelezov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "7",
+                    FirstName = "Mitko",
+                    MiddleName = "Mitev",
+                    LastName = "Mitev"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "8",
+                    FirstName = "Lalka",
+                    MiddleName = "Asenova",
+                    LastName = "Paralingova"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "9",
+                    FirstName = "Zlatka",
+                    MiddleName = "Cherna",
+                    LastName = "Chernata"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "10",
+                    FirstName = "Zagore",
+                    MiddleName = "Toshev",
+                    LastName = "Peshev"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "11",
+                    FirstName = "Marti",
+                    MiddleName = "K",
+                    LastName = "Lambova"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "12",
+                    FirstName = "Dimitrichka",
+                    MiddleName = "Hah",
+                    LastName = "Budurova"
+                });
+
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "13",
+                    FirstName = "Hinka",
+                    MiddleName = "Hulk",
+                    LastName = "Hinkova"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "14",
+                    FirstName = "Urus",
+                    MiddleName = "Urugvai",
+                    LastName = "Hapeshtiq"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "15",
+                    FirstName = "Luiz",
+                    MiddleName = "Shark",
+                    LastName = "Suarez"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "16",
+                    FirstName = "Toshko",
+                    MiddleName = "Tosheta",
+                    LastName = "Toshev"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "17",
+                    FirstName = "Ventilator",
+                    MiddleName = "Klimatikov",
+                    LastName = "Aspartamov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "18",
+                    FirstName = "Petiletka",
+                    MiddleName = "Venelinova",
+                    LastName = "Paleva"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "19",
+                    FirstName = "Razvigor",
+                    MiddleName = "Kornishonov",
+                    LastName = "Shtaigov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "20",
+                    FirstName = "Helikopter",
+                    MiddleName = "Petrov",
+                    LastName = "Petrov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "21",
+                    FirstName = "Joro",
+                    MiddleName = "Kolumbieca",
+                    LastName = "Smaglata"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "22",
+                    FirstName = "Harry",
+                    MiddleName = "J",
+                    LastName = "Potter"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "23",
+                    FirstName = "Adolf",
+                    MiddleName = "Funky",
+                    LastName = "Shperplatov"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "24",
+                    FirstName = "Enq",
+                    MiddleName = "Nanq",
+                    LastName = "Noniva"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "25",
+                    FirstName = "Cvetelina",
+                    MiddleName = "P",
+                    LastName = "Cecova"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "26",
+                    FirstName = "Lora",
+                    MiddleName = "O",
+                    LastName = "Karadjova"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "27",
+                    FirstName = "Magdalena",
+                    MiddleName = "Maleeva",
+                    LastName = "Maleeva"
+                });
+
+                this.data.Drivers.Insert(new MongoDriver()
+                {
+                    DriverID = "28",
+                    FirstName = "Stefka",
+                    MiddleName = "Preskachastata",
+                    LastName = "Kostadinova"
+                });
+            }
+
+            if (!this.data.Routes.All().Any())
+            {
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
+                    Distance = 500
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
+                    Distance = 156
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
+                    Distance = 335.5f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Pleven").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Lovech").First(),
+                    Distance = 132.9f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Plovdiv").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Shumen").First(),
+                    Distance = 250
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Montana").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Sliven").First(),
+                    Distance = 390
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Blagoevgrad").First(),
+                    Distance = 65.4f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Shumen").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
+                    Distance = 89.9f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "St.Zagora").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Maluk Porovec").First(),
+                    Distance = 247.6f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Vraca").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Montana").First(),
+                    Distance = 44
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Plovdiv").First(),
+                    Distance = 162
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Lovech").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Sliven").First(),
+                    Distance = 244
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
+                    Distance = 96.2f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Vraca").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "St.Zagora").First(),
+                    Distance = 233.5f
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
+                    Distance = 510
+                });
+
+                this.data.Routes.Insert(new MongoRoute()
+                {
+                    StartTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
+                    EndTown = this.data.Towns.SearchFor(x => x.Name == "Maluk Porovec").First(),
+                    Distance = 9090.31f
+                });
             }
         }
 
