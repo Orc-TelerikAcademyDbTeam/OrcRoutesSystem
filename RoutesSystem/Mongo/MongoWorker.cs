@@ -18,14 +18,11 @@
             this.Populate();
         }
 
-<<<<<<< HEAD
-=======
         public MongoWorker(string connectionString)
         {
             this.data = new MongoData(connectionString, "RoutesSystem");
         }
 
->>>>>>> 7d32d474108086435070cb1d0bf8f277a90d99e8
         private void Populate()
         {
             if (!this.data.Manufacturers.All().Any())
@@ -91,11 +88,8 @@
             if (!this.data.VehicleModels.All().Any())
             {
                 this.data.VehicleModels.Insert(
-<<<<<<< HEAD
                     new MongoModel() { FuelConsumption = 26.5f, Name = "Avensis", NumberOfWheels = 4 });
                 this.data.VehicleModels.Insert(
-=======
->>>>>>> 7d32d474108086435070cb1d0bf8f277a90d99e8
                     new MongoModel() { FuelConsumption = 8.5f, Name = "R8", NumberOfWheels = 4 });
                 this.data.VehicleModels.Insert(
                     new MongoModel() { FuelConsumption = 5.5f, Name = "M7", NumberOfWheels = 4 });
