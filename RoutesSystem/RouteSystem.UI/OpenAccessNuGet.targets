@@ -115,7 +115,8 @@ Copyright (C) 2007-2014 Telerik AD. All rights reserved.
         KeyFile="$(AssemblyOriginatorKeyFile)"
         KeyContainer="$(KeyContainerName)"
         References="@(ReferencePath)"
-        TargetFramework="$(TargetFrameworkVersion)" >
+        TargetFramework="$(TargetFramework
+        )" >
       <Output TaskParameter="Version" ItemName="EnhancerVersion" />
     </OpenAccessEnhancer>
     <Touch AlwaysCreate="true" Files="@(EnhancementFlagFile)" Time="%(IntermediateAssembly.ModifiedTime)" />

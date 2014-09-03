@@ -52,9 +52,9 @@
             var app = new Microsoft.Office.Interop.Excel.Application();
             app.Visible = false;
             var wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
-            var sheets = app.Worksheets;
-            wb.Sheets.Add(Type.Missing, Type.Missing, 1, Type.Missing);
-            var newSheet = (Worksheet)sheets.get_Item(1);
+            //var sheets = app.Worksheets;
+            //wb.Sheets.Add(Type.Missing, Type.Missing, 1, Type.Missing);
+            //var newSheet = (Worksheet)sheets.get_Item(1);
             wb.SaveAs(this.FullPath);
             wb.Close();
         }
@@ -67,7 +67,7 @@
             var formatedSalaryReportColumns = string.Join(", ", salaryReportColumns);
             foreach (var salaryReport in averageDriverSalary)
             {
-                OleDbCommand insertingAverageSalaryReportCommand = new OleDbCommand(@"INSERT INTO [" + AVERAGE_DRIVER_SALARY_TABLE_NAME + "$] (" + formatedSalaryReportColumns + ") VALUES('" + salaryReport.DriverFirstName + "', '" + salaryReport.AverageSalary + "')", connExcel);
+                OleDbCommand insertingAverageSalaryReportCommand = new OleDbCommand(@"INSERT INTO [" + AVERAGE_DRIVER_SALARY_TABLE_NAME + "] (" + formatedSalaryReportColumns + ") VALUES('" + salaryReport.DriverFirstName + "', '" + salaryReport.DriverLastName + "', '" + salaryReport.AverageSalary + "')", connExcel);
                 insertingAverageSalaryReportCommand.ExecuteNonQuery();
             }
         }
@@ -80,7 +80,7 @@
             var formatedTravelReportColumns = string.Join(", ", travelReportColumns);
             foreach (var distanceReport in averageTravelledDistance)
             {
-                OleDbCommand insertingAverageSalaryReportCommand = new OleDbCommand(@"INSERT INTO [" + AVERAGE_TRAVELLED_DISTANCE_TABLE_NAME + "$] (" + formatedTravelReportColumns + ") VALUES('" + distanceReport.VehicleModel + "', '" + distanceReport.VehicleManufacturer + "', '" + distanceReport.AverageDistance + "')", connExcel);
+                OleDbCommand insertingAverageSalaryReportCommand = new OleDbCommand(@"INSERT INTO [" + AVERAGE_TRAVELLED_DISTANCE_TABLE_NAME + "] (" + formatedTravelReportColumns + ") VALUES('" + distanceReport.VehicleModel + "', '" + distanceReport.VehicleManufacturer + "', '" + distanceReport.AverageDistance + "')", connExcel);
                 insertingAverageSalaryReportCommand.ExecuteNonQuery();
             }
         }
@@ -120,7 +120,7 @@
         {
             get
             {
-                return Path.GetFullPath(this.FilePath + this.FileName + ".xls");
+                return Path.GetFullPath(this.FilePath + "\\" + this.FileName + ".xlsx");
             }
         }
     }

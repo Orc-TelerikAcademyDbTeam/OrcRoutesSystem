@@ -50,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSelectedFolder = new System.Windows.Forms.TextBox();
             this.generateReportButton = new System.Windows.Forms.Button();
             this.expenseReportRadioButton = new System.Windows.Forms.RadioButton();
             this.xmlReportRadio = new System.Windows.Forms.RadioButton();
@@ -59,6 +58,7 @@
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadXMLOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
+            this.excelReportLabel = new System.Windows.Forms.Label();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -138,7 +138,7 @@
             // 
             // loadMySQLTextBox
             // 
-            this.loadMySQLTextBox.Location = new System.Drawing.Point(310, 125);
+            this.loadMySQLTextBox.Location = new System.Drawing.Point(310, 106);
             this.loadMySQLTextBox.Name = "loadMySQLTextBox";
             this.loadMySQLTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMySQLTextBox.TabIndex = 10;
@@ -146,7 +146,7 @@
             // loadMySQLLabel
             // 
             this.loadMySQLLabel.AutoSize = true;
-            this.loadMySQLLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadMySQLLabel.Location = new System.Drawing.Point(14, 109);
             this.loadMySQLLabel.Name = "loadMySQLLabel";
             this.loadMySQLLabel.Size = new System.Drawing.Size(269, 20);
             this.loadMySQLLabel.TabIndex = 9;
@@ -155,7 +155,7 @@
             // loadXMLButton
             // 
             this.loadXMLButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.loadXMLButton.Location = new System.Drawing.Point(310, 124);
+            this.loadXMLButton.Location = new System.Drawing.Point(310, 123);
             this.loadXMLButton.Name = "loadXMLButton";
             this.loadXMLButton.Size = new System.Drawing.Size(119, 28);
             this.loadXMLButton.TabIndex = 8;
@@ -166,7 +166,7 @@
             // loadXMLLabel
             // 
             this.loadXMLLabel.AutoSize = true;
-            this.loadXMLLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadXMLLabel.Location = new System.Drawing.Point(14, 127);
             this.loadXMLLabel.Name = "loadXMLLabel";
             this.loadXMLLabel.Size = new System.Drawing.Size(150, 20);
             this.loadXMLLabel.TabIndex = 7;
@@ -174,7 +174,11 @@
             // 
             // loadMongoDBTextBox
             // 
+<<<<<<< HEAD
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 250);
+=======
+            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 106);
+>>>>>>> origin/master
             this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
@@ -182,7 +186,11 @@
             // loadMongoDBLabel
             // 
             this.loadMongoDBLabel.AutoSize = true;
+<<<<<<< HEAD
             this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 250);
+=======
+            this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
+>>>>>>> origin/master
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
             this.loadMongoDBLabel.Size = new System.Drawing.Size(291, 20);
             this.loadMongoDBLabel.TabIndex = 5;
@@ -202,7 +210,7 @@
             // loadExcelLabel
             // 
             this.loadExcelLabel.AutoSize = true;
-            this.loadExcelLabel.Location = new System.Drawing.Point(9, 128);
+            this.loadExcelLabel.Location = new System.Drawing.Point(14, 146);
             this.loadExcelLabel.Name = "loadExcelLabel";
             this.loadExcelLabel.Size = new System.Drawing.Size(157, 20);
             this.loadExcelLabel.TabIndex = 3;
@@ -245,10 +253,10 @@
             // 
             this.tabReports.BackColor = System.Drawing.Color.Transparent;
             this.tabReports.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
+            this.tabReports.Controls.Add(this.excelReportLabel);
             this.tabReports.Controls.Add(this.label3);
             this.tabReports.Controls.Add(this.label2);
             this.tabReports.Controls.Add(this.label1);
-            this.tabReports.Controls.Add(this.textBoxSelectedFolder);
             this.tabReports.Controls.Add(this.generateReportButton);
             this.tabReports.Controls.Add(this.expenseReportRadioButton);
             this.tabReports.Controls.Add(this.xmlReportRadio);
@@ -264,7 +272,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(275, 62);
+            this.label3.Location = new System.Drawing.Point(300, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 10;
@@ -273,7 +281,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 131);
+            this.label2.Location = new System.Drawing.Point(52, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 9;
@@ -282,23 +290,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 62);
+            this.label1.Location = new System.Drawing.Point(52, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "(PDF Report)";
             // 
-            // textBoxSelectedFolder
-            // 
-            this.textBoxSelectedFolder.Location = new System.Drawing.Point(19, 190);
-            this.textBoxSelectedFolder.Name = "textBoxSelectedFolder";
-            this.textBoxSelectedFolder.Size = new System.Drawing.Size(240, 26);
-            this.textBoxSelectedFolder.TabIndex = 7;
-            // 
             // generateReportButton
             // 
             this.generateReportButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.generateReportButton.Location = new System.Drawing.Point(265, 190);
+            this.generateReportButton.Location = new System.Drawing.Point(200, 192);
             this.generateReportButton.Name = "generateReportButton";
             this.generateReportButton.Size = new System.Drawing.Size(119, 28);
             this.generateReportButton.TabIndex = 6;
@@ -309,17 +310,17 @@
             // expenseReportRadioButton
             // 
             this.expenseReportRadioButton.AutoSize = true;
-            this.expenseReportRadioButton.Location = new System.Drawing.Point(268, 104);
+            this.expenseReportRadioButton.Location = new System.Drawing.Point(261, 104);
             this.expenseReportRadioButton.Name = "expenseReportRadioButton";
-            this.expenseReportRadioButton.Size = new System.Drawing.Size(156, 24);
+            this.expenseReportRadioButton.Size = new System.Drawing.Size(260, 24);
             this.expenseReportRadioButton.TabIndex = 3;
-            this.expenseReportRadioButton.Text = "Expense Report";
+            this.expenseReportRadioButton.Text = "Average Driver Salary Report";
             this.expenseReportRadioButton.UseVisualStyleBackColor = true;
             // 
             // xmlReportRadio
             // 
             this.xmlReportRadio.AutoSize = true;
-            this.xmlReportRadio.Location = new System.Drawing.Point(268, 35);
+            this.xmlReportRadio.Location = new System.Drawing.Point(261, 35);
             this.xmlReportRadio.Name = "xmlReportRadio";
             this.xmlReportRadio.Size = new System.Drawing.Size(232, 24);
             this.xmlReportRadio.TabIndex = 2;
@@ -330,7 +331,7 @@
             // CheckBoxVehicleInformationReport
             // 
             this.CheckBoxVehicleInformationReport.AutoSize = true;
-            this.CheckBoxVehicleInformationReport.Location = new System.Drawing.Point(19, 104);
+            this.CheckBoxVehicleInformationReport.Location = new System.Drawing.Point(12, 104);
             this.CheckBoxVehicleInformationReport.Name = "CheckBoxVehicleInformationReport";
             this.CheckBoxVehicleInformationReport.Size = new System.Drawing.Size(243, 24);
             this.CheckBoxVehicleInformationReport.TabIndex = 1;
@@ -341,7 +342,7 @@
             // 
             this.CheckBoxAggregateRouteReport.AutoSize = true;
             this.CheckBoxAggregateRouteReport.Checked = true;
-            this.CheckBoxAggregateRouteReport.Location = new System.Drawing.Point(21, 35);
+            this.CheckBoxAggregateRouteReport.Location = new System.Drawing.Point(14, 35);
             this.CheckBoxAggregateRouteReport.Name = "CheckBoxAggregateRouteReport";
             this.CheckBoxAggregateRouteReport.Size = new System.Drawing.Size(225, 24);
             this.CheckBoxAggregateRouteReport.TabIndex = 0;
@@ -357,6 +358,15 @@
             // loadXMLOpenFileDialog
             // 
             this.loadXMLOpenFileDialog.FileName = "Load XML File";
+            // 
+            // excelReportLabel
+            // 
+            this.excelReportLabel.AutoSize = true;
+            this.excelReportLabel.Location = new System.Drawing.Point(300, 131);
+            this.excelReportLabel.Name = "excelReportLabel";
+            this.excelReportLabel.Size = new System.Drawing.Size(124, 20);
+            this.excelReportLabel.TabIndex = 11;
+            this.excelReportLabel.Text = "(Excel Report)";
             // 
             // RoutesSystemForm
             // 
@@ -405,10 +415,10 @@
         private System.Windows.Forms.TextBox loadExcelTextBox;
         private System.Windows.Forms.TextBox loadXMLTextbox;
         private System.Windows.Forms.SaveFileDialog SaveReportDialog;
-        private System.Windows.Forms.TextBox textBoxSelectedFolder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label excelReportLabel;
     }
 }
 

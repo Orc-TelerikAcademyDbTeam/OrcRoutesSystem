@@ -51,10 +51,9 @@
 
         private static void CreateExcelReport(string filePathInfo)
         {
-            // TODO: Replace this
-            //var xmlGen = new XmlReportWriter();
-            //var helper = new FilePathHelper(filePathInfo);
-            //xmlGen.CreateReport(helper.FilePath, helper.FileName);
+            var excelGen = new ExcelReportWriter();
+            var helper = new FilePathHelper(filePathInfo);
+            excelGen.CreateReport(helper.FilePath, helper.FileName);
         }
 
         internal static void CreateReport(RadioButton button, string filePathInfo)
@@ -69,6 +68,9 @@
                     break;
                 case "xmlReportRadio":
                     CreateXMLReport(filePathInfo);
+                    break;
+                case "expenseReportRadioButton":
+                    CreateExcelReport(filePathInfo);
                     break;
                 default:
                     throw new ArgumentException("Wrong button passed!");

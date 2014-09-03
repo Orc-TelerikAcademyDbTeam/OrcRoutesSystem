@@ -10,6 +10,8 @@
     using RoutesSystem.Model.SQLServerModels;
     using RouteSystemUI;
     using MySQL;
+    using RoutesSystem.Data;
+    using RoutesSystem.Model.SQLiteModels;
     
 
     internal static class Program
@@ -23,6 +25,21 @@
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RoutesSystemForm());
+
+            //SQLiteData data = new SQLiteData();
+            //data.DriversInfo.Add(new DriverInfo()
+            //                         {
+            //                             DriverFirstName = "Georgi",
+            //                             DriverLastName = "Petrov",
+            //                             EndTown = "Tyrnovo",
+            //                             StartTown = "Bqla",
+            //                             DriverSalary = 10,
+            //                             RouteDistance = 450
+            //                         });
+            //data.DriversInfo.SaveChanges();
+
+            //var excel = new ExcelReportWriter();
+            //excel.CreateReport("D:\\Desktop\\ex", "ExcelReport");
             
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();

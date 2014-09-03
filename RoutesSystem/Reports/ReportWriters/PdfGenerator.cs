@@ -17,7 +17,7 @@
         private const string COLUMN_DRIVER_TITLE = "Driver Name";
         private const string COLUMN_VEHICLE_TITLE = "Vehicle";
         private const string COLUMN_DATE_TITLE = "Date";
-        private const string AGGREGATE_MESSAGE = "Total travelledRoutes: {0} Total passed: {1} km.";
+        private const string AGGREGATE_MESSAGE = "Times travelled: {0} Total passed: {1:0.00} km.";
         private const string ROUTE_MESSAGE = "Route: {0} - {1}";
         private const int COLSPAN_MERGE_ALL_CELLS = 3;
 
