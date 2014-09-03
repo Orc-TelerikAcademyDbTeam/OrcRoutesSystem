@@ -38,7 +38,7 @@
             //                         });
             //data.DriversInfo.SaveChanges();
 
-            var data = SQLiteWorker.GetDriverRouteData();
+            //var data = SQLiteWorker.GetDriverRouteData();
 
             //SQLServerWorker.ImportMongoDBData();
             //SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
