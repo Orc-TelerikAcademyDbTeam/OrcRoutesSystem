@@ -49,8 +49,9 @@
                     // create JSON object
                     jsonResult = JsonConvert.SerializeObject(vehicle, Formatting.Indented);
 
+                    var filePath = this.path + "\\" + vehicle.VehicleID + JSON_EXTENSION;
                     // create *.json file for JSON object
-                    System.IO.File.WriteAllText(this.path + vehicle.VehicleID + JSON_EXTENSION, jsonResult);
+                    System.IO.File.WriteAllText(filePath, jsonResult);
 
                     // insert data form JSON object into MySQL
                     MySQL.EntryPoint.InsertRow(vehicle.VehicleID, vehicle.VehicleType, vehicle.Manufactorer, vehicle.VehicleModel, vehicle.FuelType, vehicle.Driver);

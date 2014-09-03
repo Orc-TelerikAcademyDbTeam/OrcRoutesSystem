@@ -22,7 +22,6 @@
     {
         private static void Main(string[] args)
         {
-
             //Repository pattern
             //var data = new RouteSystemData();
 
@@ -41,8 +40,8 @@
 
             var data = SQLiteWorker.GetDriverRouteData();
 
-            SQLServerWorker.ImportMongoDBData();
-            SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
+            //SQLServerWorker.ImportMongoDBData();
+            //SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
 
             //var pdfGen = new PdfReportWriter();
             //pdfGen.CreateReport();
