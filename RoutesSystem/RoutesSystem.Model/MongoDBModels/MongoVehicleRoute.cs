@@ -9,16 +9,16 @@
     {
         public MongoVehicleRoute()
         {
-
+            this.Id = ObjectId.GenerateNewId().ToString();
         }
 
         [BsonRepresentation(BsonType.ObjectId)]
-        public MongoRoute RouteId { get; set; }
+        public string Id { get; set; } 
 
-        [BsonRepresentation(BsonType.ObjectId)]
-        public MongoVehicle VehicleId { get; set; }
+        public int RouteId { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]
+        public int VehicleId { get; set; }
+
         public DateTime Date { get; set; }
     }
 }

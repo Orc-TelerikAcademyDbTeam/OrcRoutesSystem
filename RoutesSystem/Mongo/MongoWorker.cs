@@ -88,6 +88,8 @@
             if (!this.data.VehicleModels.All().Any())
             {
                 this.data.VehicleModels.Insert(
+                    new MongoModel() { FuelConsumption = 26.5f, Name = "Avensis", NumberOfWheels = 4 });
+                this.data.VehicleModels.Insert(
                     new MongoModel() { FuelConsumption = 8.5f, Name = "R8", NumberOfWheels = 4 });
                 this.data.VehicleModels.Insert(
                     new MongoModel() { FuelConsumption = 5.5f, Name = "M7", NumberOfWheels = 4 });
@@ -146,6 +148,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            VehicleId = 1,
                             Driver = new MongoDriver()
                             {
                                 FirstName = "Peter",
@@ -164,6 +167,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            VehicleId = 2,
                             Driver = new MongoDriver()
                             {
                                 FirstName = "Yaro",
@@ -181,6 +185,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            VehicleId = 3,
                             Driver = new MongoDriver()
                             {
                                 FirstName = "Martin",
@@ -198,6 +203,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 4,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Cristiano",
@@ -215,6 +221,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 5,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Gergi",
@@ -232,6 +239,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 6,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Ognqn",
@@ -249,6 +257,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 7,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Mitko",
@@ -266,6 +275,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 8,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Lalka",
@@ -283,6 +293,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        VehicleId = 9,
                         Driver = new MongoDriver()
                         {
                             FirstName = "Zlatka",
@@ -300,6 +311,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 10,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Zagore",
@@ -317,6 +329,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 11,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Marti",
@@ -335,6 +348,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 12,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Dimitrichka",
@@ -353,6 +367,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 13,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Hinka",
@@ -370,6 +385,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 14,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Urus",
@@ -387,6 +403,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 15,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Luiz",
@@ -404,6 +421,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 16,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Toshko",
@@ -421,6 +439,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 17,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Ventilator",
@@ -438,6 +457,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 18,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Petiletka",
@@ -455,6 +475,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 19,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Razvigor",
@@ -473,6 +494,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 20,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Helikopter",
@@ -490,6 +512,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 21,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Joro",
@@ -507,6 +530,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 22,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Harry",
@@ -524,6 +548,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 23,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Adolf",
@@ -541,6 +566,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 24,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Enq",
@@ -558,6 +584,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 25,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Cvetelina",
@@ -575,6 +602,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 26,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Lora",
@@ -592,6 +620,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 27,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Magdalena",
@@ -609,6 +638,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       VehicleId = 28,
                        Driver = new MongoDriver()
                        {
                            FirstName = "Stefka",
@@ -628,6 +658,7 @@
             {
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 1,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
                     Distance = 500
@@ -635,6 +666,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 2,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
                     Distance = 156
@@ -642,6 +674,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 3,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
                     Distance = 335.5f
@@ -649,6 +682,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 4,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Pleven").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Lovech").First(),
                     Distance = 132.9f
@@ -656,6 +690,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 5,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Plovdiv").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Shumen").First(),
                     Distance = 250
@@ -663,6 +698,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 6,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Montana").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Sliven").First(),
                     Distance = 390
@@ -670,6 +706,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 7,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Blagoevgrad").First(),
                     Distance = 65.4f
@@ -677,6 +714,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 8,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Shumen").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
                     Distance = 89.9f
@@ -684,6 +722,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 9,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "St.Zagora").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Maluk Porovec").First(),
                     Distance = 247.6f
@@ -691,6 +730,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 10,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Vraca").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Montana").First(),
                     Distance = 44
@@ -698,6 +738,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 11,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Burgas").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Plovdiv").First(),
                     Distance = 162
@@ -705,6 +746,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 12,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Lovech").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Sliven").First(),
                     Distance = 244
@@ -712,6 +754,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 13,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Sofia").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
                     Distance = 96.2f
@@ -719,6 +762,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 14,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Vraca").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "St.Zagora").First(),
                     Distance = 233.5f
@@ -726,6 +770,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 15,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Varna").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
                     Distance = 510
@@ -733,6 +778,7 @@
 
                 this.data.Routes.Insert(new MongoRoute()
                 {
+                    RouteId = 16,
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Maluk Porovec").First(),
                     Distance = 9090.31f
@@ -743,400 +789,400 @@
             {
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "1").First(),
+                    RouteId = 1,
+                    VehicleId = 1,
                     Date = new DateTime(2013, 1, 1)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "2").First(),
+                    RouteId = 1,
+                    VehicleId = 2,
                     Date = new DateTime(2013, 1, 1)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "3").First(),
+                    RouteId = 1,
+                    VehicleId = 3,
                     Date = new DateTime(2013, 1, 2)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "4").First(),
+                    RouteId = 1,
+                    VehicleId = 4,
                     Date = new DateTime(2013, 1, 3)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "5").First(),
+                    RouteId = 1,
+                    VehicleId = 5,
                     Date = new DateTime(2013, 1, 4)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    RouteId = 1,
+                    VehicleId = 6,
                     Date = new DateTime(2013, 1, 5)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "7").First(),
+                    RouteId = 1,
+                    VehicleId = 7,
                     Date = new DateTime(2013, 1, 6)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "8").First(),
+                    RouteId = 2,
+                    VehicleId = 8,
                     Date = new DateTime(2013, 2, 2)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "9").First(),
+                    RouteId = 2,
+                    VehicleId = 9,
                     Date = new DateTime(2013, 3, 3)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "10").First(),
+                    RouteId = 2,
+                    VehicleId = 10,
                     Date = new DateTime(2014, 4, 2)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "11").First(),
+                    RouteId = 3,
+                    VehicleId = 11,
                     Date = new DateTime(2014, 5, 22)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "12").First(),
+                    RouteId = 3,
+                    VehicleId = 12,
                     Date = new DateTime(2014, 5, 22)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "13").First(),
+                    RouteId = 3,
+                    VehicleId = 13,
                     Date = new DateTime(2014, 6, 10)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    RouteId = 3,
+                    VehicleId = 14,
                     Date = new DateTime(2014, 7, 19)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    RouteId = 4,
+                    VehicleId = 15,
                     Date = new DateTime(2014, 8, 20)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "16").First(),
+                    RouteId = 4,
+                    VehicleId = 16,
                     Date = new DateTime(2014, 2, 11)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "17").First(),
+                    RouteId = 3,
+                    VehicleId = 17,
                     Date = new DateTime(2014, 3, 12)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "18").First(),
+                    RouteId = 5,
+                    VehicleId = 18,
                     Date = new DateTime(2014, 4, 13)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "19").First(),
+                    RouteId = 6,
+                    VehicleId = 19,
                     Date = new DateTime(2014, 9, 25)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "20").First(),
+                    RouteId = 6,
+                    VehicleId = 20,
                     Date = new DateTime(2014, 10, 26)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "21").First(),
+                    RouteId = 7,
+                    VehicleId = 21,
                     Date = new DateTime(2014, 11, 13)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "22").First(),
+                    RouteId = 8,
+                    VehicleId = 22,
                     Date = new DateTime(2014, 2, 14)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "23").First(),
+                    RouteId = 9,
+                    VehicleId = 23,
                     Date = new DateTime(2014, 3, 15)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "24").First(),
+                    RouteId = 9,
+                    VehicleId = 24,
                     Date = new DateTime(2013, 12, 5)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "25").First(),
+                    RouteId = 10,
+                    VehicleId = 25,
                     Date = new DateTime(2014, 12, 6)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "11").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    RouteId = 11,
+                    VehicleId = 26,
                     Date = new DateTime(2014, 12, 25)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "12").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    RouteId = 12,
+                    VehicleId = 26,
                     Date = new DateTime(2013, 1, 29)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    RouteId = 13,
+                    VehicleId = 27,
                     Date = new DateTime(2012, 6, 21)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "28").First(),
+                    RouteId = 13,
+                    VehicleId = 28,
                     Date = new DateTime(2014, 7, 22)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "1").First(),
+                    RouteId = 14,
+                    VehicleId = 1,
                     Date = new DateTime(2014, 3, 3)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "2").First(),
+                    RouteId = 14,
+                    VehicleId = 2,
                     Date = new DateTime(2014, 3, 9)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "3").First(),
+                    RouteId = 15,
+                    VehicleId = 3,
                     Date = new DateTime(2014, 3, 10)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "4").First(),
+                    RouteId = 15,
+                    VehicleId = 4,
                     Date = new DateTime(2014, 3, 12)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "16").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "5").First(),
+                    RouteId = 16,
+                    VehicleId = 5,
                     Date = new DateTime(2014, 3, 15)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "16").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    RouteId = 16,
+                    VehicleId = 6,
                     Date = new DateTime(2014, 4, 18)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "28").First(),
+                    RouteId = 1,
+                    VehicleId = 28,
                     Date = new DateTime(2014, 5, 21)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    RouteId = 2,
+                    VehicleId = 27,
                     Date = new DateTime(2014, 5, 23)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    RouteId = 3,
+                    VehicleId = 26,
                     Date = new DateTime(2014, 5, 25)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "25").First(),
+                    RouteId = 4,
+                    VehicleId = 25,
                     Date = new DateTime(2014, 5, 27)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "24").First(),
+                    RouteId = 5,
+                    VehicleId = 24,
                     Date = new DateTime(2014, 6, 28)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "23").First(),
+                    RouteId = 6,
+                    VehicleId = 23,
                     Date = new DateTime(2014, 6, 30)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "22").First(),
+                    RouteId = 7,
+                    VehicleId = 22,
                     Date = new DateTime(2014, 6, 1)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "21").First(),
+                    RouteId = 8,
+                    VehicleId = 21,
                     Date = new DateTime(2014, 6, 2)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "19").First(),
+                    RouteId = 8,
+                    VehicleId = 19,
                     Date = new DateTime(2014, 6, 3)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "18").First(),
+                    RouteId = 9,
+                    VehicleId = 18,
                     Date = new DateTime(2014, 6, 5)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "17").First(),
+                    RouteId = 10,
+                    VehicleId = 17,
                     Date = new DateTime(2014, 7, 7)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "11").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "16").First(),
+                    RouteId = 11,
+                    VehicleId = 16,
                     Date = new DateTime(2014, 7, 9)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "12").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    RouteId = 12,
+                    VehicleId = 15,
                     Date = new DateTime(2014, 7, 11)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    RouteId = 13,
+                    VehicleId = 14,
                     Date = new DateTime(2014, 7, 13)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    RouteId = 14,
+                    VehicleId = 14,
                     Date = new DateTime(2014, 7, 15)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    RouteId = 15,
+                    VehicleId = 15,
                     Date = new DateTime(2014, 7, 17)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "10").First(),
+                    RouteId = 10,
+                    VehicleId = 10,
                     Date = new DateTime(2014, 7, 19)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "9").First(),
+                    RouteId = 9,
+                    VehicleId = 9,
                     Date = new DateTime(2014, 7, 21)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "8").First(),
+                    RouteId = 8,
+                    VehicleId = 8,
                     Date = new DateTime(2014, 8, 23)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "7").First(),
+                    RouteId = 7,
+                    VehicleId = 7,
                     Date = new DateTime(2014, 8, 25)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    RouteId = 6,
+                    VehicleId = 6,
                     Date = new DateTime(2014, 8, 27)
                 });
 
                 this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
                 {
-                    RouteId = this.data.Routes.SearchFor(x => x.Id == "27").First(),
-                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    RouteId = 16,
+                    VehicleId = 27,
                     Date = new DateTime(2014, 9, 29)
                 });
             }

@@ -120,7 +120,7 @@
         {
             get
             {
-                return Path.GetFullPath(this.FilePath + "\\" + this.FileName + ".xls");
+                return Path.GetFullPath(this.FilePath + "\\" + this.FileName + ".xlsx");
             }
         }
     }

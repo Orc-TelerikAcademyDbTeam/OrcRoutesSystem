@@ -15,6 +15,8 @@
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        public int RouteId { get; set; }
+
         public virtual MongoTown StartTown { get; set; }
 
         public virtual MongoTown EndTown { get; set; }

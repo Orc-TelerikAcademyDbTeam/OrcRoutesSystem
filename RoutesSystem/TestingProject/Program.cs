@@ -41,6 +41,14 @@
             });
             data.DriversInfo.SaveChanges();
 
+
+
+            //SQLServerWorker.ImportMongoDBData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+            //Console.WriteLine("Done");
+
+
             //Repository pattern
             //var data = new RouteSystemData();
 
@@ -52,8 +60,7 @@
             //SQLServerWorker.ImportMongoDBData();
             //SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
 
-            //var pdfGen = new PdfReportWriter();
-            //pdfGen.CreateReport();
+            
             //foreach (var driver in data.Drivers.All())
             //{
             //    Console.WriteLine(driver.FirstName);
@@ -88,7 +95,7 @@
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
             //c.SaveChanges();
 
-
+           
 
             //SQLServerWorker.ImportExcellData();
             //var XmlGen = new XmlReportWriter();
