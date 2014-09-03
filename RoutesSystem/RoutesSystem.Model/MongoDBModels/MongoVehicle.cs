@@ -21,9 +21,12 @@
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        public int VehicleId { get; set; }
+
         public virtual MongoDriver Driver { get; set; }
 
         public virtual MongoVehicleType VehicleType { get; set; }
+         
 
         public virtual MongoManufacturer Manufacturer { get; set; }
 

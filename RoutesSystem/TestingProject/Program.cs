@@ -22,6 +22,14 @@
     {
         private static void Main(string[] args)
         {
+
+
+            //SQLServerWorker.ImportMongoDBData();
+            //var pdfGen = new PdfReportWriter();
+            //pdfGen.CreateReport();
+            //Console.WriteLine("Done");
+
+
             //Repository pattern
             //var data = new RouteSystemData();
 
@@ -43,8 +51,7 @@
             //SQLServerWorker.ImportMongoDBData();
             //SQLServerWorker.ImportExcellData("..//..//..//ZipArchives/Fuels-Reports.zip");
 
-            //var pdfGen = new PdfReportWriter();
-            //pdfGen.CreateReport();
+            
             //foreach (var driver in data.Drivers.All())
             //{
             //    Console.WriteLine(driver.FirstName);

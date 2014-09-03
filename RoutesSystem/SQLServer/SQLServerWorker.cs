@@ -75,38 +75,42 @@
 
                 int fuelTypeId = data.Fueltypes.SearchFor(x => x.Name == vehicle.FuelType.Name).Select(x => x.Id).First();
 
-                var driver = vehicle.Driver;
+                var driverModel = new Driver()
+                {
+                    FirstName = vehicle.Driver.FirstName,
+                    MiddleName = vehicle.Driver.MiddleName,
+                    LastName = vehicle.Driver.LastName
+                };
 
-                data.Vehicles.Add(
-                    new Vehicle()
-                        {
-                            Driver = new Driver()
-                            {
-                                FirstName = driver.FirstName,
-                                MiddleName = driver.MiddleName,
-                                LastName = driver.LastName
-                            },
-                            VehicleTypeId = vehicleTypeId,
-                            ManufacturerId = manufacturerId,
-                            ModelId = modelId,
-                            YearOfManifacturer = vehicle.YearOfManifacturer,
-                            FuelTypeId = fuelTypeId
-                        });
+                var vehicleModel = new Vehicle()
+                {
+                    VehicleTypeId = vehicleTypeId,
+                    ManufacturerId = manufacturerId,
+                    ModelId = modelId,
+                    YearOfManifacturer = vehicle.YearOfManifacturer,
+                    FuelTypeId = fuelTypeId
+                };
+
+                data.Vehicles.Add(vehicleModel);
                 data.Vehicles.SaveChanges();
+
+                driverModel.VehicleId = vehicleModel.Id;
+                data.Drivers.Add(driverModel);
+                data.Drivers.SaveChanges();
             }
 
             //Fill Routes
             var allRoutes = mongoData.GetAllRoutes();
             foreach (var route in allRoutes)
             {
-                var startTown = data.Towns.SearchFor(x => x.Name == route.StartTown.Name).FirstOrDefault();
-                var endTown = data.Towns.SearchFor(x => x.Name == route.EndTown.Name).FirstOrDefault();
+                var startTown = data.Towns.SearchFor(x => x.Name == route.StartTown.Name).FirstOrDefault().Id;
+                var endTown = data.Towns.SearchFor(x => x.Name == route.EndTown.Name).FirstOrDefault().Id;
 
                 data.Routes.Add(
                     new Route()
                     {
-                        StartTown = startTown,
-                        EndTown = endTown,
+                        StartTownId = startTown,
+                        EndTownId = endTown,
                         Distance = route.Distance,
                     });
 
@@ -117,22 +121,11 @@
             var allVehicleRoutes = mongoData.GetAllVehicleRoutes();
             foreach (var vehicleRoute in allVehicleRoutes)
             {
-                var vehicleRouteId = int.Parse(vehicleRoute.RouteId.Id);
-                var routeId = data.Routes
-                    .SearchFor(x => x.StartTown.Name == vehicleRoute.RouteId.StartTown.Name 
-                        && x.EndTown.Name == vehicleRoute.RouteId.EndTown.Name)
-                        .FirstOrDefault().Id;
-
-                var vehicleId = data.Vehicles
-                    .SearchFor(x => x.Driver.FirstName == vehicleRoute.VehicleId.Driver.FirstName 
-                        && x.Driver.LastName == vehicleRoute.VehicleId.Driver.LastName)
-                        .FirstOrDefault().Id;
-
                 data.VehicleRoutes.Add(
                     new VehicleRoute() 
                     {
-                        RouteId = routeId,
-                        VehicleId = vehicleId,
+                        RouteId = vehicleRoute.RouteId,
+                        VehicleId = vehicleRoute.VehicleId,
                         Date = vehicleRoute.Date
                     });
 
