@@ -10,35 +10,25 @@
     public class XmlReport
     {
         /// <summary>
-        /// Get collection of the all visited routes with info about the drivers
+        /// Get collection of cost of fuel for the visited routes
         /// </summary>
         /// <returns></returns>
-        internal IEnumerable<VisitedRouteInfo> GetVisitedRoutes()
+        internal IEnumerable<FuelInfo> FuelSpent()
         {
             var dbContext = new SQLServerContext();
 
-            var result =
-                dbContext.Routes.Select(
-                    route =>
-                    new VisitedRouteInfo()
-                        {
-                            StartTownName = route.StartTown.Name,
-                            EndTownName = route.EndTown.Name,
-                            VehicleRouteInfo =
-                                route.VehicleRoutes.AsQueryable()
-                                     .Select(
-                                         vehicleRoute =>
-                                         new VehicleRouteInfo()
-                                             {
-                                                 RouteDate = vehicleRoute.Date,
-                                                 DriverName =
-                                                     vehicleRoute.Vehicle.Driver
-                                                                 .FirstName + " "
-                                                     + vehicleRoute.Vehicle.Driver
-                                                                   .LastName,
-                                             })
-                        }).ToArray();
-
+            var result = 
+                dbContext.FuelInfo.Select(
+                    record => 
+                    new FuelInfo()
+                    {
+                        FuelId = record.ID,
+                        VehicleId = record.VehicleId,
+                        Price = record.Price,
+                        Spent = record.Spent,
+                        Total = record.Total
+                    }
+                ).ToArray();
             return result;
         }
     }

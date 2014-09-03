@@ -8,8 +8,7 @@
 
     internal class XmlGenerator
     {
-        //Should be different report
-        private const string DEFAULT_FILE_NAME = "AggregateRouteReport";
+        private const string DEFAULT_FILE_NAME = "FuelConsumptionReport";
 
         private string fileName;
         private string path;
@@ -35,7 +34,7 @@
             }
         }
 
-        internal void Generate(IEnumerable<VisitedRouteInfo> inputData)
+        internal void Generate(IEnumerable<FuelInfo> inputData)
         {
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -43,20 +42,18 @@
             using (XmlWriter writer = XmlWriter.Create(string.Format(@"{0}\{1}.xml", this.path, this.fileName), settings))
             {
                 writer.WriteStartDocument();
-                writer.WriteComment("Report drivers visited routes");
+                writer.WriteComment("Fuel consumption report");
                 writer.WriteStartElement("Routes");
 
                 foreach (var item in inputData)
                 {
-                    foreach (var detail in item.VehicleRouteInfo)
-                    {
-                        writer.WriteStartElement("Route");
-                        writer.WriteAttributeString("Start", item.StartTownName);
-                        writer.WriteAttributeString("End", item.EndTownName);
-                        writer.WriteAttributeString("Driver", detail.DriverName);
-                        writer.WriteAttributeString("Date", detail.RouteDate.Date.ToString());
+                        writer.WriteStartElement("Routes");
+                        writer.WriteAttributeString("Vehicle Id", item.VehicleId.ToString());
+                        writer.WriteAttributeString("Fuel Id", item.FuelId.ToString());
+                        writer.WriteAttributeString("Price", item.Price.ToString());
+                        writer.WriteAttributeString("Spent", item.Spent.ToString());
+                        writer.WriteAttributeString("Total", item.Total.ToString());
                         writer.WriteEndElement();
-                    }
                 }
 
                 writer.WriteEndElement();
