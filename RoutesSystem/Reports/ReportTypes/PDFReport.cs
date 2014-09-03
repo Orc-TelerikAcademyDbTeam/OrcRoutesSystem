@@ -10,7 +10,7 @@
     internal class PdfReport
     {
         /// <summary>
-        /// Get collection of the all visited routes with info about the drivers
+        /// Get collection of the all visited routes with info about the travelledRoutes
         /// </summary>
         /// <returns></returns>
         internal IEnumerable<VisitedRouteInfo> GetVisitedRoutes()

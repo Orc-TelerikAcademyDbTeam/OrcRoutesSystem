@@ -11,5 +11,9 @@
         public string DriverFirstName { get; set; }
 
         public string DriverLastName { get; set; }
+
+        public decimal DriverSalary { get; set; }
+
+        public decimal RouteDistance { get; set; }
     }
 }

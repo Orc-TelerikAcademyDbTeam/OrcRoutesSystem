@@ -18,7 +18,7 @@
         /// <summary>
         /// Prepares reports for usage. Can be iterated.
         /// </summary>
-        /// <param name="pathToArchive">Full or relative path to the archive file</param>
+        /// <param name="pathToArchive">Full or relative filePath to the archive file</param>
         /// <param name="reportsExtensions">Allowed report files extensions</param>
         public ReportsArchive(string pathToArchive, HashSet<string> reportsExtensions)
             : this(pathToArchive, reportsExtensions, new ZipArchivator())
