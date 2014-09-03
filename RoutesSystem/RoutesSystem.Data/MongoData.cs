@@ -99,6 +99,14 @@ namespace RoutesSystem.Data
             }
         }
 
+        public IGenericNoSQLRepository<MongoVehicleRoute> VehicleRoutes
+        {
+            get
+            {
+                return this.GetRepository<MongoVehicleRoute>();
+            }
+        }
+
         private IGenericNoSQLRepository<T> GetRepository<T>() where T : class
         {
             var typeOfModel = typeof(T);

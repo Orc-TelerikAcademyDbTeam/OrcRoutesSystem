@@ -141,6 +141,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "1").First(),
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                             Manufacturer =
                                 this.data.Manufacturers.SearchFor(x => x.Name == "Toyota").First(),
@@ -153,6 +154,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "2").First(),
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                             Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Audi").First(),
                             Model = this.data.VehicleModels.SearchFor(x => x.Name == "R8").First(),
@@ -164,6 +166,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                         {
+                            Driver = this.data.Drivers.SearchFor(x => x.DriverID == "3").First(),
                             FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                             Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "BMW").First(),
                             Model = this.data.VehicleModels.SearchFor(x => x.Name == "M7").First(),
@@ -175,6 +178,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "4").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Mercedes").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "C100").First(),
@@ -186,6 +190,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "5").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Mercedes").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "SLK").First(),
@@ -197,6 +202,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "6").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Lada").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "1600").First(),
@@ -208,6 +214,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "7").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "BMW").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "X5").First(),
@@ -219,6 +226,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "8").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Diesel").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Opel").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "Vectra").First(),
@@ -230,6 +238,7 @@
                 this.data.Vehicles.Insert(
                     new MongoVehicle()
                     {
+                        Driver = this.data.Drivers.SearchFor(x => x.DriverID == "9").First(),
                         FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                         Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Wolkswagen").First(),
                         Model = this.data.VehicleModels.SearchFor(x => x.Name == "Golf").First(),
@@ -241,6 +250,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "10").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Wolkswagen").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Golf").First(),
@@ -252,6 +262,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "11").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Fiat").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Novo").First(),
@@ -264,6 +275,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "12").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Seat").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Umbro").First(),
@@ -276,6 +288,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "13").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Methane").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "GreatWall").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "555").First(),
@@ -287,6 +300,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "14").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chevy").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Curvet").First(),
@@ -298,6 +312,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "15").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Harley-Davidson").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "2200").First(),
@@ -309,6 +324,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "16").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Suzuki").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Hayabusa").First(),
@@ -320,6 +336,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "17").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Suzuki").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "VS1400").First(),
@@ -331,6 +348,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "18").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Honda").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Civic").First(),
@@ -342,6 +360,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "19").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Honda").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "SuperCub").First(),
@@ -354,6 +373,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "20").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chavdar").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "141").First(),
@@ -365,6 +385,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "21").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Chavdar").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "11M3").First(),
@@ -376,6 +397,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "22").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Stralis").First(),
@@ -387,6 +409,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "23").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-10").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Traker").First(),
@@ -398,6 +421,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "24").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-5").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "Daily").First(),
@@ -409,6 +433,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "25").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Iveco").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "DailyVan").First(),
@@ -420,6 +445,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "26").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "R470").First(),
@@ -431,6 +457,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "27").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "R500").First(),
@@ -442,6 +469,7 @@
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
+                       Driver = this.data.Drivers.SearchFor(x => x.DriverID == "28").First(),
                        FuelType = this.data.FuelTypes.SearchFor(x => x.Name == "Benzine A-0").First(),
                        Manufacturer = this.data.Manufacturers.SearchFor(x => x.Name == "Scania").First(),
                        Model = this.data.VehicleModels.SearchFor(x => x.Name == "K124EB").First(),
@@ -455,7 +483,6 @@
             {
                 this.data.Drivers.Insert(new MongoDriver() 
                 { 
-                    DriverID = "1",
                     FirstName = "Peter",
                     MiddleName = "Petrov",
                     LastName = "Petrov"
@@ -463,7 +490,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "2",
                     FirstName = "Yaro",
                     MiddleName = "Berov",
                     LastName = "Penov"
@@ -472,7 +498,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "3",
                     FirstName = "Martin",
                     MiddleName = "Vaklinov",
                     LastName = "Vaklinov"
@@ -480,7 +505,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "4",
                     FirstName = "Cristiano",
                     MiddleName = "",
                     LastName = "Ronaldo"
@@ -488,7 +512,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "5",
                     FirstName = "Gergi",
                     MiddleName = "Georgiev",
                     LastName = "Georgiev"
@@ -496,7 +519,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "6",
                     FirstName = "Ognqn",
                     MiddleName = "",
                     LastName = "Jelezov"
@@ -504,7 +526,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "7",
                     FirstName = "Mitko",
                     MiddleName = "Mitev",
                     LastName = "Mitev"
@@ -512,7 +533,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "8",
                     FirstName = "Lalka",
                     MiddleName = "Asenova",
                     LastName = "Paralingova"
@@ -520,7 +540,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "9",
                     FirstName = "Zlatka",
                     MiddleName = "Cherna",
                     LastName = "Chernata"
@@ -528,7 +547,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "10",
                     FirstName = "Zagore",
                     MiddleName = "Toshev",
                     LastName = "Peshev"
@@ -536,7 +554,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "11",
                     FirstName = "Marti",
                     MiddleName = "K",
                     LastName = "Lambova"
@@ -544,7 +561,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "12",
                     FirstName = "Dimitrichka",
                     MiddleName = "Hah",
                     LastName = "Budurova"
@@ -553,7 +569,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "13",
                     FirstName = "Hinka",
                     MiddleName = "Hulk",
                     LastName = "Hinkova"
@@ -561,7 +576,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "14",
                     FirstName = "Urus",
                     MiddleName = "Urugvai",
                     LastName = "Hapeshtiq"
@@ -569,7 +583,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "15",
                     FirstName = "Luiz",
                     MiddleName = "Shark",
                     LastName = "Suarez"
@@ -577,7 +590,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "16",
                     FirstName = "Toshko",
                     MiddleName = "Tosheta",
                     LastName = "Toshev"
@@ -585,7 +597,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "17",
                     FirstName = "Ventilator",
                     MiddleName = "Klimatikov",
                     LastName = "Aspartamov"
@@ -593,7 +604,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "18",
                     FirstName = "Petiletka",
                     MiddleName = "Venelinova",
                     LastName = "Paleva"
@@ -601,7 +611,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "19",
                     FirstName = "Razvigor",
                     MiddleName = "Kornishonov",
                     LastName = "Shtaigov"
@@ -609,7 +618,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "20",
                     FirstName = "Helikopter",
                     MiddleName = "Petrov",
                     LastName = "Petrov"
@@ -617,7 +625,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "21",
                     FirstName = "Joro",
                     MiddleName = "Kolumbieca",
                     LastName = "Smaglata"
@@ -625,7 +632,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "22",
                     FirstName = "Harry",
                     MiddleName = "J",
                     LastName = "Potter"
@@ -633,7 +639,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "23",
                     FirstName = "Adolf",
                     MiddleName = "Funky",
                     LastName = "Shperplatov"
@@ -641,7 +646,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "24",
                     FirstName = "Enq",
                     MiddleName = "Nanq",
                     LastName = "Noniva"
@@ -649,7 +653,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "25",
                     FirstName = "Cvetelina",
                     MiddleName = "P",
                     LastName = "Cecova"
@@ -657,7 +660,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "26",
                     FirstName = "Lora",
                     MiddleName = "O",
                     LastName = "Karadjova"
@@ -665,7 +667,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "27",
                     FirstName = "Magdalena",
                     MiddleName = "Maleeva",
                     LastName = "Maleeva"
@@ -673,7 +674,6 @@
 
                 this.data.Drivers.Insert(new MongoDriver()
                 {
-                    DriverID = "28",
                     FirstName = "Stefka",
                     MiddleName = "Preskachastata",
                     LastName = "Kostadinova"
@@ -792,6 +792,408 @@
                     StartTown = this.data.Towns.SearchFor(x => x.Name == "Pernik").First(),
                     EndTown = this.data.Towns.SearchFor(x => x.Name == "Maluk Porovec").First(),
                     Distance = 9090.31f
+                });
+            }
+
+            if (!this.data.VehicleRoutes.All().Any())
+            {
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "1").First(),
+                    Date = new DateTime(2013, 1, 1)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "2").First(),
+                    Date = new DateTime(2013, 1, 1)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "3").First(),
+                    Date = new DateTime(2013, 1, 2)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "4").First(),
+                    Date = new DateTime(2013, 1, 3)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "5").First(),
+                    Date = new DateTime(2013, 1, 4)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    Date = new DateTime(2013, 1, 5)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "7").First(),
+                    Date = new DateTime(2013, 1, 6)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "8").First(),
+                    Date = new DateTime(2013, 2, 2)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "9").First(),
+                    Date = new DateTime(2013, 3, 3)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "10").First(),
+                    Date = new DateTime(2014, 4, 2)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "11").First(),
+                    Date = new DateTime(2014, 5, 22)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "12").First(),
+                    Date = new DateTime(2014, 5, 22)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "13").First(),
+                    Date = new DateTime(2014, 6, 10)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    Date = new DateTime(2014, 7, 19)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    Date = new DateTime(2014, 8, 20)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "16").First(),
+                    Date = new DateTime(2014, 2, 11)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "17").First(),
+                    Date = new DateTime(2014, 3, 12)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "18").First(),
+                    Date = new DateTime(2014, 4, 13)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "19").First(),
+                    Date = new DateTime(2014, 9, 25)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "20").First(),
+                    Date = new DateTime(2014, 10, 26)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "21").First(),
+                    Date = new DateTime(2014, 11, 13)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "22").First(),
+                    Date = new DateTime(2014, 2, 14)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "23").First(),
+                    Date = new DateTime(2014, 3, 15)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "24").First(),
+                    Date = new DateTime(2013, 12, 5)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "25").First(),
+                    Date = new DateTime(2014, 12, 6)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "11").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    Date = new DateTime(2014, 12, 25)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "12").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    Date = new DateTime(2013, 1, 29)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    Date = new DateTime(2012, 6, 21)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "28").First(),
+                    Date = new DateTime(2014, 7, 22)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "1").First(),
+                    Date = new DateTime(2014, 3, 3)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "2").First(),
+                    Date = new DateTime(2014, 3, 9)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "3").First(),
+                    Date = new DateTime(2014, 3, 10)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "4").First(),
+                    Date = new DateTime(2014, 3, 12)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "16").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "5").First(),
+                    Date = new DateTime(2014, 3, 15)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "16").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    Date = new DateTime(2014, 4, 18)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "1").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "28").First(),
+                    Date = new DateTime(2014, 5, 21)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "2").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    Date = new DateTime(2014, 5, 23)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "3").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "26").First(),
+                    Date = new DateTime(2014, 5, 25)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "4").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "25").First(),
+                    Date = new DateTime(2014, 5, 27)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "5").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "24").First(),
+                    Date = new DateTime(2014, 6, 28)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "23").First(),
+                    Date = new DateTime(2014, 6, 30)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "22").First(),
+                    Date = new DateTime(2014, 6, 1)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "21").First(),
+                    Date = new DateTime(2014, 6, 2)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "19").First(),
+                    Date = new DateTime(2014, 6, 3)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "18").First(),
+                    Date = new DateTime(2014, 6, 5)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "17").First(),
+                    Date = new DateTime(2014, 7, 7)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "11").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "16").First(),
+                    Date = new DateTime(2014, 7, 9)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "12").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    Date = new DateTime(2014, 7, 11)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "13").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    Date = new DateTime(2014, 7, 13)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "14").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "14").First(),
+                    Date = new DateTime(2014, 7, 15)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "15").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "15").First(),
+                    Date = new DateTime(2014, 7, 17)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "10").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "10").First(),
+                    Date = new DateTime(2014, 7, 19)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "9").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "9").First(),
+                    Date = new DateTime(2014, 7, 21)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "8").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "8").First(),
+                    Date = new DateTime(2014, 8, 23)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "7").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "7").First(),
+                    Date = new DateTime(2014, 8, 25)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "6").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "6").First(),
+                    Date = new DateTime(2014, 8, 27)
+                });
+
+                this.data.VehicleRoutes.Insert(new MongoVehicleRoute()
+                {
+                    RouteId = this.data.Routes.SearchFor(x => x.Id == "27").First(),
+                    VehicleId = this.data.Vehicles.SearchFor(x => x.Id == "27").First(),
+                    Date = new DateTime(2014, 9, 29)
                 });
             }
         }

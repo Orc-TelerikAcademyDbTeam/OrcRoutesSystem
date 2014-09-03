@@ -71,6 +71,7 @@
     <Compile Include="MongoDBModels\MongoRoute.cs" />
     <Compile Include="MongoDBModels\MongoTown.cs" />
     <Compile Include="MongoDBModels\MongoVehicle.cs" />
+    <Compile Include="MongoDBModels\MongoVehicleRoute.cs" />
     <Compile Include="MongoDBModels\MongoVehicleType.cs" />
     <Compile Include="SQLiteModels\DriverInfo.cs" />
     <Compile Include="SQLServerModels\FuelInfo.cs" />
