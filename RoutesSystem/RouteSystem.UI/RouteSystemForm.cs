@@ -3,6 +3,7 @@
     using RouteSystem.UI;
     using System;
     using System.Windows.Forms;
+    using System.Linq;
 
     public partial class RoutesSystemForm : Form
     {
@@ -127,8 +128,10 @@
             this.SaveReportDialog.ShowDialog();
             var filePathInfo = this.SaveReportDialog.FileName;
             this.textBoxSelectedFolder.Text = filePathInfo;
-            
-            UIEngine.CreatePDFReport(filePathInfo);
+            var checkedButton = tabReports.Controls
+                .OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+
+            UIEngine.CreateReport(checkedButton, filePathInfo);
             MessageBox.Show("Report created!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

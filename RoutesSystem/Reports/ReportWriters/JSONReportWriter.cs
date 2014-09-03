@@ -4,12 +4,12 @@
 
     public class JSONReportWriter
     {
-        public void CreateReport()
+        public void CreateReport(string filePath = null, string fileName = null)
         {
             var report = new JSONReport();
             var reportData = report.GetVehicleInformation();
 
-            var JSONGenerator = new JSONGenerator();
+            var JSONGenerator = new JSONGenerator(filePath, fileName);
             JSONGenerator.Generate(reportData);
         }
     }

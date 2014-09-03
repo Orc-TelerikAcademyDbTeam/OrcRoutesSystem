@@ -49,16 +49,15 @@
             this.tabReports = new System.Windows.Forms.TabPage();
             this.textBoxSelectedFolder = new System.Windows.Forms.TextBox();
             this.generateReportButton = new System.Windows.Forms.Button();
-            this.reportFileTypeLabel = new System.Windows.Forms.Label();
-            this.reportFileTypeSelect = new System.Windows.Forms.ComboBox();
             this.expenseReportRadioButton = new System.Windows.Forms.RadioButton();
             this.carsReportRadioButton = new System.Windows.Forms.RadioButton();
-            this.routesReportRadioButton = new System.Windows.Forms.RadioButton();
-            this.driversReportRadioButton = new System.Windows.Forms.RadioButton();
+            this.CheckBoxVehicleInformationReport = new System.Windows.Forms.RadioButton();
+            this.CheckBoxAggregateRouteReport = new System.Windows.Forms.RadioButton();
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadXMLOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
-            this.reportProgress = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -246,15 +245,14 @@
             // 
             this.tabReports.BackColor = System.Drawing.Color.Transparent;
             this.tabReports.BackgroundImage = global::RouteSystem.UI.Properties.Resources.background;
-            this.tabReports.Controls.Add(this.reportProgress);
+            this.tabReports.Controls.Add(this.label2);
+            this.tabReports.Controls.Add(this.label1);
             this.tabReports.Controls.Add(this.textBoxSelectedFolder);
             this.tabReports.Controls.Add(this.generateReportButton);
-            this.tabReports.Controls.Add(this.reportFileTypeLabel);
-            this.tabReports.Controls.Add(this.reportFileTypeSelect);
             this.tabReports.Controls.Add(this.expenseReportRadioButton);
             this.tabReports.Controls.Add(this.carsReportRadioButton);
-            this.tabReports.Controls.Add(this.routesReportRadioButton);
-            this.tabReports.Controls.Add(this.driversReportRadioButton);
+            this.tabReports.Controls.Add(this.CheckBoxVehicleInformationReport);
+            this.tabReports.Controls.Add(this.CheckBoxAggregateRouteReport);
             this.tabReports.Location = new System.Drawing.Point(4, 29);
             this.tabReports.Name = "tabReports";
             this.tabReports.Padding = new System.Windows.Forms.Padding(3);
@@ -264,7 +262,7 @@
             // 
             // textBoxSelectedFolder
             // 
-            this.textBoxSelectedFolder.Location = new System.Drawing.Point(21, 184);
+            this.textBoxSelectedFolder.Location = new System.Drawing.Point(19, 190);
             this.textBoxSelectedFolder.Name = "textBoxSelectedFolder";
             this.textBoxSelectedFolder.Size = new System.Drawing.Size(240, 26);
             this.textBoxSelectedFolder.TabIndex = 7;
@@ -272,7 +270,7 @@
             // generateReportButton
             // 
             this.generateReportButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.generateReportButton.Location = new System.Drawing.Point(267, 184);
+            this.generateReportButton.Location = new System.Drawing.Point(265, 190);
             this.generateReportButton.Name = "generateReportButton";
             this.generateReportButton.Size = new System.Drawing.Size(119, 28);
             this.generateReportButton.TabIndex = 6;
@@ -280,70 +278,47 @@
             this.generateReportButton.UseVisualStyleBackColor = false;
             this.generateReportButton.Click += new System.EventHandler(this.generateReportButton_Click);
             // 
-            // reportFileTypeLabel
-            // 
-            this.reportFileTypeLabel.AutoSize = true;
-            this.reportFileTypeLabel.Location = new System.Drawing.Point(17, 132);
-            this.reportFileTypeLabel.Name = "reportFileTypeLabel";
-            this.reportFileTypeLabel.Size = new System.Drawing.Size(244, 20);
-            this.reportFileTypeLabel.TabIndex = 5;
-            this.reportFileTypeLabel.Text = "Choose File Type For Report:";
-            // 
-            // reportFileTypeSelect
-            // 
-            this.reportFileTypeSelect.FormattingEnabled = true;
-            this.reportFileTypeSelect.Items.AddRange(new object[] {
-            "PDF Report",
-            "XML Report",
-            "JSON Report"});
-            this.reportFileTypeSelect.Location = new System.Drawing.Point(260, 132);
-            this.reportFileTypeSelect.Name = "reportFileTypeSelect";
-            this.reportFileTypeSelect.Size = new System.Drawing.Size(240, 28);
-            this.reportFileTypeSelect.TabIndex = 4;
-            // 
             // expenseReportRadioButton
             // 
             this.expenseReportRadioButton.AutoSize = true;
-            this.expenseReportRadioButton.Location = new System.Drawing.Point(260, 74);
+            this.expenseReportRadioButton.Location = new System.Drawing.Point(268, 104);
             this.expenseReportRadioButton.Name = "expenseReportRadioButton";
             this.expenseReportRadioButton.Size = new System.Drawing.Size(156, 24);
             this.expenseReportRadioButton.TabIndex = 3;
-            this.expenseReportRadioButton.TabStop = true;
             this.expenseReportRadioButton.Text = "Expense Report";
             this.expenseReportRadioButton.UseVisualStyleBackColor = true;
             // 
             // carsReportRadioButton
             // 
             this.carsReportRadioButton.AutoSize = true;
-            this.carsReportRadioButton.Location = new System.Drawing.Point(260, 35);
+            this.carsReportRadioButton.Location = new System.Drawing.Point(268, 35);
             this.carsReportRadioButton.Name = "carsReportRadioButton";
             this.carsReportRadioButton.Size = new System.Drawing.Size(124, 24);
             this.carsReportRadioButton.TabIndex = 2;
-            this.carsReportRadioButton.TabStop = true;
             this.carsReportRadioButton.Text = "Cars Report";
             this.carsReportRadioButton.UseVisualStyleBackColor = true;
             // 
-            // routesReportRadioButton
+            // CheckBoxVehicleInformationReport
             // 
-            this.routesReportRadioButton.AutoSize = true;
-            this.routesReportRadioButton.Location = new System.Drawing.Point(19, 74);
-            this.routesReportRadioButton.Name = "routesReportRadioButton";
-            this.routesReportRadioButton.Size = new System.Drawing.Size(145, 24);
-            this.routesReportRadioButton.TabIndex = 1;
-            this.routesReportRadioButton.TabStop = true;
-            this.routesReportRadioButton.Text = "Routes Report";
-            this.routesReportRadioButton.UseVisualStyleBackColor = true;
+            this.CheckBoxVehicleInformationReport.AutoSize = true;
+            this.CheckBoxVehicleInformationReport.Location = new System.Drawing.Point(19, 104);
+            this.CheckBoxVehicleInformationReport.Name = "CheckBoxVehicleInformationReport";
+            this.CheckBoxVehicleInformationReport.Size = new System.Drawing.Size(243, 24);
+            this.CheckBoxVehicleInformationReport.TabIndex = 1;
+            this.CheckBoxVehicleInformationReport.Text = "Vehicle Information Report";
+            this.CheckBoxVehicleInformationReport.UseVisualStyleBackColor = true;
             // 
-            // driversReportRadioButton
+            // CheckBoxAggregateRouteReport
             // 
-            this.driversReportRadioButton.AutoSize = true;
-            this.driversReportRadioButton.Location = new System.Drawing.Point(21, 35);
-            this.driversReportRadioButton.Name = "driversReportRadioButton";
-            this.driversReportRadioButton.Size = new System.Drawing.Size(225, 24);
-            this.driversReportRadioButton.TabIndex = 0;
-            this.driversReportRadioButton.TabStop = true;
-            this.driversReportRadioButton.Text = "Aggregate Route Report";
-            this.driversReportRadioButton.UseVisualStyleBackColor = true;
+            this.CheckBoxAggregateRouteReport.AutoSize = true;
+            this.CheckBoxAggregateRouteReport.Checked = true;
+            this.CheckBoxAggregateRouteReport.Location = new System.Drawing.Point(21, 35);
+            this.CheckBoxAggregateRouteReport.Name = "CheckBoxAggregateRouteReport";
+            this.CheckBoxAggregateRouteReport.Size = new System.Drawing.Size(225, 24);
+            this.CheckBoxAggregateRouteReport.TabIndex = 0;
+            this.CheckBoxAggregateRouteReport.TabStop = true;
+            this.CheckBoxAggregateRouteReport.Text = "Aggregate Route Report";
+            this.CheckBoxAggregateRouteReport.UseVisualStyleBackColor = true;
             // 
             // loadExcelOpenFileDialog
             // 
@@ -353,12 +328,23 @@
             // 
             this.loadXMLOpenFileDialog.FileName = "Load XML File";
             // 
-            // reportProgress
+            // label1
             // 
-            this.reportProgress.Location = new System.Drawing.Point(19, 216);
-            this.reportProgress.Name = "reportProgress";
-            this.reportProgress.Size = new System.Drawing.Size(242, 23);
-            this.reportProgress.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(72, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "(PDF Report)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(72, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "(JSON Report)";
             // 
             // RoutesSystemForm
             // 
@@ -398,19 +384,18 @@
         private System.Windows.Forms.Button loadExcelButton;
         private System.Windows.Forms.Label loadExcelLabel;
         private System.Windows.Forms.RadioButton carsReportRadioButton;
-        private System.Windows.Forms.RadioButton routesReportRadioButton;
-        private System.Windows.Forms.RadioButton driversReportRadioButton;
+        private System.Windows.Forms.RadioButton CheckBoxVehicleInformationReport;
+        private System.Windows.Forms.RadioButton CheckBoxAggregateRouteReport;
         private System.Windows.Forms.OpenFileDialog loadExcelOpenFileDialog;
         private System.Windows.Forms.OpenFileDialog loadXMLOpenFileDialog;
         private System.Windows.Forms.Button generateReportButton;
-        private System.Windows.Forms.Label reportFileTypeLabel;
-        private System.Windows.Forms.ComboBox reportFileTypeSelect;
         private System.Windows.Forms.RadioButton expenseReportRadioButton;
         private System.Windows.Forms.TextBox loadExcelTextBox;
         private System.Windows.Forms.TextBox loadXMLTextbox;
         private System.Windows.Forms.SaveFileDialog SaveReportDialog;
         private System.Windows.Forms.TextBox textBoxSelectedFolder;
-        private System.Windows.Forms.ProgressBar reportProgress;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -17,7 +17,7 @@
         private string fileName;
         private string path;
 
-        internal JSONGenerator(string fileName = null, string path = null)
+        internal JSONGenerator(string path = null, string fileName = null)
         {
             if (fileName == null)
             {
