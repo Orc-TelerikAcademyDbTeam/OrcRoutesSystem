@@ -47,6 +47,7 @@
             this.importDataTypeLabel = new System.Windows.Forms.Label();
             this.importDataTypeSelect = new System.Windows.Forms.ComboBox();
             this.tabReports = new System.Windows.Forms.TabPage();
+            this.excelReportLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.loadExcelOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadXMLOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveReportDialog = new System.Windows.Forms.SaveFileDialog();
-            this.excelReportLabel = new System.Windows.Forms.Label();
             this.tabRouteSystem.SuspendLayout();
             this.tabLoadData.SuspendLayout();
             this.tabReports.SuspendLayout();
@@ -76,7 +76,7 @@
             this.tabRouteSystem.Name = "tabRouteSystem";
             this.tabRouteSystem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabRouteSystem.SelectedIndex = 0;
-            this.tabRouteSystem.Size = new System.Drawing.Size(534, 413);
+            this.tabRouteSystem.Size = new System.Drawing.Size(534, 286);
             this.tabRouteSystem.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabRouteSystem.TabIndex = 0;
             // 
@@ -102,7 +102,7 @@
             this.tabLoadData.Location = new System.Drawing.Point(4, 29);
             this.tabLoadData.Name = "tabLoadData";
             this.tabLoadData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLoadData.Size = new System.Drawing.Size(526, 380);
+            this.tabLoadData.Size = new System.Drawing.Size(526, 253);
             this.tabLoadData.TabIndex = 0;
             this.tabLoadData.Text = "Load Data";
             // 
@@ -146,7 +146,7 @@
             // loadMySQLLabel
             // 
             this.loadMySQLLabel.AutoSize = true;
-            this.loadMySQLLabel.Location = new System.Drawing.Point(14, 109);
+            this.loadMySQLLabel.Location = new System.Drawing.Point(9, 109);
             this.loadMySQLLabel.Name = "loadMySQLLabel";
             this.loadMySQLLabel.Size = new System.Drawing.Size(269, 20);
             this.loadMySQLLabel.TabIndex = 9;
@@ -155,7 +155,7 @@
             // loadXMLButton
             // 
             this.loadXMLButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.loadXMLButton.Location = new System.Drawing.Point(310, 123);
+            this.loadXMLButton.Location = new System.Drawing.Point(310, 142);
             this.loadXMLButton.Name = "loadXMLButton";
             this.loadXMLButton.Size = new System.Drawing.Size(119, 28);
             this.loadXMLButton.TabIndex = 8;
@@ -166,25 +166,35 @@
             // loadXMLLabel
             // 
             this.loadXMLLabel.AutoSize = true;
-            this.loadXMLLabel.Location = new System.Drawing.Point(14, 127);
+            this.loadXMLLabel.Location = new System.Drawing.Point(14, 146);
             this.loadXMLLabel.Name = "loadXMLLabel";
             this.loadXMLLabel.Size = new System.Drawing.Size(150, 20);
             this.loadXMLLabel.TabIndex = 7;
             this.loadXMLLabel.Text = "Choose XML File:";
             // 
             // loadMongoDBTextBox
+<<<<<<< HEAD
             // 
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 250);
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 106);
+=======
+            // 
+            this.loadMongoDBTextBox.Location = new System.Drawing.Point(311, 106);
+>>>>>>> origin/master
             this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
             this.loadMongoDBTextBox.TabIndex = 6;
             // 
             // loadMongoDBLabel
             // 
+<<<<<<< HEAD
             this.loadMongoDBLabel.AutoSize = true;
             this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 250);
             this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
+=======
+            this.loadMongoDBLabel.AutoSize = true;
+            this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
+>>>>>>> origin/master
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
             this.loadMongoDBLabel.Size = new System.Drawing.Size(291, 20);
             this.loadMongoDBLabel.TabIndex = 5;
@@ -262,6 +272,15 @@
             this.tabReports.Size = new System.Drawing.Size(526, 253);
             this.tabReports.TabIndex = 1;
             this.tabReports.Text = "Generate Reports";
+            // 
+            // excelReportLabel
+            // 
+            this.excelReportLabel.AutoSize = true;
+            this.excelReportLabel.Location = new System.Drawing.Point(300, 131);
+            this.excelReportLabel.Name = "excelReportLabel";
+            this.excelReportLabel.Size = new System.Drawing.Size(124, 20);
+            this.excelReportLabel.TabIndex = 11;
+            this.excelReportLabel.Text = "(Excel Report)";
             // 
             // label3
             // 
@@ -353,21 +372,12 @@
             // 
             this.loadXMLOpenFileDialog.FileName = "Load XML File";
             // 
-            // excelReportLabel
-            // 
-            this.excelReportLabel.AutoSize = true;
-            this.excelReportLabel.Location = new System.Drawing.Point(300, 131);
-            this.excelReportLabel.Name = "excelReportLabel";
-            this.excelReportLabel.Size = new System.Drawing.Size(124, 20);
-            this.excelReportLabel.TabIndex = 11;
-            this.excelReportLabel.Text = "(Excel Report)";
-            // 
             // RoutesSystemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(534, 413);
+            this.ClientSize = new System.Drawing.Size(534, 286);
             this.Controls.Add(this.tabRouteSystem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoutesSystemForm";
