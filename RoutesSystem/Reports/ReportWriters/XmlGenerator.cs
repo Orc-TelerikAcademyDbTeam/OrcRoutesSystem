@@ -2,6 +2,7 @@
 {
     using Reports.ReportModels;
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     using System.IO;
     using System.Xml;
@@ -53,6 +54,22 @@
                         writer.WriteAttributeString("Price", item.Price.ToString());
                         writer.WriteAttributeString("Spent", item.Spent.ToString());
                         writer.WriteAttributeString("Total", item.Total.ToString());
+                        writer.WriteEndElement();
+                }
+
+                var groupedCosts = inputData.GroupBy(x => x.VehicleId).Select(
+                        k => new
+                        {
+                            Vehicle = inputData.Where(x=>x.VehicleId==k.Key).Select(x=>x.VehicleId).First(),
+                            TotalCost = inputData.Where(x => x.VehicleId == k.Key).Select(x =>k.Sum(y=>y.Total)).First()
+                        }
+                    ).ToList();
+
+                foreach (var item in groupedCosts)
+                {
+                        writer.WriteStartElement("TotalCostPerVehicle");
+                        writer.WriteAttributeString("VehicleId", item.Vehicle.ToString());
+                        writer.WriteAttributeString("FuelId", item.TotalCost.ToString());
                         writer.WriteEndElement();
                 }
 
