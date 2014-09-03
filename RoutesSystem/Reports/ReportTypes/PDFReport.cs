@@ -33,7 +33,7 @@
                                         DriverName = vehicleRoute.Vehicle.Driver.FirstName + " " +
                                             vehicleRoute.Vehicle.Driver.LastName
                                     })
-                        }).ToArray();
+                        }).OrderByDescending(route => (route.VehicleRouteInfo.Count() * route.Distance)).ToArray();
 
             return result;
         }
