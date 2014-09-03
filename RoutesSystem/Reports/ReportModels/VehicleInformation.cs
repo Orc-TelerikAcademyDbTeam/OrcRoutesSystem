@@ -12,6 +12,8 @@
 
         public string FuelType { get; set; }
 
-        public string Driver { get; set; }
+        public string DriverFirstName { get; set; }
+
+        public string DriverLastName { get; set; }
     }
 }

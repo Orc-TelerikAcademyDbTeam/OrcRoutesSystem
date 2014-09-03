@@ -26,7 +26,8 @@
                         Manufactorer = vehicle.Manufacturer.Name,
                         VehicleModel = vehicle.Model.Name,
                         FuelType = vehicle.FuelType.Name,
-                        Driver = vehicle.Driver.FirstName + " " + vehicle.Driver.LastName
+                        DriverFirstName = vehicle.Driver.FirstName,
+                        DriverLastName = vehicle.Driver.LastName
                     }).ToArray();
 
             return result;

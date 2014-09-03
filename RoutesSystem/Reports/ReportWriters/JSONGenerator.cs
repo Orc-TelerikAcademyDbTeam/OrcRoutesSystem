@@ -54,7 +54,7 @@
                     System.IO.File.WriteAllText(filePath, jsonResult);
 
                     // insert data form JSON object into MySQL
-                    MySQL.EntryPoint.InsertRow(vehicle.VehicleID, vehicle.VehicleType, vehicle.Manufactorer, vehicle.VehicleModel, vehicle.FuelType, vehicle.Driver);
+                    MySQL.EntryPoint.InsertRow(vehicle.VehicleID, vehicle.VehicleType, vehicle.Manufactorer, vehicle.VehicleModel, vehicle.FuelType, vehicle.DriverFirstName, vehicle.DriverLastName);
                 }
             }
             catch (Exception ex)
