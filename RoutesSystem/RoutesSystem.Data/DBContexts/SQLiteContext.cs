@@ -25,7 +25,7 @@
             return base.Set<T>();
         }
 
-        public new void SaveChanges()
+        public void SaveChanges()
         {
             base.SaveChanges();
         }

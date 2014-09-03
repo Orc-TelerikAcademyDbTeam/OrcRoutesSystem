@@ -17,26 +17,35 @@
     using MySQL;
     using Mongo;
     using RoutesSystem.Data;
+    using System.Data.SQLite;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
+            //EntryPoint.Start();
+            //EntryPoint.InsertRow(20, "Car", "Opel", "Fiesta", "Gas", "Penio", "Penev");
+            //EntryPoint.InsertRow(5, "Car", "Opel", "Fiesta", "Gas", "Penio", "Penev");
+            //EntryPoint.InsertRow(6, "Car", "Opel", "Fiesta", "Gas", "Penio", "Penev");
+
+            SQLiteData data = new SQLiteData();
+            data.DriversInfo.Add(new DriverInfo()
+            {
+                Id = 6,
+                DriverFirstName = "Ivan",
+                DriverLastName = "Ivanov",
+                EndTown = "Maluk Porovec",
+                StartTown = "Golqm Porovec",
+                RouteDistance = 10,
+                DriverSalary = 5
+            });
+            data.DriversInfo.SaveChanges();
+
             //Repository pattern
             //var data = new RouteSystemData();
 
             //var jsonGen = new JSONReportWriter();
             //jsonGen.CreateReport();
-
-            //SQLiteData data=new SQLiteData();
-            //data.DriversInfo.Add(new DriverInfo()
-            //                         {
-            //                             DriverFirstName = "Penio",
-            //                             DriverLastName = "Penev",
-            //                             EndTown = "Maluk Porovec",
-            //                             StartTown = "Golqm Porovec"
-            //                         });
-            //data.DriversInfo.SaveChanges();
 
             //var data = SQLiteWorker.GetDriverRouteData();
 
@@ -79,7 +88,7 @@
             //c.DriversInfo.Add(new DriverInfo { StartTown = "Vraca", EndTown = "Kaspichan" });
             //c.SaveChanges();
 
-           
+
 
             //SQLServerWorker.ImportExcellData();
             //var XmlGen = new XmlReportWriter();
