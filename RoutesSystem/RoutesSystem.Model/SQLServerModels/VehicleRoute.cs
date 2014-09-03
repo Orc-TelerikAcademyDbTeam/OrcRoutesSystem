@@ -12,6 +12,7 @@
         [Key, ForeignKey("Route"), Column(Order = 0)]
         public int RouteId { get; set; }
 
+        [Key, Column(Order = 2)]
         public DateTime Date { get; set; }
 
         public virtual Vehicle Vehicle { get; set; }
