@@ -84,7 +84,7 @@
     <Compile Include="RouteSystemForm.Designer.cs">
       <DependentUpon>RouteSystemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIEngine.cs" />
     <EmbeddedResource Include="RouteSystemForm.resx">

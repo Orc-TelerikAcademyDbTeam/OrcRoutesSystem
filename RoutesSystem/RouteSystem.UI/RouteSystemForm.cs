@@ -70,16 +70,6 @@
                 this.loadMongoDBLabel.Visible = true;
                 this.loadMongoDBTextBox.Visible = true;
             }
-            else if (this.importDataTypeSelect.SelectedItem.ToString() == "MySQL and SQLite")
-            {
-                hideUnusedLoadData();
-
-                this.loadMySQLLabel.Visible = true;
-                this.loadMySQLTextBox.Visible = true;
-
-                this.loadSQLiteLabel.Visible = true;
-                this.loadSQLiteTextBox.Visible = true;
-            }
         }
 
         private void importDataTypeButton_Click(object sender, EventArgs e)
@@ -116,21 +106,6 @@
                 else
                 {
                     UIEngine.ImportXMLToMongoAndSQLServer(this.loadMongoDBTextBox.Text, this.loadXMLTextbox.Text);
-                }
-            }
-            else if (this.importDataTypeSelect.SelectedItem.ToString() == "MySQL and SQLite")
-            {
-                if (this.loadMySQLTextBox.Text == "" && this.loadSQLiteTextBox.Text == "")
-                {
-                    MessageBox.Show("Choose MySQL and SQLite connection strings first!");
-                }
-                else if (this.loadMySQLTextBox.Text == "")
-                {
-                    MessageBox.Show("Choose MySQL connection string first!");
-                }
-                else if (this.loadSQLiteTextBox.Text == "")
-                {
-                    MessageBox.Show("Choose SQLite connection string first!");
                 }
             }
         }

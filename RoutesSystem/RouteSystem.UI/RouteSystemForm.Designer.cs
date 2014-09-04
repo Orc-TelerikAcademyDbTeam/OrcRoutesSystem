@@ -192,9 +192,6 @@
             // 
             // loadMongoDBTextBox
             // 
-            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 250);
-            this.loadMongoDBTextBox.Location = new System.Drawing.Point(310, 106);
-            // 
             this.loadMongoDBTextBox.Location = new System.Drawing.Point(311, 106);
             this.loadMongoDBTextBox.Name = "loadMongoDBTextBox";
             this.loadMongoDBTextBox.Size = new System.Drawing.Size(119, 26);
@@ -202,9 +199,6 @@
             // 
             // loadMongoDBLabel
             // 
-            this.loadMongoDBLabel.AutoSize = true;
-            this.loadMongoDBLabel.Location = new System.Drawing.Point(9, 250);
-            this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
             this.loadMongoDBLabel.AutoSize = true;
             this.loadMongoDBLabel.Location = new System.Drawing.Point(14, 109);
             this.loadMongoDBLabel.Name = "loadMongoDBLabel";
@@ -257,8 +251,7 @@
             this.importDataTypeSelect.FormattingEnabled = true;
             this.importDataTypeSelect.Items.AddRange(new object[] {
             "MongoDB and Excel",
-            "XML",
-            "MySQL and SQLite"});
+            "XML"});
             this.importDataTypeSelect.Location = new System.Drawing.Point(13, 63);
             this.importDataTypeSelect.Name = "importDataTypeSelect";
             this.importDataTypeSelect.Size = new System.Drawing.Size(287, 28);
