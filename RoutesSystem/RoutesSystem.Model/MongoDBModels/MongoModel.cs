@@ -5,7 +5,6 @@
 
     public class MongoModel
     {
-
         public MongoModel()
         {
             this.Id = ObjectId.GenerateNewId().ToString();

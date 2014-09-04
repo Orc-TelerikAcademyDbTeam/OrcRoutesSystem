@@ -1,18 +1,9 @@
 ﻿namespace RouteSystem.UI
 {
     using System;
-    using System.Linq;
     using System.Windows.Forms;
 
-    using RoutesSystem.Data.DBContexts;
-    using RoutesSystem.Model;
-    using Reports.ReportWriters;
-    using RoutesSystem.Model.SQLServerModels;
     using RouteSystemUI;
-    using MySQL;
-    using RoutesSystem.Data;
-    using RoutesSystem.Model.SQLiteModels;
-    
 
     internal static class Program
     {
@@ -25,52 +16,6 @@
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RoutesSystemForm());
-
-            //SQLiteData data = new SQLiteData();
-            //data.DriversInfo.Add(new DriverInfo()
-            //                         {
-            //                             DriverFirstName = "Georgi",
-            //                             DriverLastName = "Petrov",
-            //                             EndTown = "Tyrnovo",
-            //                             StartTown = "Bqla",
-            //                             DriverSalary = 10,
-            //                             RouteDistance = 450
-            //                         });
-            //data.DriversInfo.SaveChanges();
-
-            //var excel = new ExcelReportWriter();
-            //excel.CreateReport("D:\\Desktop\\ex", "ExcelReport");
-            
-            //var pdfGen = new PdfReportWriter();
-            //pdfGen.CreateReport();
-            
-            //MessageBox.Show("DONE!");
-
-            //var data = new SQLServerContext();
-            //pdfGenerator.CreateReport();
-            //data.Manufacturers.Add(new Manufacturer { Name = "Pesho" });
-
-            //data.SaveChanges();
-
-            //var jsonGen = new JSONReportWriter();
-            //jsonGen.CreateReport();
-
-            //var manufacturers = data.Manufacturers.FirstOrDefault();
-
-            //MessageBox.Show(manufacturers.Id.ToString());
-
-            ////ArchiveReports usage example
-            //var archiveLocation = "../../../ZipArchives/Sample-Sales-Reports.zip";
-            //var reportsExtensions = new HashSet<string>() { ".xls" };
-            //var reportsArchive = new ReportsArchive(archiveLocation, reportsExtensions);
-
-            //using (reportsArchive)
-            //{
-            //    foreach (var report in reportsArchive)
-            //    {
-            //        //Console.WriteLine("{0} => {1}  {2}", report.DirectoryName, report.FileName, report.FileExtension);
-            //    }
-            //}
         }
     }
 }

@@ -1,10 +1,8 @@
 ﻿namespace RoutesSystem.Data.DBContexts
 {
-    using System;
     using System.Data.Entity;
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.Migrations;
-    using RoutesSystem.Model;
     using RoutesSystem.Model.SQLServerModels;
 
     public class SQLServerContext : DbContext, IRoutesSystemDbContext
@@ -37,7 +35,7 @@
 
         public IDbSet<CarEntry> VehicleExpenseInfo { get; set; }
  
-        public IDbSet<CarExpenses>  VehicleExpenses { get; set; }
+        public IDbSet<CarExpenses> VehicleExpenses { get; set; }
 
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {

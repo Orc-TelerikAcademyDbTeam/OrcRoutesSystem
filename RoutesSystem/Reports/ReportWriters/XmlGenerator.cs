@@ -1,11 +1,12 @@
 ﻿namespace Reports.ReportWriters
 {
-    using Reports.ReportModels;
     using System;
-    using System.Linq;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Xml;
+
+    using Reports.ReportModels;
 
     internal class XmlGenerator
     {
@@ -48,29 +49,28 @@
 
                 foreach (var item in inputData)
                 {
-                        writer.WriteStartElement("Routes");
-                        writer.WriteAttributeString("VehicleId", item.VehicleId.ToString());
-                        writer.WriteAttributeString("FuelId", item.FuelId.ToString());
-                        writer.WriteAttributeString("Price", item.Price.ToString());
-                        writer.WriteAttributeString("Spent", item.Spent.ToString());
-                        writer.WriteAttributeString("Total", item.Total.ToString());
-                        writer.WriteEndElement();
+                    writer.WriteStartElement("Routes");
+                    writer.WriteAttributeString("VehicleId", item.VehicleId.ToString());
+                    writer.WriteAttributeString("FuelId", item.FuelId.ToString());
+                    writer.WriteAttributeString("Price", item.Price.ToString());
+                    writer.WriteAttributeString("Spent", item.Spent.ToString());
+                    writer.WriteAttributeString("Total", item.Total.ToString());
+                    writer.WriteEndElement();
                 }
 
                 var groupedCosts = inputData.GroupBy(x => x.VehicleId).Select(
                         k => new
                         {
-                            Vehicle = inputData.Where(x=>x.VehicleId==k.Key).Select(x=>x.VehicleId).First(),
-                            TotalCost = inputData.Where(x => x.VehicleId == k.Key).Select(x =>k.Sum(y=>y.Total)).First()
-                        }
-                    ).ToList();
+                            Vehicle = inputData.Where(x => x.VehicleId == k.Key).Select(x => x.VehicleId).First(),
+                            TotalCost = inputData.Where(x => x.VehicleId == k.Key).Select(x => k.Sum(y => y.Total)).First()
+                        }).ToList();
 
                 foreach (var item in groupedCosts)
                 {
-                        writer.WriteStartElement("TotalCostPerVehicle");
-                        writer.WriteAttributeString("VehicleId", item.Vehicle.ToString());
-                        writer.WriteAttributeString("FuelId", item.TotalCost.ToString());
-                        writer.WriteEndElement();
+                    writer.WriteStartElement("TotalCostPerVehicle");
+                    writer.WriteAttributeString("VehicleId", item.Vehicle.ToString());
+                    writer.WriteAttributeString("FuelId", item.TotalCost.ToString());
+                    writer.WriteEndElement();
                 }
 
                 writer.WriteEndElement();

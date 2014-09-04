@@ -5,7 +5,6 @@
     using System.Reflection;
     using System.Xml;
 
-
     public class XmlReportReader<T>
     {
         private string filePath;
@@ -35,7 +34,10 @@
                 return this.document;
             }
 
-            set { this.document = value; }
+            set 
+            { 
+                this.document = value; 
+            }
         }
 
         public T ReadDocument(string modelsNamespace)

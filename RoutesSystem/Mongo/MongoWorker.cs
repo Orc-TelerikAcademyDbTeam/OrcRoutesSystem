@@ -4,8 +4,6 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    using Reports.ReportModels;
-
     using RoutesSystem.Data;
     using RoutesSystem.Model;
     using RoutesSystem.Model.MongoDBModels;
@@ -27,6 +25,65 @@
         {
             this.data = new MongoData(connectionString, "RoutesSystem");
             this.Populate();
+        }
+
+        public void ImportXMLCarsEntry(IEnumerable<CarEntry> cars)
+        {
+            foreach (var carEntry in cars)
+            {
+                var expenses = new List<MongoExpense>();
+                foreach (var expense in carEntry.Expenses)
+                {
+                    expenses.Add(new MongoExpense() { Cost = expense.Cost, Date = expense.Month, });
+                }
+
+                var mongoCarEntry = new MongoCarEntry()
+                {
+                    VehicleId = carEntry.RegistrationIdentifier,
+                    Expenses = expenses
+                };
+                this.data.VehicleExpensesInfo.Insert(mongoCarEntry);
+            }
+        }
+
+        public IQueryable<MongoTown> GetAllTowns()
+        {
+            return this.data.Towns.All();
+        }
+
+        public IQueryable<MongoManufacturer> GetAllManufacturers()
+        {
+            return this.data.Manufacturers.All();
+        }
+
+        public IQueryable<MongoVehicleType> GetAllVehicleTypes()
+        {
+            return this.data.VehicleTypes.All();
+        }
+
+        public IQueryable<MongoFuelType> GetAllFuelTypes()
+        {
+            return this.data.FuelTypes.All();
+        }
+
+        public IQueryable<MongoVehicle> GetAllVehicles()
+        {
+            return this.data.Vehicles.All();
+        }
+
+        public IQueryable<MongoModel> GetAllModels()
+        {
+            return this.data.VehicleModels.All();
+        }
+
+        public IQueryable<MongoRoute> GetAllRoutes()
+        {
+            return this.data.Routes.All();
+        }
+
+        public IQueryable<MongoVehicleRoute> GetAllVehicleRoutes()
+        {
+            return this.data.VehicleRoutes.All();
         }
 
         private void Populate()
@@ -350,7 +407,6 @@
                        YearOfManifacturer = new DateTime(1999, 8, 11)
                    });
 
-
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
                    {
@@ -368,7 +424,6 @@
                            this.data.VehicleTypes.SearchFor(x => x.Name == "Coupe").First(),
                        YearOfManifacturer = new DateTime(1999, 2, 2)
                    });
-
 
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
@@ -495,7 +550,6 @@
                            this.data.VehicleTypes.SearchFor(x => x.Name == "Motor-Cycle").First(),
                        YearOfManifacturer = new DateTime(2004, 9, 8)
                    });
-
 
                 this.data.Vehicles.Insert(
                    new MongoVehicle()
@@ -1192,64 +1246,6 @@
                     Date = new DateTime(2014, 9, 29)
                 });
             }
-        }
-
-        public void ImportXMLCarsEntry(IEnumerable<CarEntry> cars)
-        {
-            foreach (var carEntry in cars)
-            {
-                var expenses = new List<MongoExpense>();
-                foreach (var expense in carEntry.Expenses)
-                {
-                    expenses.Add(new MongoExpense() { Cost = expense.Cost, Date = expense.Month, });
-                }
-                var mongoCarEntry = new MongoCarEntry()
-                                        {
-                                            VehicleId = carEntry.RegistrationIdentifier,
-                                            Expenses = expenses
-                                        };
-                this.data.VehicleExpensesInfo.Insert(mongoCarEntry);
-            }
-        }
-
-        public IQueryable<MongoTown> GetAllTowns()
-        {
-            return this.data.Towns.All();
-        }
-
-        public IQueryable<MongoManufacturer> GetAllManufacturers()
-        {
-            return this.data.Manufacturers.All();
-        }
-
-        public IQueryable<MongoVehicleType> GetAllVehicleTypes()
-        {
-            return this.data.VehicleTypes.All();
-        }
-
-        public IQueryable<MongoFuelType> GetAllFuelTypes()
-        {
-            return this.data.FuelTypes.All();
-        }
-
-        public IQueryable<MongoVehicle> GetAllVehicles()
-        {
-            return this.data.Vehicles.All();
-        }
-
-        public IQueryable<MongoModel> GetAllModels()
-        {
-            return this.data.VehicleModels.All();
-        }
-
-        public IQueryable<MongoRoute> GetAllRoutes()
-        {
-            return this.data.Routes.All();
-        }
-
-        public IQueryable<MongoVehicleRoute> GetAllVehicleRoutes()
-        {
-            return this.data.VehicleRoutes.All();
         }
     }
 }

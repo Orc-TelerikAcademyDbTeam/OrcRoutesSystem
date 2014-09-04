@@ -18,15 +18,15 @@
             set { this.registrationIndentifier = value; }
         }
 
-        public void AddExpense(Expense expense)
-        {
-            this.Expenses.Add(expense);
-        }
-
         public ICollection<Expense> Expenses
         {
             get { return this.expenses; }
             set { this.expenses = value; }
+        }
+
+        public void AddExpense(Expense expense)
+        {
+            this.Expenses.Add(expense);
         }
     }
 }

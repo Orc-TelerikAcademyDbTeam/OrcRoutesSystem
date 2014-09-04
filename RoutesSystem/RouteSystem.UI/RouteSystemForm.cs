@@ -1,9 +1,10 @@
 ﻿namespace RouteSystemUI
 {
-    using RouteSystem.UI;
     using System;
-    using System.Windows.Forms;
     using System.Linq;
+    using System.Windows.Forms;
+
+    using RouteSystem.UI;
 
     public partial class RoutesSystemForm : Form
     {
@@ -24,7 +25,6 @@
         {
             this.loadXMLOpenFileDialog.ShowDialog();
             this.loadXMLTextbox.Text = this.loadXMLOpenFileDialog.FileName;
-            
         }
 
         private void hideUnusedLoadData()
@@ -109,7 +109,7 @@
                 {
                     MessageBox.Show("Choose XML file first!");
                 }
-                else if (this.loadMongoDBTextBox.Text=="")
+                else if (this.loadMongoDBTextBox.Text == "")
                 {
                     MessageBox.Show("Choose MongoDB connection string first!");
                 }
@@ -148,12 +148,10 @@
 
         private void CheckBoxAggregateRouteReport_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void xmlReportRadio_CheckedChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

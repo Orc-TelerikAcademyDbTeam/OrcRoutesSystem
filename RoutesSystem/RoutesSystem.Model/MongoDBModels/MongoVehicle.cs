@@ -27,7 +27,6 @@
 
         public virtual MongoVehicleType VehicleType { get; set; }
          
-
         public virtual MongoManufacturer Manufacturer { get; set; }
 
         public virtual MongoModel Model { get; set; }

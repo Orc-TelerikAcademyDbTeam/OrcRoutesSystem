@@ -1,14 +1,11 @@
 ﻿namespace Reports.ReportWriters
 {
-    using MySQL;
-    using RoutesSystem.Model.SQLiteModels;
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using SQLite;
+
+    using MySQL;
     using Reports.ReportTypes;
+    using RoutesSystem.Model.SQLiteModels;
+    using SQLite;
 
     public class ExcelReportWriter
     {

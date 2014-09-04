@@ -22,6 +22,5 @@
         public virtual MongoTown EndTown { get; set; }
 
         public float Distance { get; set; }
-
     }
 }

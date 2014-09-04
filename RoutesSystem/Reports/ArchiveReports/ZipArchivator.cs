@@ -5,7 +5,7 @@
 
     using Reports.Contracts;
 
-    public class ZipArchivator:IArchivator
+    public class ZipArchivator : IArchivator
     {
         public void Archive(string sourcePath, string destinationPath, string archiveFileName)
         {
@@ -19,12 +19,12 @@
 
             FileAttributes sourceAttributes = File.GetAttributes(sourcePath);
 
-            // It`s directory
+            // checking if it is a directory
+            // if not: check if it is a file
             if ((sourceAttributes & FileAttributes.Directory) == FileAttributes.Directory)
             {
                 ZipFile.CreateFromDirectory(sourcePath, archiveFullPath, CompressionLevel.Fastest, true);
             }
-            // It`s file
             else
             {
                 using (FileStream zipToOpen = new FileStream(archiveFullPath, FileMode.Create))

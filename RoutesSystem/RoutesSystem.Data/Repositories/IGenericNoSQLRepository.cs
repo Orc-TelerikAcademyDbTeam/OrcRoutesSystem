@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Data.Repositories
+﻿namespace RoutesSystem.Data.Repositories
 {
+    using System;
+    using System.Linq;
     using System.Linq.Expressions;
 
     using MongoDB.Driver;
 
-    public interface IGenericNoSQLRepository<T> where T:class 
+    public interface IGenericNoSQLRepository<T> where T : class
     {
         IQueryable<T> All();
 

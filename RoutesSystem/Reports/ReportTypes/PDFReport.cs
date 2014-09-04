@@ -4,7 +4,6 @@
     using System.Linq;
 
     using Reports.ReportModels;
-
     using RoutesSystem.Data.DBContexts;
 
     internal class PdfReport

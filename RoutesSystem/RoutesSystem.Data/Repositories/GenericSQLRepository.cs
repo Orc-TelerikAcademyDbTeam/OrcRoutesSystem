@@ -1,15 +1,10 @@
 ﻿namespace RoutesSystem.Data.Repositories
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Linq;
     using System.Linq.Expressions;
-
     using RoutesSystem.Data.Contracts;
 
     public class GenericSQLRepository<T> : IGenericRepository<T> where T : class

@@ -4,7 +4,6 @@
     using System.Linq;
 
     using Reports.ReportModels;
-
     using RoutesSystem.Data.DBContexts;
 
     public class XmlReport
@@ -27,8 +26,8 @@
                         Price = record.Price,
                         Spent = record.Spent,
                         Total = record.Total
-                    }
-                ).ToArray();
+                    }).ToArray();
+
             return result;
         }
     }

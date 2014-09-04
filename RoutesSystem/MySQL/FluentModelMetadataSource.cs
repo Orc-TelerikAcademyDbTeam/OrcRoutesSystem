@@ -1,22 +1,11 @@
-using System;
-using System.Data;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Data.Common;
-using System.Collections.Generic;
-using Telerik.OpenAccess;
-using Telerik.OpenAccess.Metadata;
-using Telerik.OpenAccess.Data.Common;
-using Telerik.OpenAccess.Metadata.Fluent;
-using Telerik.OpenAccess.Metadata.Fluent.Advanced;
-using Telerik.OpenAccess.Metadata.Relational;
-
 namespace MySQL
 {
+    using System.Collections.Generic;
+    using Telerik.OpenAccess.Metadata;
+    using Telerik.OpenAccess.Metadata.Fluent;
 
     public partial class FluentModelMetadataSource : FluentMetadataSource
     {
-
         protected override IList<MappingConfiguration> PrepareMapping()
         {
             List<MappingConfiguration> configurations = new List<MappingConfiguration>();
@@ -48,4 +37,3 @@ namespace MySQL
         }
     }
 }
-

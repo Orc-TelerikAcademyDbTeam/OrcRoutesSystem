@@ -50,6 +50,7 @@
                     jsonResult = JsonConvert.SerializeObject(vehicle, Formatting.Indented);
 
                     var filePath = this.path + "\\" + vehicle.VehicleID + JSON_EXTENSION;
+
                     // create *.json file for JSON object
                     System.IO.File.WriteAllText(filePath, jsonResult);
 

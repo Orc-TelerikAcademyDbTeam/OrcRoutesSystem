@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Data
+﻿namespace RoutesSystem.Data
 {
-    using System.IO;
+    using System;
+    using System.Collections.Generic;
 
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Data.Repositories;
     using RoutesSystem.Model.SQLiteModels;
-    using RoutesSystem.Model.SQLServerModels;
 
     public class SQLiteData
     {

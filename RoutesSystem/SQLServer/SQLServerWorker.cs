@@ -4,9 +4,7 @@
     using System.Linq;
 
     using Mongo;
-
     using Reports.ReportReaders;
-
     using RoutesSystem.Data;
     using RoutesSystem.Model.SQLServerModels;
 
@@ -16,19 +14,19 @@
     {
         private static RouteSystemData data = new RouteSystemData();
 
-        public static void ImportMongoDBData(string connectionString=null)
+        public static void ImportMongoDBData(string connectionString = null)
         {
             MongoWorker mongoData;
-            if (connectionString!=null)
+            if (connectionString != null)
             {
                 mongoData = new MongoWorker(connectionString);
             }
             else
-        {
-                mongoData=new MongoWorker();
+            {
+                mongoData = new MongoWorker();
             }
 
-            //Fill Manufactures
+            // Fill Manufactures
             var allManufacturers = mongoData.GetAllManufacturers();
 
             foreach (var manufacturer in allManufacturers)
@@ -37,7 +35,7 @@
                 data.Manufacturers.SaveChanges();
             }
 
-            //Fill Towns
+            // Fill Towns
             var allTowns = mongoData.GetAllTowns();
             foreach (var town in allTowns)
             {
@@ -45,7 +43,7 @@
                 data.Towns.SaveChanges();
             }
 
-            //Fill Vehicle Types
+            // Fill Vehicle Types
             var allVehicleTypes = mongoData.GetAllVehicleTypes();
             foreach (var type in allVehicleTypes)
             {
@@ -53,7 +51,7 @@
                 data.VehicleTypes.SaveChanges();
             }
 
-            //Fill Fuel Types
+            // Fill Fuel Types
             var allFuelTypes = mongoData.GetAllFuelTypes();
             foreach (var fuel in allFuelTypes)
             {
@@ -61,7 +59,7 @@
                 data.Fueltypes.SaveChanges();
             }
 
-            //Fill Models
+            // Fill Models
             var allModels = mongoData.GetAllModels();
             foreach (var model in allModels)
             {
@@ -74,7 +72,7 @@
                 data.Models.SaveChanges();
             }
 
-            //Fill Vehicles
+            // Fill Vehicles
             var allVehicles = mongoData.GetAllVehicles();
             foreach (var vehicle in allVehicles)
             {
@@ -100,7 +98,7 @@
                             ModelId = modelId,
                             YearOfManifacturer = vehicle.YearOfManifacturer,
                             FuelTypeId = fuelTypeId
-                };
+                        };
 
                 data.Vehicles.Add(vehicleModel);
                 data.Vehicles.SaveChanges();
@@ -110,7 +108,7 @@
                 data.Drivers.SaveChanges();
             }
 
-            //Fill Routes
+            // Fill Routes
             var allRoutes = mongoData.GetAllRoutes();
             foreach (var route in allRoutes)
             {
@@ -128,12 +126,12 @@
                 data.Routes.SaveChanges();
             }
 
-            //Fill VehicleRoutes
+            // Fill VehicleRoutes
             var allVehicleRoutes = mongoData.GetAllVehicleRoutes();
             foreach (var vehicleRoute in allVehicleRoutes)
             {
                 data.VehicleRoutes.Add(
-                    new VehicleRoute() 
+                    new VehicleRoute()
                     {
                         RouteId = vehicleRoute.RouteId,
                         VehicleId = vehicleRoute.VehicleId,
@@ -159,6 +157,7 @@
                                         };
                 data.FuelInfo.Add(fuelInfoModel);
             }
+
             data.FuelInfo.SaveChanges();
         }
 
@@ -174,6 +173,7 @@
                     data.VehicleExpenses.SaveChanges();
                     expenses.Add(newExpense);
                 }
+
                 var newCarEntry = new RoutesSystem.Model.SQLServerModels.CarEntry()
                 {
                     VehicleId = carEntry.RegistrationIdentifier,

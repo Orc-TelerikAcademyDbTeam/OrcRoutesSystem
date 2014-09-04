@@ -1,24 +1,42 @@
 ﻿namespace RouteSystemUI
 {
-    partial class RoutesSystemForm
+    public partial class RoutesSystemForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        private System.Windows.Forms.TabControl tabRouteSystem;
+        private System.Windows.Forms.TabPage tabLoadData;
+        private System.Windows.Forms.Label importDataTypeLabel;
+        private System.Windows.Forms.ComboBox importDataTypeSelect;
+        private System.Windows.Forms.TabPage tabReports;
+        private System.Windows.Forms.Button importDataTypeButton;
+        private System.Windows.Forms.TextBox loadSQLiteTextBox;
+        private System.Windows.Forms.Label loadSQLiteLabel;
+        private System.Windows.Forms.TextBox loadMySQLTextBox;
+        private System.Windows.Forms.Label loadMySQLLabel;
+        private System.Windows.Forms.Button loadXMLButton;
+        private System.Windows.Forms.Label loadXMLLabel;
+        private System.Windows.Forms.TextBox loadMongoDBTextBox;
+        private System.Windows.Forms.Label loadMongoDBLabel;
+        private System.Windows.Forms.Button loadExcelButton;
+        private System.Windows.Forms.Label loadExcelLabel;
+        private System.Windows.Forms.RadioButton xmlReportRadio;
+        private System.Windows.Forms.RadioButton CheckBoxVehicleInformationReport;
+        private System.Windows.Forms.RadioButton CheckBoxAggregateRouteReport;
+        private System.Windows.Forms.OpenFileDialog loadExcelOpenFileDialog;
+        private System.Windows.Forms.OpenFileDialog loadXMLOpenFileDialog;
+        private System.Windows.Forms.Button generateReportButton;
+        private System.Windows.Forms.RadioButton expenseReportRadioButton;
+        private System.Windows.Forms.TextBox loadExcelTextBox;
+        private System.Windows.Forms.TextBox loadXMLTextbox;
+        private System.Windows.Forms.SaveFileDialog SaveReportDialog;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label excelReportLabel;
 
         #region Windows Form Designer generated code
 
@@ -387,36 +405,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabRouteSystem;
-        private System.Windows.Forms.TabPage tabLoadData;
-        private System.Windows.Forms.Label importDataTypeLabel;
-        private System.Windows.Forms.ComboBox importDataTypeSelect;
-        private System.Windows.Forms.TabPage tabReports;
-        private System.Windows.Forms.Button importDataTypeButton;
-        private System.Windows.Forms.TextBox loadSQLiteTextBox;
-        private System.Windows.Forms.Label loadSQLiteLabel;
-        private System.Windows.Forms.TextBox loadMySQLTextBox;
-        private System.Windows.Forms.Label loadMySQLLabel;
-        private System.Windows.Forms.Button loadXMLButton;
-        private System.Windows.Forms.Label loadXMLLabel;
-        private System.Windows.Forms.TextBox loadMongoDBTextBox;
-        private System.Windows.Forms.Label loadMongoDBLabel;
-        private System.Windows.Forms.Button loadExcelButton;
-        private System.Windows.Forms.Label loadExcelLabel;
-        private System.Windows.Forms.RadioButton xmlReportRadio;
-        private System.Windows.Forms.RadioButton CheckBoxVehicleInformationReport;
-        private System.Windows.Forms.RadioButton CheckBoxAggregateRouteReport;
-        private System.Windows.Forms.OpenFileDialog loadExcelOpenFileDialog;
-        private System.Windows.Forms.OpenFileDialog loadXMLOpenFileDialog;
-        private System.Windows.Forms.Button generateReportButton;
-        private System.Windows.Forms.RadioButton expenseReportRadioButton;
-        private System.Windows.Forms.TextBox loadExcelTextBox;
-        private System.Windows.Forms.TextBox loadXMLTextbox;
-        private System.Windows.Forms.SaveFileDialog SaveReportDialog;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label excelReportLabel;
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+
+            base.Dispose(disposing);
+        }
     }
 }
-

@@ -6,6 +6,7 @@
     public class Manufacturer
     {
         private ICollection<Vehicle> vehicles;
+
         public Manufacturer()
         {
             this.vehicles = new HashSet<Vehicle>();
@@ -24,6 +25,7 @@
             {
                 return this.vehicles;
             }
+
             set
             {
                 this.vehicles = value;

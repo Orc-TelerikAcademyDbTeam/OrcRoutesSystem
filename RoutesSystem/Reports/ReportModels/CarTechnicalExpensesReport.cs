@@ -12,6 +12,19 @@
             this.CarEntries = new List<CarEntry>();
         }
 
+        public ICollection<CarEntry> CarEntries
+        {
+            get 
+            {
+                return this.carEntries; 
+            }
+
+            set 
+            { 
+                this.carEntries = value; 
+            }
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
@@ -23,12 +36,6 @@
             {
                 yield return car;
             }
-        }
-
-        public ICollection<CarEntry> CarEntries
-        {
-            get { return this.carEntries; }
-            set { this.carEntries = value; }
         }
 
         public void AddCarEntry(CarEntry car)

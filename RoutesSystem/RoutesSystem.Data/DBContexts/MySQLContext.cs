@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Core.DataBaseIteraction
+﻿namespace RoutesSystem.Core.DataBaseIteraction
 {
+    using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
 
     using RoutesSystem.Data.Contracts;
 
-    class MySQL : IDatabaseContext
+    public class MySQL : IDatabaseContext
     {
         public IDbSet<T> Set<T>() where T : class
         {

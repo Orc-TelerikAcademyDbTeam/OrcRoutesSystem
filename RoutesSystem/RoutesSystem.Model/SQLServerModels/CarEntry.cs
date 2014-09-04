@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Model.SQLServerModels
+﻿namespace RoutesSystem.Model.SQLServerModels
 {
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel.DataAnnotations;
 
@@ -15,7 +10,7 @@ namespace RoutesSystem.Model.SQLServerModels
 
         public CarEntry()
         {
-            this.vehicleExpenses=new Collection<CarExpenses>();
+            this.vehicleExpenses = new Collection<CarExpenses>();
         }
 
         [Key]
@@ -29,6 +24,7 @@ namespace RoutesSystem.Model.SQLServerModels
             {
                 return this.vehicleExpenses;
             }
+
             set
             {
                 this.vehicleExpenses = value;

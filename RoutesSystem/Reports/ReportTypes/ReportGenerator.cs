@@ -37,18 +37,16 @@
             return report;
         }
 
-        //Example for one report. Need to implements DTOs
+        // Example for one report. Need to implements DTOs
         private IReportData DriversVehiclesInfo()
         {
-            using(var dbContext = new SQLServerContext())
+            using (var dbContext = new SQLServerContext())
             {
                 var driversVehicle = dbContext.Vehicles.Select(x => new
                 {
                     VehicleType = x.Type.Name,
-                    DriverName = x.Driver.FirstName + " "+ x.Driver.LastName
+                    DriverName = x.Driver.FirstName + " " + x.Driver.LastName
                 }).ToArray();
-
-                //driversVehicle
             }
 
             return null;

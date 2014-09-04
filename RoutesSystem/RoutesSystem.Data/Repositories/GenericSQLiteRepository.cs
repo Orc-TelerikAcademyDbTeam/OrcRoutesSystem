@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RoutesSystem.Data.Repositories
+﻿namespace RoutesSystem.Data.Repositories
 {
+    using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Linq;
     using System.Linq.Expressions;
 
     using RoutesSystem.Data.Contracts;
 
-    public class GenericSQLiteRepository<T>:IGenericRepository<T> where T:class 
+    public class GenericSQLiteRepository<T> : IGenericRepository<T> where T : class
     {
         private ISQLiteDbContext context;
         private IDbSet<T> set;

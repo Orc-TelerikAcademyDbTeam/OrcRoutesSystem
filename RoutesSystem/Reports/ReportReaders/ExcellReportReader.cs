@@ -14,7 +14,6 @@
         {
             var result = new List<FuelInfo>();
             
-
             var archiveReport = new ReportsArchive(
                 filePath,
                 new HashSet<string>() { ".xls" });
@@ -27,6 +26,7 @@
                     result.AddRange(entries);
                 }
             }
+
             return result;
         }
 

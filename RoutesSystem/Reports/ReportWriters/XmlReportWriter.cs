@@ -1,9 +1,5 @@
 ﻿namespace Reports.ReportWriters
 {
-    using System.Xml;
-
-    using RoutesSystem.Core.Reports;
-
     using Reports.ReportTypes;
 
     public class XmlReportWriter

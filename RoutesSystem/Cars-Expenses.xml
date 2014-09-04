@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle-technical-control>
+  <carEntry registrationIdentifier="1">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="2">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="3">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="2">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="4">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="4">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="1">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+  <carEntry registrationIdentifier="2">
+    <expense month="01/01/2011" cost="10.00"></expense>
+	<expense month="02/02/2012" cost="20.00"></expense>
+  </carEntry>
+</vehicle-technical-control>

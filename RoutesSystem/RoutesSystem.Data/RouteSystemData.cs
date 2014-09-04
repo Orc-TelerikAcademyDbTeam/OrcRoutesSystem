@@ -2,14 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     using RoutesSystem.Data.Contracts;
     using RoutesSystem.Data.DBContexts;
     using RoutesSystem.Data.Repositories;
-    using RoutesSystem.Model;
     using RoutesSystem.Model.SQLServerModels;
 
     public class RouteSystemData

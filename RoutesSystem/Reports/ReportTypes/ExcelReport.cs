@@ -3,11 +3,10 @@
     using System;
     using System.Collections.Generic;
     using System.Data.OleDb;
+    using System.Linq;
 
     using global::Reports.ReportModels;
     using RoutesSystem.Model.SQLiteModels;
-    using MySQL;
-    using System.Linq;
 
     internal static class ExcelReport
     {
@@ -23,13 +22,14 @@
                 var sheetName = dtExcelSchema.Rows[0]["TABLE_NAME"];
                 var command = new OleDbCommand("SELECT * FROM " + "[" + sheetName + "]", con);
                 var reader = command.ExecuteReader();
-                int i = 0;
+
                 while (reader.Read())
                 {
                     if (reader[0] == DBNull.Value)
                     {
                         return result;
                     }
+
                     var info = new FuelInfo();
                     info.FuelId = Convert.ToInt32(reader[0]);
                     info.VehicleId = Convert.ToInt32(reader[1]);
@@ -39,6 +39,7 @@
                     result.Add(info);
                 }
             }
+
             return result;
         }
 

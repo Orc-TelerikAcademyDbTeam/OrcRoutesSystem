@@ -49,8 +49,7 @@
         {
             try
             {
-                using (FileStream fs = new FileStream(string.Format(@"{0}\{1}.pdf", this.path, this.fileName),
-                    FileMode.Create, FileAccess.Write, FileShare.None))
+                using (FileStream fs = new FileStream(string.Format(@"{0}\{1}.pdf", this.path, this.fileName), FileMode.Create, FileAccess.Write, FileShare.None))
                 using (Document doc = new Document())
                 using (PdfWriter writer = PdfWriter.GetInstance(doc, fs))
                 {
@@ -89,9 +88,7 @@
 
         private void AppendHeader(PdfPTable table, VisitedRouteInfo route)
         {
-            this.AddCellToTable(string.Format(ROUTE_MESSAGE, route.StartTownName, route.EndTownName),
-                table, BaseColor.GRAY, COLSPAN_MERGE_ALL_CELLS);
-
+            this.AddCellToTable(string.Format(ROUTE_MESSAGE, route.StartTownName, route.EndTownName), table, BaseColor.GRAY, COLSPAN_MERGE_ALL_CELLS);
             this.AddCellToTable(COLUMN_DRIVER_TITLE, table, BaseColor.LIGHT_GRAY, null, PdfPCell.ALIGN_CENTER);
             this.AddCellToTable(COLUMN_VEHICLE_TITLE, table, BaseColor.LIGHT_GRAY, null, PdfPCell.ALIGN_CENTER);
             this.AddCellToTable(COLUMN_DATE_TITLE, table, BaseColor.LIGHT_GRAY, null, PdfPCell.ALIGN_CENTER);
@@ -108,8 +105,7 @@
         {
             var driversCount = route.VehicleRouteInfo.Count();
             var totalDistance = route.Distance * driversCount;
-            this.AddCellToTable(string.Format(AGGREGATE_MESSAGE,
-                driversCount, totalDistance), table, null, COLSPAN_MERGE_ALL_CELLS, PdfPCell.ALIGN_RIGHT);
+            this.AddCellToTable(string.Format(AGGREGATE_MESSAGE, driversCount, totalDistance), table, null, COLSPAN_MERGE_ALL_CELLS, PdfPCell.ALIGN_RIGHT);
         }
 
         private void AddCellToTable(string value, PdfPTable table)
@@ -117,18 +113,19 @@
             AddCellToTable(value, table, null, null);
         }
 
-        private void AddCellToTable(string value, PdfPTable table, BaseColor color = null,
-            int? colspan = null, int? alignment = null)
+        private void AddCellToTable(string value, PdfPTable table, BaseColor color = null, int? colspan = null, int? alignment = null)
         {
             var cell = new PdfPCell(new Paragraph(value));
             if (color != null)
             {
                 cell.BackgroundColor = color;
             }
+
             if (colspan != null)
             {
                 cell.Colspan = (int)colspan;
             }
+
             if (alignment != null)
             {
                 cell.HorizontalAlignment = (int)alignment;

@@ -32,24 +32,6 @@
             this.Archivator = archivator;
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-
-        public IEnumerator<ArchiveReport> GetEnumerator()
-        {
-            foreach (var report in this.Reports)
-            {
-                if (report == null)
-                {
-                    break;
-                }
-
-                yield return report;
-            }
-        }
-
         public string ReportsPath
         {
             get
@@ -76,11 +58,6 @@
             }
         }
 
-        public void Dispose()
-        {
-            Directory.Delete(this.temporaryPath, true);
-        }
-
         public IList<ArchiveReport> Reports
         {
             get
@@ -93,6 +70,7 @@
 
                 return this.reports;
             }
+
             private set
             {
                 this.reports = value;
@@ -109,6 +87,29 @@
             set
             {
                 this.archivator = value;
+            }
+        }
+
+        public void Dispose()
+        {
+            Directory.Delete(this.temporaryPath, true);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
+        public IEnumerator<ArchiveReport> GetEnumerator()
+        {
+            foreach (var report in this.Reports)
+            {
+                if (report == null)
+                {
+                    break;
+                }
+
+                yield return report;
             }
         }
 
@@ -152,7 +153,7 @@
                     this.AddReportsFromDirectory(directory);
                 }
             }
-            catch (IOException ex)
+            catch (IOException)
             {
                 throw new IOException("Some reports are not accessible!");
             }

@@ -15,24 +15,13 @@
 
         public MongoDBContext(string url, string database)
         {
-            this.client=new MongoClient(url);
+            this.client = new MongoClient(url);
             this.database = client.GetServer().GetDatabase(database);
         }
 
         public MongoDBContext()
             : this("mongodb://localhost", "RoutesSystem")
         {
-            
-        }
-
-        public MongoCollection Set<T>(string name) where T : class
-        {
-            return this.database.GetCollection<T>(name);
-        }
-
-        public MongoCollection Set<T>() where T : class
-        {
-            return this.Set<T>((typeof(T)).Name);
         }
 
         public MongoCollection<MongoDriver> Drivers { get; set; }
@@ -56,5 +45,15 @@
         public MongoCollection<MongoCarEntry> VehicleExpensesInfo { get; set; }
 
         public MongoCollection<MongoExpense> VehicleExpenses { get; set; }
+
+        public MongoCollection Set<T>(string name) where T : class
+        {
+            return this.database.GetCollection<T>(name);
+        }
+
+        public MongoCollection Set<T>() where T : class
+        {
+            return this.Set<T>(typeof(T).Name);
+        }
     }
 }

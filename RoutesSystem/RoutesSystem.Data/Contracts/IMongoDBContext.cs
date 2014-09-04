@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Driver;
-namespace RoutesSystem.Data.Contracts
+﻿namespace RoutesSystem.Data.Contracts
 {
+    using MongoDB.Driver;
+
     using RoutesSystem.Model;
     using RoutesSystem.Model.MongoDBModels;
     using RoutesSystem.Model.SQLServerModels;
 
     public interface IMongoDBContext
     {
-        MongoCollection Set<T>(string setName) where T : class;
-
-        MongoCollection Set<T>() where T : class;
-
         MongoCollection<MongoDriver> Drivers { get; set; }
 
         MongoCollection<MongoFuelInfo> FuelInfo { get; set; }
@@ -33,5 +25,9 @@ namespace RoutesSystem.Data.Contracts
         MongoCollection<MongoVehicle> Vehicles { get; set; }
 
         MongoCollection<MongoVehicleType> VehicleTypes { get; set; }
+
+        MongoCollection Set<T>(string setName) where T : class;
+
+        MongoCollection Set<T>() where T : class;
     }
 }
